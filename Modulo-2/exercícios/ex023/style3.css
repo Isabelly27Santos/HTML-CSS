@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 247, 247);
+  max-width: 1000px;
+  margin: auto;
+}
+
+table {
+  position: relative;
+  width: 800px;
+  line-height: 2em;
+  border: 3px solid black;
+  border-collapse: collapse;
+  margin-left: 30px;
+  margin: auto;
+  background-color: white;
+}
+
+body tr,
+td,
+th {
+  border: 1px solid black;
+  padding-left: 8px;
+  padding-right: 8px;
+  white-space: nowrap;
+}
+
+tbody > tr:nth-child(2n) {
+    background-color: rgb(221, 221, 221);
+}
+
+thead #um {
+    position: sticky;  /*leva o cabecalho fixo na rolagem da tela, precisa ter a tabela com position: relative*/
+    top: -1px;
+}
+thead #dois {
+    position: sticky;
+    top:66.6px;
+}
+
+caption {
+  font: bolder 1.8em arial;
+  padding: 10px;
+  margin-top: 40px;
+  color: rgb(57, 57, 60);
+  -webkit-text-stroke: 1px #7266668b;
+  border: 3px solid black;
+  border-bottom: none;
+  background-color: rgb(212, 208, 208);
+  box-shadow: inset 3px 3px 3px rgba(0, 0, 0, 0.130);
+}
+
+td img {
+    width: 50px;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    align-items: rigth;
+    margin: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+#center td {
+    text-align: center;
+}
+
+th, tfoot {
+  background-color: rgb(52, 51, 51);
+  color: white;
+  text-align: center;
+}
+
+td:nth-child(n+3):nth-child(-n+7) {  /*alinha os textos entre a coluna 3 e 7*/
+    text-align: center;
+}
+
+td:nth-child(2){
+    font-weight: 800;
+}

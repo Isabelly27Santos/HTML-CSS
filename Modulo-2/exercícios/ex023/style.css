@@ -1,56 +1,56 @@
 @charset "UTF-8";
 
 body {
-font-family: Arial, Helvetica, sans-serif;
-background-color: rgb(247, 244, 244);
-max-width: 800px;
-margin: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(247, 244, 244);
+  max-width: 800px;
+  margin: auto;
 }
 
 table {
-width: 800px;
-line-height: 2em;
-border: 1px solid black;
-border-collapse: collapse;
-margin-left: 30px;
-margin: auto;
-background-color: white;
+  width: 800px;
+  line-height: 2em;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: 30px;
+  margin: auto;
+  background-color: white;
 }
 
 body tr,
 td,
 th {
-border: 1px solid black;
-padding-left: 8px;
-padding-right: 8px;
+  border: 1px solid black;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 caption {
-    font: bolder 1.8em arial;
-    padding: 10px;
-    color: rgb(49, 49, 165);
-    -webkit-text-stroke: 1px #9ba1ab8b;
+  font: bolder 1.8em arial;
+  padding: 10px;
+  color: rgb(49, 49, 165);
+  -webkit-text-stroke: 1px #9ba1ab8b;
 }
 
 th {
-    background-color: rgb(197, 197, 236);
+  background-color: rgb(197, 197, 236);
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 #esgotado {
-    background-color: rgb(240, 180, 180);
-    font-weight: 600;
+  background-color: rgb(240, 180, 180);
+  font-weight: 600;
 }
 
 #ultimas {
-    background-color: rgb(238, 240, 180);
-    font-weight: 600;
+  background-color: rgb(238, 240, 180);
+  font-weight: 600;
 }
 
 #disponivel {
-    background-color: rgb(185, 226, 199);
-    font-weight: 600;
+  background-color: rgb(185, 226, 199);
+  font-weight: 600;
 }
