@@ -2,6 +2,8 @@
 
 Estudando a linguagem HTML e CSS pelo canal <a href="https://www.youtube.com/@cursoemvideo" target="_blank">Curso em Vídeo</a> com o professor Gustavo Guanabara.
 
+### Clique aqui e acesse <a href="https://isabelly27santos.github.io/HTML-CSS/index.html" target="_blank">Minha Página</a> ter ver mais detalhes!
+
  ### ✨Principais Projetos
 
 - Site <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/desafios/d010/index.html" target="_blank">Curiosidades Android</a>
