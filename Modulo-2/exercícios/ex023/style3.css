@@ -1,21 +1,19 @@
 @charset "UTF-8";
 
-body {
+html, body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 247, 247);
-  max-width: 900px;
-  margin: auto;
+  background-color: rgb(255, 247, 247)
 }
 
 table {
   position: relative;
-  width: 800px;
   line-height: 2em;
   border: 3px solid black;
   border-collapse: collapse;
-  margin-left: 30px;
   margin: auto;
   background-color: white;
+  max-width: 80vw;
+  margin: auto;
 }
 
 body tr,
