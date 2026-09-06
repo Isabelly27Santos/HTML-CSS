@@ -4,4 +4,4 @@ Estudando a linguagem HTML e CSS pelo canal <a href="https://www.youtube.com/@cu
 
  ### ✨Principais Projetos
 
-- Site <a href="https://isabelly27santos.github.io/html_css/Modulo-2/desafios/d010/index.html" target="_blank">Curiosidades Android</a>
+- Site <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/desafios/d010/index.html" target="_blank">Curiosidades Android</a>
