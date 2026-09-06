@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+table {
+  border-collapse: collapse;
+  background-color: rgb(199, 228, 232);
+  margin: auto;
+  margin-top: 40px;
+}
+
+td {
+  width: 30px;
+  height: 30px;
+  border: 3px solid black;
+}
+
+.preto {
+  background-color: black;
+}
+
+.marrom {
+  background-color: rgb(213, 197, 197);
+}
+.white {
+  background-color: white;
+}
