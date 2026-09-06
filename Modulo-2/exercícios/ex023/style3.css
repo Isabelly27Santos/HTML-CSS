@@ -5,6 +5,12 @@ html, body {
   background-color: rgb(255, 247, 247)
 }
 
+#container {
+  overflow-x: auto;
+  width: 90vw;
+  margin: auto;
+}
+
 table {
   position: relative;
   line-height: 2em;
