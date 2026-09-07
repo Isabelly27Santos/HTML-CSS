@@ -34,7 +34,7 @@
   /* altera todos os elementos do site*/
   margin: 0px;
   padding: 0px;
-  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .cabecalho {
@@ -80,7 +80,6 @@ nav {
   margin-left: 10vw;
   margin-right: 40px;
   background-color: #07063dde;
-  min-width: 300px;
   max-width: 750px;
   box-shadow: 0px 0px 5px rgb(24, 35, 134);
 }
@@ -142,6 +141,9 @@ nav > a:hover {
   header.cabecalho {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+  nav {
+    line-height: 40px;
   }
 }
 
