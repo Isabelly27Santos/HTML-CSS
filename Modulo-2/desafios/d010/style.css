@@ -46,7 +46,6 @@
     var(--cor3),
     var(--cor0)
   );
-  min-height: 150px;
   padding-top: 60px;
 }
 
@@ -58,7 +57,6 @@ header h1 {
     600 3em "Chakra Petch",
     sans-serif;
   text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.541);
-  min-width: 320px;
   text-align: left;
   display: block;
 }
@@ -122,7 +120,7 @@ nav > a:hover {
 }
 
 .foto-robo {
-  min-width: 200px;
+  width: 200px;
   max-width: 300px;
   object-fit: cover;
 
