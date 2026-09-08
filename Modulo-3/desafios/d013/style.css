@@ -88,10 +88,10 @@ section#redes-sociais img:hover {
 
     section#redes-sociais {
         display: grid;
-        grid-template-columns: repeat(6, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         width: auto;
         padding: 20px;
-        padding-top: 40px;
+        padding-top: 30px;
         margin: 0;
     }
 
