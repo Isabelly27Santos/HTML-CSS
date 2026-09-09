@@ -13,6 +13,11 @@ body {
   background-color: black;
 }
 
+body {
+  background: url(imagens/neoclasical-art-floral-illustration.jpg) no-repeat top center;
+  background-size: cover;
+  }
+
 main {
   position: relative;
   height: 100vh;
@@ -81,31 +86,37 @@ section#redes-sociais img:hover {
     padding-top: 40px;
   }
 
-  body {
-    background: url(imagens/neoclasical-art-floral-illustration.jpg) no-repeat
-      top center;
-    background-size: cover;
-  }
-
   section#telefone {
     position: relative;
     top: auto;
     left: auto;
     transform: none;
     margin-top: 20px;
+    width: 250px;
+    height: 500px;
+    background-size: contain;
   }
 
   section#redes-sociais {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     width: auto;
     padding: 20px;
-    padding-top: 30px;
+    margin-top: -50px;
     margin: 0;
+    
   }
 
   section#redes-sociais img {
     width: 40px;
     margin: 10px;
   }
+
+  iframe#tela {
+  position: relative;
+  top: 65px;
+  left: 21px;
+  width: 211px;
+  height: 376px;
+}
 }
