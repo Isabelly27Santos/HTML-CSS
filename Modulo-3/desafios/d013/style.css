@@ -98,7 +98,7 @@ section#redes-sociais img:hover {
 
   section#redes-sociais {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     width: auto;
     padding: 5px 20px;
     margin: 0;
@@ -106,7 +106,7 @@ section#redes-sociais img:hover {
 
   section#redes-sociais img {
     width: 40px;
-    margin: 10px;
+    margin: 7px;
   }
 
   iframe#tela {
