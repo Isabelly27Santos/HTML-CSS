@@ -3,7 +3,9 @@
 @media screen and (min-width: 768px) and (max-width: 992px) {
     #login {
         width: 90vw;
-        height: 400px;
+        max-width: 600px;
+        height: 90vh;
+        max-height: 450px;
     }
 
     section#login > div#imagem {
@@ -24,8 +26,10 @@
 
 @media screen and (min-width: 993px) {
     #login {
-        width: 950px;
-        height: 450px;
+        width: 90vw;
+        max-width: 800px;
+        height: 90vh;
+        max-height: 450px;
 
     }
 
