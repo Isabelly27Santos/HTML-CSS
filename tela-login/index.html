@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="shortcut icon" href="imagens/abra-o-livro.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="script.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <!---------------------------Página Inicial--------------------------------------->
+        <section id="welcome" class="tela ativa">
+            <h1>Bem-Vindo =)</h1>
+            <p>
+                Olá, caro leitor(a)! Aqui na BookTime há mais de 3 mil histórias
+                disponíveis para você explorar. Acesse sua conta para descobrir novos
+                mundos!
+            </p>
+            <div id="menina">
+                <img src="imagens/pessoa.png" alt="menina segurando um livro" />
+            </div>
+            <button onclick="mostrarTela('tela-criar')" id="criar">Criar conta</button>
+            <button onclick="mostrarTela('tela-entrar')" id="entrar">Entrar</button>
+        </section>
+
+        <!---------------------------Página Entrar Conta--------------------------------------->
+        <div id="tela-entrar" class="tela">
+            <div onclick="mostrarTela('welcome')" class="voltar">
+                <i class="fa-solid fa-chevron-left"></i>
+                  Voltar
+            </div>
+            <section id="menu-entrar">
+                <div>
+                    <h2>Bem-vindo(a) de volta!</h2>
+                    <p>
+                        É muito bom ter você de novo aqui :) Há muitas histórias novas te
+                        esperando, faça login para ver.
+                    </p>
+                    <form action="cadastro.php" method="post" autocomplete="on">
+                        <input class="entrada" type="email" name="email" id="iemail" autocomplete="email" required
+                            placeholder=" insira o email" maxlength="150" />
+                        <input class="entrada" type="password" name="senha" id="isenha" autocomplete="current-password" required
+                            minlength="8" maxlength="30" placeholder="senha">
+                        <input id="botao-acesso" type="submit" value="Criar Conta">
+                    </form>
+                    <div id="resgate">
+                        <label for="lembrar">
+                            <input type="checkbox" id="lembrar"> Lembrar de mim
+                        </label>
+                        <p id="esqueceu"><a href="#">Esqueceu a senha?</a></p>
+                    </div>
+                    <div class="separador">
+                        <span id="esq"></span>
+                        <p>Acesse com</p>
+                        <span id="dir"></span>
+                    </div>
+                    <div id="icones">
+                        <a href="#"><img src="imagens/facebook (1).png" alt="Facebook"></a>
+                        <a href="#"><img src="imagens/google (1).png" alt="Google"></a>
+                        <a href="#"><img src="imagens/logotipo-da-apple (1).png" alt="Apple"></a>
+                    </div>
+                    <p id="cadastre-se">
+                        Não tem uma conta? <a href="#">Cadastre-se</a>
+                    </p>
+                </div>
+            </section>
+        </div>
+
+         <!---------------------------Página Criar na Conta--------------------------------------->
+        <div id="tela-criar" class="tela">
+            <div onclick="mostrarTela('welcome')" class="voltar">
+                <i class="fa-solid fa-chevron-left"></i>
+                  Voltar
+            </div>
+            <section id="menu-criar">
+                <div>
+                    <h2>Cadastre sua Conta</h2>
+                    <p>
+                        Crie sua conta e descubra um mundo de livros esperando por você. Você está pronto(a)?
+                    </p>
+                    <form action="cadastro.php" method="post" autocomplete="on">
+                        <input class="entrada" type="text" name="nome" id="inome" required autocomplete="name"
+                            placeholder=" nome completo">
+                        <input class="entrada" type="email" name="email" id="iemail" autocomplete="email" required placeholder=" email"
+                            maxlength="150" />
+                        <input class="entrada" type="password" name="senha" id="isenha" autocomplete="current-password" required
+                            minlength="8" maxlength="30" placeholder="senha">
+                        <input id="botao-acesso" type="submit" value="Criar conta">
+                    </form>
+
+                    <div class="separador">
+                        <span id="esq"></span>
+                        <p>Acesse com</p>
+                        <span id="dir"></span>
+                    </div>
+                    <div id="icones">
+                        <a href="#"><img src="imagens/facebook (1).png" alt="Facebook"></a>
+                        <a href="#"><img src="imagens/google (1).png" alt="Google"></a>
+                        <a href="#"><img src="imagens/logotipo-da-apple (1).png" alt="Apple"></a>
+                    </div>
+                    <p id="cadastre-se">
+                        Não tem uma conta? <a href="#">Cadastre-se</a>
+                    </p>
+                </div>
+    </main>
+
+</body>
+
+</html>
