@@ -35,8 +35,9 @@ body {
 }
 
 #welcome {
-  margin: 20px;
-  text-align: center;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
 }
 
 #welcome h1 {
@@ -117,7 +118,7 @@ button {  /*Configura botões criar conta e entrar da tela inicial*/
 }
 
 #menu-criar {
-    height: 85vh;
+    height: 80vh;
 }
 
 h2 {
