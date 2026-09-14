@@ -149,7 +149,7 @@ h2 {
   margin-bottom: 25px;
 }
 
-.entrada { /*configura todas caixas de entrada de input*/
+.entrada, .botao-senha { /*configura todas caixas de entrada de input*/
   display: block;
   background-color: transparent;
   width: 85vw;
@@ -255,4 +255,19 @@ input#botao-acesso { /* Configura botão de acesso das telas criar-conta e entra
   text-decoration: none;
   font-weight: 600;
   color: rgb(83, 14, 148);
+}
+
+.botao-senha {
+    display: grid;
+    grid-template-columns: 95% 5%;
+    align-items: center;
+}
+
+.olho {
+    cursor: pointer;
+    justify-self: center;
+}
+
+.senha {
+    border: none;
 }
