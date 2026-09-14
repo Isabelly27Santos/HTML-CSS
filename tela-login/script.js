@@ -7,26 +7,20 @@ function mostrarTela(id) {
     document.getElementById(id).classList.add('ativa');
 }
 
-const olhos = document.querySelectorAll('.olho');
+const olhos = document.querySelectorAll('.eyes');
 
 olhos.forEach(olho => {
-
     olho.addEventListener('click', () => {
 
-        const senha = olho.previousElementSibling;
+        const botao = olho.parentElement;
+        const senha = botao.previousElementSibling;
 
         if (senha.type === 'password') {
-
             senha.type = 'text';
-            olho.className = 'olho fa-regular fa-eye';
-
+            olho.className = 'eyes fa-regular fa-eye';
         } else {
-
             senha.type = 'password';
-            olho.className = 'olho fa-regular fa-eye-slash';
-
+            olho.className = 'eyes fa-regular fa-eye-slash';
         }
-
     });
-
 });

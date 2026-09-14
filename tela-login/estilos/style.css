@@ -263,9 +263,12 @@ input#botao-acesso { /* Configura botão de acesso das telas criar-conta e entra
     align-items: center;
 }
 
-.olho {
+.botao-olho {
     cursor: pointer;
     justify-self: center;
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
 }
 
 .senha {
