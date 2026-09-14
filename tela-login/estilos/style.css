@@ -184,7 +184,7 @@ input#botao-acesso { /* Configura botão de acesso das telas criar-conta e entra
 #resgate {  /*configura grid de esqueceu a senha e lembrar de mim*/
   display: grid;
   grid-template-columns: 1fr 1fr;
-  width: 100%;
+  width: 84%;
   margin: auto;
   font-size: 0.7em;
   color: rgb(103, 8, 145);
