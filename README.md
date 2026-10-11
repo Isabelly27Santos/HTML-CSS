@@ -6,8 +6,14 @@ Estudando a linguagem HTML e CSS pelo canal <a href="https://www.youtube.com/@cu
 
  ### ✨Principais Projetos
 
+- Tela de Login <a href="https://isabelly27santos.github.io/HTML-CSS/tela-login/index.html" target="_blank">BookTime</a>
+
+- Tela de Login <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-3/desafios/d014/index.html" target="_blank">Simples</a>
+
 - Site <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/desafios/d010/index.html" target="_blank">Curiosidades Android</a>
 
-- Site <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/desafios/d012/index.html" target="_blank">Cordel Moderno</a>
+- Projeto <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-3/desafios/d013/index.html" target="_blank">Celular Interativo - Redes Sociais </a>
+
+- Projeto <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/desafios/d012/index.html" target="_blank">Cordel Moderno</a>
 
 - Tabela <a href="https://isabelly27santos.github.io/HTML-CSS/Modulo-2/exercícios/ex023/tabelas03.html" target="_blank">Unidades federativas do Brasil por população</a>
