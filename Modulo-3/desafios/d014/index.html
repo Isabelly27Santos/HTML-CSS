@@ -1,44 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="estilos/style.css" />
-    <link rel="stylesheet" href="estilos/media-query.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Tabelas</title>
+    <style>
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            background-color: rgb(242, 239, 239);
+            margin: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+         th, td, caption {
+            padding: 8px;
+            border: 1px solid black;
+         }
+        caption {
+            border-bottom: none;
+            font-weight: 700;
+            background-color: rgb(174, 208, 196);
+        }
+        h1 {
+            text-align: center;
+        }
+        tr:nth-child(-n+1),tr:nth-child(-n+2), tr:nth-child(7),tr:nth-child(10) {
+            background-color:rgb(107, 110, 110);
+            color: white;
+            font: 500 0.9em arial;
+            text-align: center;
+        }
+    </style>
 </head>
-
 <body>
-    <main>
-        <section id="login">
-            <div id="imagem"></div>
-            <div id="formulario">
-                <h1>Login</h1>
-                <p id="msg">
-                    Seja bem-vindo(a) novamente. Faça login para acessar a sua conta e
-                    fazer as configurações no seu ambiente.
-                </p>
-                <form action="login.php" method="post" autocomplete="on">
-                    <div class="campo">
-                        <i class="fa-solid fa-circle-user"></i>
-                        <input type="email" name="login" id="ilogin" placeholder=" seu e-mail" autocomplete="email"
-                            required maxlength="100"/>
-                        <label for="ilogin"></i></label>
-                    </div>
-                        <div class="senha">
-                            <i class="fa-solid fa-lock"></i>
-                            <input type="password" name="senha" id="isenha" placeholder=" sua senha"
-                                autocomplete="current-password" required minlength="8" maxlength="30" />
-                            <label for="isenha"></i></label>
-                        </div>
-                        <input type="submit" value="Entrar">
-                        <a href="esqueci.html" class="botao">Esqueci a senha <i class="fa-solid fa-envelope"></i></a>
-                </form>
-            </div>
-        </section>
-    </main>
+    <h1>Desafio de Tabelas</h1>
+    <table>
+        <tr>
+            <th scope="col" rowspan="2">Área</th>
+            <th scope="col" rowspan="2">Disciplinas</th>
+            <th scope="colgroup" colspan="2">Notas</th>
+            <th scope="col" rowspan="2">Média</th>
+        </tr>
+        <tr>
+            <th scope="col">Nota 1</th>
+            <th scope="col">Nota 2</th>
+        </tr>
+        <tr>
+            <th scope="rowgroup" rowspan="4">Exatas</th>
+            <td>Matemática</td>
+            <td>10.0</td>
+            <td>9.0</td>
+            <td>9.5</td>
+        </tr>
+        <tr>
+            <td>Física</td>
+            <td>6.0</td>
+            <td>8.5</td>
+            <td>7.2</td>
+        </tr>
+        <tr>
+            <td>Química</td>
+            <td>9.0</td>
+            <td>5.5</td>
+            <td>7.2</td>
+        </tr>
+        <tr>
+            <td>Biologia</td>
+            <td>10.0</td>
+            <td>8.5</td>
+            <td>9.2</td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="4">Média de Exatas</th>
+            <td><strong>8.3</strong></td>
+        </tr>
+        <tr>
+            <th scope="rowgroup" rowspan="2">Humanas</th>
+            <td>História</td>
+            <td>7.5</td>
+            <td>5.5</td>
+            <td>6.5</td>
+        </tr>
+        <tr>
+            <td>Geografia</td>
+            <td>10.0</td>
+            <td>9.5</td>
+            <td>9.5</td>
+        </tr>
+        <tr>
+            <th scope="row" colspan="4">Média de Humanas</th>
+            <td ><strong>8.0</strong></td>
+        </tr>
+    </table>
 </body>
-
 </html>
