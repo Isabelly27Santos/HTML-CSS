@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+header {
+    flex-direction: column;
+    align-items: stretch;
+
+}
+
+header > h1 {
+    flex: auto;
+    padding: 15px;
+    text-align: center;
+}
+
+.burguer {
+    display: block;
+    font-size: 30px;
+    border: none;
+    background: rgb(53, 52, 52);
+    cursor: pointer;
+    width: 100%;
+    color: white;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    }
+
+.burguer:hover {
+  background-color: rgb(208, 207, 207);
+  color: black;
+  transition: background-color 0.2s;
+}
+
+header > nav.menu {
+    display: none;
+    flex-flow: column nowrap;
+    width: 100%;
+    padding: 5px 10px;
+}
+
+header > nav.menu.aberto {
+    display: flex;
+}
+
+nav > a {
+    margin: 5px 0;
+    width: 100%;
+}
