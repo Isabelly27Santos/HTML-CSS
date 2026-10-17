@@ -10,7 +10,8 @@
 
 .caixa1 {
     background-color: salmon;
-    grid-area: 1 / 1/ 2/ 5;
+    grid-area: 1 / 1/ 2/ 5; /* (row-start, column start,  row-end, column end)
+*/
 }
 
 .caixa2 {
