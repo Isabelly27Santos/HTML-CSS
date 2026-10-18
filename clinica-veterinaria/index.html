@@ -6,9 +6,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=surgical" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_small" />
+    <script src="script.js" defer></script>
     <title>Quatro Patas</title>
 </head>
 <body>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
     <div class="container">
         <header>
             <img class="logo" src="imagens/logo-header.png" alt="logo clínica quatro patas">
@@ -80,21 +83,75 @@
             <button>TODAS AS ESPECIALIDADES</button>
         </card>
         <div class="metricas">
-            metricas
+                <div class="card-metricas"> <i class="fa-solid fa-briefcase-medical imetricas"></i><span>8</span> Anos de Experiência</div>
+                <div class="card-metricas"> <i class="fa-solid fa-dog imetricas"></i>  <span>100.000+</span> Pets Felizes</div>
+                <div class="card-metricas"> <i class="fa-solid fa-stethoscope imetricas"></i>  <span>80.000+</span> Clientes</div>
+                <div class="card-metricas"> <i class="fa-solid fa-user-nurse imetricas"></i> <span>70</span> Profissionais Experts</div>
         </div>
     </div>
     <div class="container2">
         <div class="foto-sobre">
-            foto
+            <img src="imagens/vet-quem-somos.png" alt="veterinário com cachorro">
+            <div class="degrade"></div>
+            <dotlottie-wc
+                src="imagens/animacao.lottie"
+                autoplay
+                loop>
+            </dotlottie-wc>
         </div>
         <div class="sobre-nos">
-            sobre nos
+            <h2>Conheça a Quatro Patas</h2>
+
+            <h1>Cuidado, Amor e Bem-Estar para o Seu Pet</h1>
+
+            <p>
+                <strong>Olá, nós somos a Quatro Patas! 🐾</strong> Somos apaixonados por animais e acreditamos que cada pet merece cuidado, carinho e atenção especial. Nossa missão é oferecer um atendimento acolhedor e de qualidade, cuidando da saúde e do bem-estar dos seus melhores amigos em cada etapa da vida.
+                Contamos com profissionais dedicados e uma estrutura preparada para proporcionar conforto, segurança e tranquilidade tanto para os pets quanto para seus tutores. Aqui, cada animal é tratado com todo o amor e respeito que merece, porque sabemos que eles são muito mais do que animais de estimação: são parte da família!
+            </p>
+            <p class="checks-sobre-nos">
+                <p class="checks"> <span class="material-symbols-outlined">check_small</span> Atendimento Personalizado</p>
+                <p class="checks"><span class="material-symbols-outlined">check_small</span> Cuidado e Carinho em Cada Consulta</p>
+                <p class="checks"><span class="material-symbols-outlined">check_small</span> Saúde e Bem-Estar Animal</p>
+            </p>
+
+            <button>SAIBA MAIS</button>
+
         </div>
         <div class="porque">
-            porque nos escolher
+            <h1>Por que <br> Nos Escolher ?</h1>
+            <p>Estamos sempre em busca do melhor para nossos clientes e seus pets, com atendimento humanizado e serviços de excelência.</p>
         </div>
         <div class="resultados">
-            resultados
+            <div class="habilidade">
+            <div class="habilidade-info">
+                Experiência dos Veterinários
+                <span>90%</span>
+            </div>
+
+            <div class="barra">
+                <div class="progresso" data-porcentagem="90"></div>
+            </div>
+            </div>
+            <div class="habilidade">
+            <div class="habilidade-info">
+                Qualidade do Serviço
+                <span>90%</span>
+            </div>
+
+            <div class="barra">
+                <div class="progresso" data-porcentagem="90"></div>
+            </div>
+            </div>
+            <div class="habilidade">
+            <div class="habilidade-info">
+                Satisfação do Seu Pet!
+                <span>90%</span>
+            </div>
+
+            <div class="barra">
+                <div class="progresso" data-porcentagem="90"></div>
+            </div>
+            </div>
         </div>
         <div class="avaliacoes">
             opinioes

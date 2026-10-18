@@ -63,7 +63,7 @@ img.logo {
     margin-left: 50px;
 }
 
-.botao-agendar-consulta:hover, .card-principal > button:hover {
+.botao-agendar-consulta:hover, .card-principal > button:hover, .especialidades > button:hover, .sobre-nos > button:hover {
     background-color: var(--cor7);
     cursor: pointer;
     box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.679);
@@ -240,6 +240,7 @@ hero>img {
 .avaliacao-maps > h2 {
     text-align: center;
     background-color: var(--cor1);
+    font-size: clamp(1.2rem, 1.8rem, 1.8rem);
 }
 
 .text-avaliacao {
@@ -263,12 +264,15 @@ hero>img {
     width: auto;
     background-color: white;
     grid-area: 4 / 1 / 5 / -1;
+    margin: 10vh 0px;
+    display: flex;
+    flex-direction: column;
 
 }
 .container-especialidades {
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
+    justify-content: center;
     gap: 25px;
     margin: 0px 15vw;
 }
@@ -277,7 +281,7 @@ hero>img {
     text-align: center;
     font-size: clamp(1.3rem, 2vw, 2rem);
     color: var(--cor5);
-    margin: 7vh 0px;
+    margin-bottom: 7vh;
 }
 
 .card-especialidades {
@@ -291,49 +295,213 @@ hero>img {
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-evenly;
+    color: var(--cor5);
+    font-weight: 700;
     
 }
 
-.card-especialidades > p {
-    
+.card-especialidades:hover {
+    transform: translateY(-7px);
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.718);
+    cursor: pointer;
 }
 
+.especialidades > button, .sobre-nos > button {
+    padding: 15px 35px;
+    margin: 4vw auto 0px  auto;
+    color: white;
+    background-color: var(--cor6);
+    border-radius: 25px;
+    border: none;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.818);
+    font-weight: 600;
+
+}
 
 
 .metricas {
-    height: 60vh;
-    background-color: var(--cor2);
+    padding: 20vh 0px;
+     background:
+        linear-gradient(#51be92bc),
+        url(imagens/fundo-metricas.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-area: 5 / 1 / 6 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.card-metricas {
+    background-color: transparent;
+    border: solid 1px white;
+    border-radius: 10px;
+    flex: 1 1 300px;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: clamp(1rem, 1.5rem, 1.5rem);
+    font-weight: 700;
+    gap: 20px;
+}
+
+.card-metricas > span {
+    background-color: transparent;
+    font-size: clamp(2rem, 4.5rem, 4.5rem);
+}
+
+.imetricas {
+    background-color: transparent;
+    font-size: clamp(1rem, 4rem, 4rem);
+    color: white;
 }
 
 .container2 {
     display: grid;
-    grid-template: auto / repeat(3, 1fr);
+    grid-template: auto / repeat(10, 1fr);
     height: 130vh;
 }
 
 .foto-sobre {
-    background-color: gray;
-    grid-area: 1 / 1 / 2 / 2;
-    height: 80vh;
+    grid-area: 1 / 1 / 2 / 5;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    object-fit: contain;
+}
+
+.foto-sobre > .degrade {
+    height: 40%;
+    width: 100%;
+    position: absolute;
+    z-index: 3;
+    background: linear-gradient(
+        to top,
+        #ffffff 40%,
+        rgba(255, 255, 255, 0.937) 60%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    bottom: 0;
+    pointer-events: none;
+}
+
+dotlottie-wc {
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+}
+
+
+.foto-sobre > img {
+    position: absolute;
+    z-index: 2; 
+    background-color: transparent;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 650px;
+
+}
+
+.sobre-nos > h1 {
+    color: var(--cor6);
+    font-size: clamp(2rem, 3rem, 3rem);
+    margin: 15px 0px;
+}
+
+.sobre-nos > h2 {
+    color: var(--cor3);
+}
+
+.sobre-nos > p {
+    font-size: clamp(1rem, 1.3rem, 1.3rem);
 }
 
 .sobre-nos {
     background-color: white;
-    grid-area: 1 / 2 / -1 / -1;
-    height: 80vh;
+    grid-area: 1 / 5 / -1 / -1;
+    padding: 5vw;
+}
+
+.sobre-nos > .checks-sobre-nos {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.checks {
+    color: var(--cor3);
+    font-weight: 700;
+    line-height: 1.5em;
 }
 
 .porque {
-    background-color: rgb(204, 167, 167);
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 1 / 3 / 5;
     height: 40vh;
 }
 
+.porque > h1 {
+    color: var(--cor7);
+    font-size: clamp(2rem, 3rem, 3rem);
+    font-weight: 800;
+    margin: 1vw 4vw;
+}
+
+.porque > p {
+    color: rgb(72, 71, 71);
+    font-size: clamp(1rem, 1.4rem, 1.4rem);
+    font-weight: normal;
+    margin: 1vw 4vw;
+}
+
+
 .resultados {
-    background-color: rgb(167, 173, 204);
-    grid-area: 2 / 2 / 3 / -1;
+    grid-area: 2 /5 / 3 / -1;
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 5vw;
+    gap: 30px;
     
+}
+
+.habilidade {
+    width: 100%;
+}
+
+.habilidade-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    color: rgb(80, 80, 80);
+    font-weight: 700;
+    font-size: clamp(1rem, 1.6rem, 1.6rem);
+}
+
+.barra {
+    width: 100%;
+    height: 17px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progresso {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(to right, #a2e0c7, #51be93);
+    border-radius: 10px;
+    transition: width 3s ease;
 }
 
 .avaliacoes {
