@@ -7,7 +7,7 @@
     padding: 0;
     box-sizing: border-box;
     background-color: white;
-    font-family: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: var(--fonte1);
 }
 
 :root {
@@ -17,6 +17,9 @@
     --cor5: #568667fc;
     --cor6: #c9986ffd;
     --cor7: #ad825ffd;
+    --cor8: #484747;
+    --fonte1: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fonte2: "Montserrat", Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -45,7 +48,7 @@ img.logo {
     font-weight: 500;
     font-size: 1.2em;
     justify-self: flex-start;
-    color: rgb(107, 107, 107);
+    color: var(--cor8);
     margin-left: 5vh;
 }
 
@@ -63,7 +66,7 @@ img.logo {
     margin-left: 50px;
 }
 
-.botao-agendar-consulta:hover, .card-principal > button:hover, .especialidades > button:hover, .sobre-nos > button:hover {
+.botao-agendar-consulta:hover, .card-principal > button:hover, .especialidades > button:hover, .sobre-nos > button:hover, .post > button:hover {
     background-color: var(--cor7);
     cursor: pointer;
     box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.679);
@@ -124,7 +127,8 @@ hero {
     gap: 10px;
     align-items: center;
     justify-content: space-around;
-    height: 60vh;
+    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
+    padding: 3vw 0px;
 }
 
 .card-agendar {
@@ -137,7 +141,7 @@ hero {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.316);
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.221);
     
 }
 
@@ -161,7 +165,7 @@ hero {
 
 .card-agendar > p {
     font-weight: 600;
-    color: rgb(63, 62, 62);
+    color: var(--cor8);
 }
 
 .card-agendar:hover {
@@ -181,7 +185,7 @@ hero {
     background-image: url(imagens/hero.png);
     background-size: cover;
     grid-area: 1 / 1 / 3 / 2;
-    margin: auto;
+    margin: 6vw auto;
     border-radius: 15px;
     display: grid;
     grid-template: auto / 40% 50%;
@@ -203,6 +207,11 @@ hero>img {
     text-align: left;
     background-color: transparent;
     color: white;
+}
+
+.card-principal > h1 > span {
+    background-color: transparent;
+    color: #009258;
 }
 
 .card-principal > p {
@@ -228,13 +237,13 @@ hero>img {
 
 
 .avaliacao-maps {
-    height: 60vh;
     background-color: var(--cor1);
     grid-area: 3 / 2 / 4 / 3;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
+    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
 }
 
 .avaliacao-maps > h2 {
@@ -306,7 +315,7 @@ hero>img {
     cursor: pointer;
 }
 
-.especialidades > button, .sobre-nos > button {
+.especialidades > button, .sobre-nos > button, .post > button {
     padding: 15px 35px;
     margin: 4vw auto 0px  auto;
     color: white;
@@ -346,9 +355,11 @@ hero>img {
     justify-content: center;
     text-align: center;
     color: white;
-    font-size: clamp(1rem, 1.5rem, 1.5rem);
+    font-size: clamp(1rem, 2rem, 2rem);
     font-weight: 700;
     gap: 20px;
+    font-family: var(--fonte2);
+    padding: 20px;
 }
 
 .card-metricas > span {
@@ -428,6 +439,10 @@ dotlottie-wc {
     font-size: clamp(1rem, 1.3rem, 1.3rem);
 }
 
+.info-sobre {
+    color: var(--cor8);
+}
+
 .sobre-nos {
     background-color: white;
     grid-area: 1 / 5 / -1 / -1;
@@ -448,18 +463,19 @@ dotlottie-wc {
 
 .porque {
     grid-area: 2 / 1 / 3 / 5;
-    height: 40vh;
+    height: 65vh;
 }
 
 .porque > h1 {
     color: var(--cor7);
-    font-size: clamp(2rem, 3rem, 3rem);
+    font-size: clamp(2rem, 3.5rem, 3.5rem);
     font-weight: 800;
     margin: 1vw 4vw;
+    font-family: var(--fonte2);
 }
 
 .porque > p {
-    color: rgb(72, 71, 71);
+    color: var(--cor8);
     font-size: clamp(1rem, 1.4rem, 1.4rem);
     font-weight: normal;
     margin: 1vw 4vw;
@@ -483,7 +499,7 @@ dotlottie-wc {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    color: rgb(80, 80, 80);
+    color: var(--cor8);
     font-weight: 700;
     font-size: clamp(1rem, 1.6rem, 1.6rem);
 }
@@ -504,28 +520,184 @@ dotlottie-wc {
     transition: width 3s ease;
 }
 
-.avaliacoes {
-    background-color: white;
+.testemunhos {
+    background-color: var(--cor5);
     grid-area: 3 / 1 / 4 / -1;
-    height: 70vh;
+    padding: 5vw 0px;
 }
 
-.banner {
-    background-color: var(--cor2);
-    grid-area: 4 / 1 / 5 / -1;
-    height: 50vh;
+.testemunhos > h1 {
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-size: clamp(1.5rem, 3rem, 3rem);
+    font-family: var(--fonte2);
+}
+
+.container-testemunho {
+    display: flex;
+    justify-content: center;
+    gap: 3.5vw;
+    background-color: var(--cor5);
+    padding: 2vw 0px;
+}
+
+.container-testemunho > img, .post > img {
+    width: clamp(200px, 400px, 500px);
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.426);
+    aspect-ratio: 1 / 1;
+
+}
+
+.testemunho-info {
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.422);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.426);
+    width: clamp(200px, 400px, 500px);
+    color: white;
+    padding: 20px;
+    font-size: clamp(.7rem, 1.1rem, 1.1rem);
+    border-radius: 5px;
+    aspect-ratio: 1 / 1;
 }
 
 .blogs {
     background-color: white;
-    grid-area: 5 / 1 / 6 / -1;
-    height: 80vh;
+    grid-area: 4 / 1 / 5 / -1;
+}
+
+.blogs > h1, .unidades > h1 {
+    text-align: center;
+    color: var(--cor7);
+    font-size: clamp(2rem, 4.5rem, 4.5rem);
+    margin: 6vw;
+    font-weight: 500;
+    font-family: var(--fonte2);
+
+}
+.container-blogs {
+    display: flex;
+    flex: 1 1 100px;
+    max-width: 90vw;
+    gap: 5vw;
+    margin: auto;
+    padding: 0px 0vw 3vw 0px;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-start;
+    flex: 1 1 100px;
+    text-align: left;
+    gap: 20px;
+    color: var(--cor8);
+    position: relative;
+
+}
+
+.post > h2 {
+    text-align: center;
+    color: var(--cor5);
+}
+
+.post > img {
+    width: 100%;
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.555);
+}
+
+.post > button {
+    margin-top: 10px;
+
+}
+
+.data-post {
+    background-color: var(--cor3);
+    padding: 1vw 1.6vw;
+    position: absolute;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    text-align: center;
+    font-weight: 600;
+    color: white;
+    z-index: 1;
+    bottom: 93%;
+    
+}
+
+.data-post > .num {
+    background-color: var(--cor3);
+    font-size: clamp(1rem, 1.6rem, 1.6rem);
+
+
 }
 
 .unidades {
-    background-color: var(--cor2);
+    background-color: white;
+    grid-area: 5 / 1 / 6 / -1;
+    padding-bottom: 7vw;
+}
+
+.unidades > h1 {
+    text-align: center;
+}
+
+.container-unidades {
+    display: flex;
+    justify-content: center;
+    gap: 4vw;
+    line-height: 2.3rem;
+    color: var(--cor8);
+}
+
+.unidade > img {
+    width: 100%;
+    width: clamp(200px, 400px, 500px);
+    border-radius: 5px;
+    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.555);
+    aspect-ratio: 4 / 3;
+}
+
+.unidade > img:hover {
+    box-shadow: 0px 0px 15px rgba(49, 49, 49, 0.773);
+}
+
+.unidade:hover {
+    cursor: pointer;
+}
+
+.unidade > h2 {
+    font-size: clamp(1rem, 2rem, 2rem);
+    margin: 1rem 0px;
+    color: var(--cor5);
+}
+
+.unidade > p {
+    font-size: clamp(1rem, 1.2rem, 1.2rem);
+}
+
+.unidade > p > .fa-solid {
+    color: var(--cor5);
+}
+
+.duvidas-faleconosco {
     grid-area: 6 / 1 / 7 / -1;
-    height: 65vh;
+    background-color: blueviolet;
+    height: 30vw;
+    display: grid;
+    grid-template: auto / repeat(10, 1fr);
+}
+
+.duvidas {
+    background-color: pink;
+    grid-area: 1 / 1 / 2 / 6;
+}
+
+.faleconosco {
+    background-color: blue;
+    grid-area: 1 / 6 / 2 / -1;
 }
 
 footer {

@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=surgical" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_small" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sriracha&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
     <script src="script.js" defer></script>
     <title>Quatro Patas</title>
 </head>
@@ -39,7 +43,7 @@
         <hero>
             <div class="card-principal">
                 
-                <h1>Cuidado Especializado para Seu Pet</h1>
+                <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
                 <p>
                     Na Quatro Patas, seu melhor amigo recebe todo o carinho e atenção que merece. Oferecemos cuidados veterinários pensados para promover mais saúde, bem-estar e qualidade em  todas as fases da vida. &#x1F43E
                 </p>
@@ -83,10 +87,10 @@
             <button>TODAS AS ESPECIALIDADES</button>
         </card>
         <div class="metricas">
-                <div class="card-metricas"> <i class="fa-solid fa-briefcase-medical imetricas"></i><span>8</span> Anos de Experiência</div>
-                <div class="card-metricas"> <i class="fa-solid fa-dog imetricas"></i>  <span>100.000+</span> Pets Felizes</div>
-                <div class="card-metricas"> <i class="fa-solid fa-stethoscope imetricas"></i>  <span>80.000+</span> Clientes</div>
-                <div class="card-metricas"> <i class="fa-solid fa-user-nurse imetricas"></i> <span>70</span> Profissionais Experts</div>
+                <div class="card-metricas"> <i class="fa-solid fa-briefcase-medical imetricas"></i><span class="contador" data-valor="8">0</span> Anos de Experiência</div>
+                <div class="card-metricas"> <i class="fa-solid fa-dog imetricas"></i>  <span  class="contador" data-valor="100000" data-sufixo = "+">0</span> Pets Felizes</div>
+                <div class="card-metricas"> <i class="fa-solid fa-stethoscope imetricas"></i>  <span   class="contador" data-valor="80000" data-sufixo = "+">0+</span> Clientes</div>
+                <div class="card-metricas"> <i class="fa-solid fa-user-nurse imetricas"></i> <span    class="contador" data-valor="70">0</span> Profissionais Experts</div>
         </div>
     </div>
     <div class="container2">
@@ -104,7 +108,7 @@
 
             <h1>Cuidado, Amor e Bem-Estar para o Seu Pet</h1>
 
-            <p>
+            <p class="info-sobre">
                 <strong>Olá, nós somos a Quatro Patas! 🐾</strong> Somos apaixonados por animais e acreditamos que cada pet merece cuidado, carinho e atenção especial. Nossa missão é oferecer um atendimento acolhedor e de qualidade, cuidando da saúde e do bem-estar dos seus melhores amigos em cada etapa da vida.
                 Contamos com profissionais dedicados e uma estrutura preparada para proporcionar conforto, segurança e tranquilidade tanto para os pets quanto para seus tutores. Aqui, cada animal é tratado com todo o amor e respeito que merece, porque sabemos que eles são muito mais do que animais de estimação: são parte da família!
             </p>
@@ -153,18 +157,78 @@
             </div>
             </div>
         </div>
-        <div class="avaliacoes">
-            opinioes
+        <div class="testemunhos">
+            <h1>Testemunho de Nossos Pacientes</h1>
+            <div class="container-testemunho">
+                <img src="imagens/testemunho1.jpg" alt="gato Félix">
+                <p class="testemunho-info">Esse é o Félix, um gatinho muito corajoso! Ele foi adotado e tem uma família linda agora. Preocupados com o bem estar dele, os tutores o levaram no Quatro Patas Tatuapé para fazer uma consulta filhote, em que recebeu todas as orientações necessárias para cuidar do novo filhotinho. ❤
+                Félix já foi castrado e agora está se recuperando com todo o amor em casa, seguindo todas as orientações da Dra. Ana Elisa, veterinária dele.
+                <br> <br> Félix</p>
+            </div>
         </div>
-        <div class="banner">
-            Qualidade e Cuidado
-            Com o Seu Pet
+        <div class="blogs">
+            <h1>Últimas Postagens</h1>
+            <div class="container-blogs">
+                <div class="post">
+                    <img src="imagens/blog1.jpg" alt="cachorro dando a pata"> 
+                    <h2>Adestramento de Cães: Tudo o Que Você Precisa Saber para Educar Seu Melhor Amigo</h2>
+                    <p>Educar um cão vai muito além de ensinar comandos como sentar, deitar e dar a pata. O adestramento é uma parte importante da convivência entre tutores e animais, pois ajuda a estabelecer limites, desenvolver a confiança e tornar o dia a dia mais tranquilo e seguro para todos. Com paciência, consistência e técnicas adequadas, é possível ensinar bons comportamentos e fortalecer o vínculo com seu melhor amigo.</p>
+                    <button>LEIA MAIS</button>
+                    <span class="data-post"><span class="num">18</span> <br> set</span>
+                </div>
+                
+                <div class="post">
+                    <img src="https://adimax.com.br/wp-content/uploads/2024/09/Firefly-gato-e-cachorro-dividindo-o-mesmo-pote-de-comida-em-um-quintal-de-uma-casa-estilo-foto-rea.png" alt="gato e cachorro comendo">
+                    <h2>Alimentação Natural para Pets: Benefícios, Cuidados e Como Oferecer uma Dieta Equilibrada</h2>
+                    <p>A alimentação tem um papel fundamental na saúde, na disposição e na qualidade de vida dos nossos animais de estimação. Com tantas opções disponíveis e diferentes informações circulando pela internet, é natural que surjam dúvidas sobre qual alimento oferecer, quais ingredientes são seguros e como identificar a dieta mais adequada para cada pet. Afinal, cuidar da nutrição também é uma forma de demonstrar carinho e proporcionar uma vida mais saudável ao seu companheiro.</p>
+                    <button>LEIA MAIS</button>
+                    <span class="data-post"><span class="num">09</span> <br> out</span>
+                </div>
+
+                <div class="post">
+                    <img src="imagens/blog3.jpg" alt="gato e cachorro no veterinário">
+                    <h2>Saúde dos Pets: Como Cuidar do Seu Cão ou Gato e Garantir Mais Qualidade de Vida</h2>
+                    <p>Manter a saúde do seu pet em dia é uma das demonstrações mais importantes de amor e responsabilidade. Assim como nós, cães e gatos precisam de cuidados regulares, alimentação equilibrada, acompanhamento veterinário e atenção aos pequenos sinais que o corpo apresenta. Muitas vezes, mudanças discretas no comportamento, no apetite ou na disposição podem indicar que algo não está bem, por isso conhecer as necessidades do seu companheiro faz toda a diferença.</p>
+                    <button>LEIA MAIS</button>
+                    <span class="data-post"><span class="num">12</span> <br> dez</span>
+                </div>
+
+            </div>
         </div>
-        <section class="blogs">
-            blogs
-        </section>
         <section class="unidades">
-            nossas unidades
+            <h1>Nossas Unidades</h1>
+            <div class="container-unidades">
+                <div class="unidade">
+                    <img src="imagens/unidade1.jpg" alt="Unidade Tatuapé">
+                     <h2>Tatuapé</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
+                </div>
+                <div class="unidade">
+                    <img src="imagens/unidade2.jpg" alt="Unidade Moema">
+                    <h2>Moema</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001 </p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
+                </div>
+                <div class="unidade">
+                    <img src="imagens/unidade3.jpg" alt="Unidade Santo Amaro">
+                    <h2>Santo Amaro</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
+                </div>
+            </div>
+        </section>
+        <section class="duvidas-faleconosco">
+            <div class="duvidas">
+                <h1>Dúvidas Frequentes</h1>
+            </div>
+
+            <div class="faleconosco">
+                fale conosco
+            </div>
         </section>
         <footer>
             rodape
