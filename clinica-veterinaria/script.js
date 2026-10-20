@@ -108,3 +108,37 @@ const observador3 = new IntersectionObserver((entradas) => {
 elementos.forEach((elemento) => {
     observador3.observe(elemento);
 });
+
+
+//faz a transição do carrossel em testemunhos
+
+const trilho = document.querySelector(".trilho-testemunhos");
+const slides = document.querySelectorAll(".slide-testemunho");
+const anterior = document.querySelector(".seta-esquerda");
+const proximo = document.querySelector(".seta-direita");
+
+let indiceAtual = 0;
+
+function mostrarTestemunho() {
+    trilho.style.transform = `translateX(-${indiceAtual * 100}%)`;
+}
+
+proximo.addEventListener("click", () => {
+    indiceAtual++;
+
+    if (indiceAtual >= slides.length) {
+        indiceAtual = 0;
+    }
+
+    mostrarTestemunho();
+});
+
+anterior.addEventListener("click", () => {
+    indiceAtual--;
+
+    if (indiceAtual < 0) {
+        indiceAtual = slides.length - 1;
+    }
+
+    mostrarTestemunho();
+});
