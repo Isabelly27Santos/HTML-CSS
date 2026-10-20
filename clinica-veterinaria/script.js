@@ -31,7 +31,7 @@ const observador2 = new IntersectionObserver((entradas) => {
         if (entrada.isIntersecting) {
             const contador = entrada.target;
             const valorFinal = Number(contador.dataset.valor);
-            const duracao = 3000;
+            const duracao = 2000;
             const inicio = performance.now();
 
             function animar(tempoAtual) {
@@ -62,4 +62,49 @@ const observador2 = new IntersectionObserver((entradas) => {
 
 contadores.forEach((contador) => {
     observador2.observe(contador);
+});
+
+
+//controla abertura e fechamento das perguntas
+const perguntas = document.querySelectorAll(".item-duvida h2");
+
+perguntas.forEach((pergunta) => {
+    pergunta.addEventListener("click", () => {
+        const resposta = pergunta.nextElementSibling;
+
+        pergunta.classList.toggle("ativo");
+        resposta.classList.toggle("aberto");
+    });
+});
+
+
+//mostra mensagem de sucesso ao enviar pelo formulário
+const formulario = document.querySelector(".formulario");
+
+formulario.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+
+    const nome = document.querySelector("#nome").value.trim();
+
+    alert(`Obrigada pelo contato, ${nome}! 🐾
+Sua mensagem foi enviada com sucesso. Em breve, retornaremos.`);
+});
+
+
+//revela gradualmente os elementos do site
+
+const elementos = document.querySelectorAll(".revelar");
+
+const observador3 = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            entrada.target.classList.add("ativo");
+        }
+    });
+}, {
+    threshold: 0.25
+});
+
+elementos.forEach((elemento) => {
+    observador3.observe(elemento);
 });

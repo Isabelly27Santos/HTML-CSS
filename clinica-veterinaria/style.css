@@ -340,6 +340,7 @@ hero>img {
     justify-content: center;
     align-items: center;
     gap: 30px;
+    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
 }
 
 .card-metricas {
@@ -524,6 +525,7 @@ dotlottie-wc {
     background-color: var(--cor5);
     grid-area: 3 / 1 / 4 / -1;
     padding: 5vw 0px;
+    box-shadow: inset 0px 0px 10px rgba(7, 7, 7, 0.27);
 }
 
 .testemunhos > h1 {
@@ -684,24 +686,305 @@ dotlottie-wc {
 
 .duvidas-faleconosco {
     grid-area: 6 / 1 / 7 / -1;
-    background-color: blueviolet;
-    height: 30vw;
     display: grid;
     grid-template: auto / repeat(10, 1fr);
+    align-items: start;
 }
 
 .duvidas {
-    background-color: pink;
     grid-area: 1 / 1 / 2 / 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 4vw 4vw 4vw;
+    gap: 1vw;
 }
 
-.faleconosco {
-    background-color: blue;
+.duvidas > h1 {
+    font-size: clamp(1em, 3em, 3em);
+    color: var(--cor5);
+    text-align: center;
+    margin: 1.5vw;
+}
+
+.item-duvida > h2 {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(226, 225, 225, 0.23);
+    box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.297);
+    color: var(--cor8);
+    font-family: var(--fonte2);
+    font-weight: 600;
+    font-size: clamp(1rem, 1.3rem, 1.3rem);
+
+}
+
+.item-duvida > h2 {
+    cursor: pointer;
+    transition: color 0.5s ease;
+}
+
+.item-duvida > h2:hover {
+    color: var(--cor3);
+}
+
+.item-duvida h2 i {
+    transition: transform 0.3s ease; /*efeito de virar fica suave*/
+}
+
+.item-duvida h2.ativo i {
+    transform: rotate(180deg);  /*vira a seta para cima*/
+}
+
+.item-duvida h2.ativo, .item-duvida h2.ativo i {
+    background-color: var(--cor3);
+    color: white;
+}
+
+.item-duvida > h2 > .fa-solid {
+    background-color: transparent;
+}
+
+.item-duvida > .respostas {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    transition:
+        grid-template-rows 0.5s ease,
+        opacity 0.4s ease;
+}
+
+.item-duvida >.respostas > p {
+    overflow: hidden;
+    margin: 0 2vw;
+    line-height: 1.6rem;
+    font-size: clamp(1rem, 1.1rem, 1.1rem);
+}
+
+
+/* Resposta aberta */
+.respostas.aberto {
+    display: block;
+    opacity: 1;
+    margin: 12px 0 20px;
+}
+
+.respostas.aberto p {
+    margin: 2vw;
+}
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    font-family: var(--fonte2);
+    background-color: transparent;
+    margin-bottom: 15vw;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: transparent;
+}
+
+.campo > label {
+    font-weight: 600;
+    color: black;
+    background-color: transparent;
+
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    font: inherit;
+    font-size: 1rem;
+    outline: none;
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    border-color: var(--cor3);
+    box-shadow: 0 0 0 3px rgba(248, 249, 248, 0.634);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: clamp(120px, 200px, 200px);
+}
+
+.formulario button {
+    padding: 14px 24px;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--cor5);
+    color: white;
+    font: inherit;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.formulario button:hover {
+    background-color: rgb(21, 96, 62);
+    transform: translateY(-2px);
+}
+
+.container-faleconosco {
+    background:
+        linear-gradient(#51be92d2),
+        url(https://img.magnific.com/fotos-premium/jovem-veterinaria-segurando-um-grande-gato-preto-e-sorrindo-na-clinica_386167-312.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 5vw;
+    height: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    flex: none;
     grid-area: 1 / 6 / 2 / -1;
+    background-color: white;
+    align-self: start;
+    
+
+}
+
+.container-faleconosco > h1 {
+    text-align: center;
+    background-color: transparent;
+    padding: 2vw 0px;
+    font-size: clamp(1rem, 2.5rem, 2.5rem);
+    color: white;
+    font-family: var(--fonte2);
 }
 
 footer {
-    background-color: var(--cor3);
+    background-color: var(--cor5);
     grid-area: 7 / 1 / 8 / -1;
-    height: 65vh;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 7vw;
+    font-size: clamp(1rem, 1.1rem, 1.1rem);
+    padding: 5vw 0;
+}
+
+.container-foot, .container-foot-social {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--cor5);
+}
+
+.footer-img {
+    max-width: 150px;
+    aspect-ratio: 1/1;
+    align-self: start;
+    background-color: transparent;
+}
+
+.container-foot > h1 {
+    color: white;
+    background-color: var(--cor5);
+}
+
+.container-foot > h2 {
+    color: white;
+    background-color: var(--cor5);
+}
+
+.container-foot > p, .container-foot > p .fa-solid, .container-foot a {
+    color: white;
+    background-color: var(--cor5);
+    text-decoration: none;
+}
+
+.container-foot-social > p, .container-foot-social .fa-brands{
+    background-color: transparent;
+    text-align: center;
+    color: white;
+    font-size: clamp(1rem, 2rem, 2rem);
+    font-weight: 700;
+}
+
+.container-foot-social .fa-brands {
+    background-color: var(--cor3);
+
+}
+
+.container-foot-social div {
+    gap: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.container-foot-social span {
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: var(--cor3);
+}
+
+
+
+.container-foot-social span:hover {
+    color: var(--cor5);
+    cursor: pointer;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.277);
+    transition: color 0.3s ease;
+    box-shadow: 0px 0px 10px rgba(245, 240, 240, 0.626);
+}
+
+.container-foot h2:hover, .container-foot a:hover {
+    color: var(--cor1);
+    cursor: pointer;
+}
+
+.direitos {
+    text-align: center;
+    padding: 4vw;
+    background-color:var(--cor5);
+    grid-area: 8 / 1 / 9 / -1;
+}
+
+.direitos > p{
+    background-color: transparent;
+    color: white;
+    margin: 15px;
+    font-weight: 600;
+
+}
+
+/* Estado inicial: elemento escondido */
+.revelar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Estado final: elemento visível */
+.revelar.ativo {
+    opacity: 1;
+    transform: translateY(0);
 }

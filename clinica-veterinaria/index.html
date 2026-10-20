@@ -41,7 +41,7 @@
             <a href="">CONTATO</a>
         </nav>
         <hero>
-            <div class="card-principal">
+            <div class="card-principal revelar">
                 
                 <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
                 <p>
@@ -49,16 +49,16 @@
                 </p>
                 <button>Ver Planos</button>
             </div>
-            <div class="card-agendar">
+            <div class="card-agendar revelar">
                 <div class="circle"><i class="fa-solid fa-user-doctor iagendar"></i></div>
                 <p>Agendar Consulta</p>
             </div >
-            <div  class="card-agendar">
+            <div  class="card-agendar revelar">
                 <div class="circle"><i class="fa-solid fa-vial iagendar"></i></div>
                 <p>Agendar Exame</p>
             </div>
         </hero>
-        <div class="avaliacao-maps">
+        <div class="avaliacao-maps revelar">
             <h2>Somos 4,8 &#x2B50 no Google!</h2>
             <p class="text-avaliacao">Veja o que nossos clientes dizem sobre a Quatro Patas.</p>
             <div class="avaliacao">
@@ -72,7 +72,7 @@
                 <p>Tutor do Thor</p>
             </div>
         </div>
-        <card class="especialidades">
+        <card class="especialidades revelar">
             <h2>Especialidades Veterinárias</h2>
             <div class="container-especialidades">
                 <div class="card-especialidades">Medicina Felina </i> <img src="https://img.icons8.com/?size=100&id=fQaa3wJkgiUX&format=png&color=51be93" alt="Medicina Felina"></div>
@@ -94,7 +94,7 @@
         </div>
     </div>
     <div class="container2">
-        <div class="foto-sobre">
+        <div class="foto-sobre revelar">
             <img src="imagens/vet-quem-somos.png" alt="veterinário com cachorro">
             <div class="degrade"></div>
             <dotlottie-wc
@@ -103,7 +103,7 @@
                 loop>
             </dotlottie-wc>
         </div>
-        <div class="sobre-nos">
+        <div class="sobre-nos revelar">
             <h2>Conheça a Quatro Patas</h2>
 
             <h1>Cuidado, Amor e Bem-Estar para o Seu Pet</h1>
@@ -115,7 +115,7 @@
             <p class="checks-sobre-nos">
                 <p class="checks"> <span class="material-symbols-outlined">check_small</span> Atendimento Personalizado</p>
                 <p class="checks"><span class="material-symbols-outlined">check_small</span> Cuidado e Carinho em Cada Consulta</p>
-                <p class="checks"><span class="material-symbols-outlined">check_small</span> Saúde e Bem-Estar Animal</p>
+                <p class="checks"><span class="material-symbols-outlined">check_small</span> Emergências 24h</p>
             </p>
 
             <button>SAIBA MAIS</button>
@@ -157,15 +157,78 @@
             </div>
             </div>
         </div>
-        <div class="testemunhos">
-            <h1>Testemunho de Nossos Pacientes</h1>
-            <div class="container-testemunho">
-                <img src="imagens/testemunho1.jpg" alt="gato Félix">
-                <p class="testemunho-info">Esse é o Félix, um gatinho muito corajoso! Ele foi adotado e tem uma família linda agora. Preocupados com o bem estar dele, os tutores o levaram no Quatro Patas Tatuapé para fazer uma consulta filhote, em que recebeu todas as orientações necessárias para cuidar do novo filhotinho. ❤
-                Félix já foi castrado e agora está se recuperando com todo o amor em casa, seguindo todas as orientações da Dra. Ana Elisa, veterinária dele.
-                <br> <br> Félix</p>
+
+        <section class="testemunhos revelar">
+            <h1>Testemunhos de Nossos Pacientes</h1>
+
+            <div class="carrossel-testemunhos">
+
+                <button class="seta seta-esquerda"
+                        aria-label="Testemunho anterior">
+                    &#10094;
+                </button>
+
+                <div class="janela-testemunhos">
+                    <div class="trilho-testemunhos">
+
+                        <article class="slide-testemunho">
+                            <img src="imagens/testemunho1.jpg"
+                                alt="Gato Félix">
+
+                            <div class="testemunho-info">
+                                <h2>Félix</h2>
+                                <p>
+                                    Esse é o Félix, um gatinho muito corajoso!
+                                    Ele foi adotado e tem uma família linda agora.
+                                    Preocupados com o bem-estar dele, seus tutores
+                                    o levaram ao Quatro Patas para uma consulta
+                                    de filhote e receberam todas as orientações
+                                    necessárias para cuidar dele. ❤️
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="slide-testemunho">
+                            <img src="imagens/testemunho2.jpg"
+                                alt="Cachorrinho atendido pela clínica">
+
+                            <div class="testemunho-info">
+                                <h2>Thor</h2>
+                                <p>
+                                    Thor recebeu muito carinho e atenção
+                                    durante sua visita à Quatro Patas.
+                                    Sua família ficou feliz com os cuidados
+                                    e as orientações recebidas. ❤️
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="slide-testemunho">
+                            <img src="imagens/testemunho3.jpg"
+                                alt="Gatinho atendido pela clínica">
+
+                            <div class="testemunho-info">
+                                <h2>Luna</h2>
+                                <p>
+                                    Luna veio para sua consulta de rotina
+                                    e recebeu todo o cuidado que merece.
+                                    Aqui, cada pet é tratado com muito amor!
+                                    ❤️
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+
+                <button class="seta seta-direita"
+                        aria-label="Próximo testemunho">
+                    &#10095;
+                </button>
+
             </div>
-        </div>
+        </section>
+
         <div class="blogs">
             <h1>Últimas Postagens</h1>
             <div class="container-blogs">
@@ -195,7 +258,7 @@
 
             </div>
         </div>
-        <section class="unidades">
+        <section class="unidades revelar">
             <h1>Nossas Unidades</h1>
             <div class="container-unidades">
                 <div class="unidade">
@@ -223,16 +286,163 @@
         </section>
         <section class="duvidas-faleconosco">
             <div class="duvidas">
-                <h1>Dúvidas Frequentes</h1>
+                <h1>Perguntas Frequentes</h1>
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> A Quatro Patas funciona 24 horas?</h2>
+                    <div  class="respostas">
+                        <p>Sim! A Quatro Patas oferece atendimento veterinário 24 horas, todos os dias, para cuidar do seu melhor amigo sempre que ele precisar. Estamos preparados para receber seu pet em situações de emergência e oferecer o cuidado e a atenção que ele merece, inclusive durante a noite, aos finais de semana e feriados.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> A clínica aceita convênios veterinários?</h2>
+                    <div class = "respostas">
+                        <p>Sim! A Quatro Patas aceita alguns convênios veterinários para facilitar o acesso aos nossos serviços. Como a cobertura pode variar de acordo com o plano contratado e o procedimento necessário, recomendamos entrar em contato com nossa equipe para confirmar se o seu convênio é aceito e quais atendimentos estão disponíveis.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> Preciso agendar uma consulta para levar meu pet?</h2>
+                    <div class = "respostas">
+                        <p>Para consultas de rotina, recomendamos verificar a disponibilidade e realizar o agendamento antecipadamente. Em casos de emergência, você pode procurar a Quatro Patas a qualquer momento, pois nosso atendimento funciona 24 horas. Se possível, entre em contato com a equipe antes de vir para receber orientações.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> Quais animais são atendidos pela Quatro Patas?</h2>
+                    <div class = "respostas">
+                        <p>Nosso objetivo é proporcionar cuidado, conforto e bem-estar aos animais de estimação. Atendemos cães e gatos, oferecendo atenção individualizada para compreender as necessidades de cada paciente. Entre em contato para confirmar a disponibilidade de atendimento para outras espécies.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> O que devo fazer se meu pet apresentar uma emergência?</h2>
+                    <div class = "respostas">
+                        <p>Se o seu pet apresentar sinais como dificuldade para respirar, convulsões, sangramento intenso, desmaio ou suspeita de intoxicação, procure atendimento veterinário imediatamente. A Quatro Patas funciona 24 horas para receber seu companheiro quando ele mais precisa. Sempre que possível, ligue para a clínica durante o deslocamento para que a equipe possa orientar sua chegada.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> Quais serviços veterinários a Quatro Patas oferece?</h2>
+                    <div class = "respostas">
+                        <p>A Quatro Patas busca cuidar da saúde e da qualidade de vida do seu pet em diferentes etapas da vida. Nossa estrutura e nossos serviços podem incluir consultas veterinárias, avaliações preventivas e atendimento de urgência e emergência, conforme a disponibilidade da unidade. Entre em contato para conhecer os serviços oferecidos e verificar quais procedimentos estão disponíveis.</p>
+                    </div>
+                </div>
+
+                <div class="item-duvida">
+                    <h2><i class="fa-solid fa-chevron-down"></i> Como posso entrar em contato com a Quatro Patas?</h2>
+                    <div class = "respostas">
+                        <p>Nossa equipe está pronta para ajudar você a encontrar as melhores orientações para o cuidado do seu pet. Entre em contato pelos nossos canais de atendimento para esclarecer dúvidas sobre consultas, convênios, serviços disponíveis e emergências. Afinal, sabemos que seu companheiro faz parte da família e merece atenção, carinho e cuidado em todos os momentos.</p>
+                    </div>
+                </div>
             </div>
 
-            <div class="faleconosco">
-                fale conosco
-            </div>
+                <div class="container-faleconosco">
+                    <h1>Fale com a Quatro Patas!</h1>
+                    <form class="formulario">
+                        <div class="campo">
+                            <label for="nome">Nome</label>
+                            <input
+                                type="text"
+                                id="nome"
+                                name="nome"
+                                placeholder="Digite seu nome aqui"
+                                required
+                                >
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefone">Telefone/WhatsApp</label>
+                            <input type="tel"
+                            id="telefone"
+                            name="telefone"
+                            placeholder="Seu número para contato"
+                            required
+                            >
+                        </div>
+                        
+                        <div class="campo">
+                            <label for="mensagem">Mensagem</label>
+                            <textarea
+                            id="mensagem"
+                            name="mensagem"
+                            placeholder="No que podemos te ajudar? Em breve retornaremos sua mensagem."
+                            rows="5"
+                            required
+                            >
+                        </textarea>
+
+                        <button type="submit">Enviar </button>
+                    </form>
+                </div>
         </section>
         <footer>
-            rodape
+
+                <div  class="container-foot-social">
+                    <img src="imagens/logo-foot.png" class="footer-img" alt="logo Quatro Patas">
+                    <p>Siga-nos!</p>
+                    <div>
+                        <span><i class="fa-brands fa-instagram"></i></span>
+                        <span><i class="fa-brands fa-facebook"></i></span>
+                    </div>
+                </div>
+
+            <div class="container-foot">
+              
+                     <h2>Tatuapé</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
+           
+              
+                    <h2>Moema</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001 </p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
+         
+                    <h2>Santo Amaro</h2>
+                     <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
+                     <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
+    
+            </div>
+            <div class="container-foot">
+                <h1>Atendimento</h1>
+                <h2>Unidade Tatuapé:</h2>
+                <p>
+                    Clínica Veterinária: 24h <br>
+                    Petshop e Banho e tosa: 09h às 19h
+                </p>
+                <h2>Unidade Moema:</h2>
+                <p>
+                    Clínica Veterinária: 09h às 19h <br>
+                    Petshop e Banho e tosa: 09h as 18h <br> com hora marcada
+                </p>
+                <h2>Unidade Santo Amaro:</h2>
+                <p>
+                    Clínica Veterinária: 24h <br>
+                    Petshop e Banho e tosa: 10h as 18h <br> com hora marcada
+                </p>
+            </div>
+            <div class="container-foot">
+                <h1>Serviços</h1>
+                <a href="">Vacina para Cães</a>
+                <a href="">Vacina para Gatos</a>
+                <a href="">Atendimento Veterinário</a>
+                <a href="">UTI</a>
+                <a href="">Internação</a>
+                <a href="">Castração</a>
+                <a href="">Banho e Tosa</a>
+                <a href="">Plano Preventivo</a>
+                <a href="">Todos os serviços</a>
+            </div>
         </footer>
+        
+        <div class="direitos">
+            <hr>
+            <p>© 2026 Quatro Patas • Todos os direitos reservados.</p>
+            <p>Projeto desenvolvido por Isabelly Santos.</p>
+        </div>
     </div>
 </body>
 </html>
