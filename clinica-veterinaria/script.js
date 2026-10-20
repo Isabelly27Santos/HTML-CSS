@@ -142,3 +142,41 @@ anterior.addEventListener("click", () => {
 
     mostrarTestemunho();
 });
+
+
+
+/* Abre e fecha os menus por clique */
+document.querySelectorAll(".dropdown > a, .linha > a").forEach((link) => {
+    link.addEventListener("click", (evento) => {
+        const item = link.parentElement;
+
+        // Intercepta apenas links que possuem submenu
+        const submenu = item.querySelector(":scope > .submenu, :scope > .submenu-interno");
+
+        if (!submenu) return;
+
+        evento.preventDefault();
+
+        const estavaAberto = item.classList.contains("aberto");
+
+        // Fecha outros itens do mesmo nível
+        const irmaos = Array.from(item.parentElement.children);
+
+        irmaos.forEach((irmao) => {
+            if (irmao !== item) {
+                irmao.classList.remove("aberto");
+            }
+        });
+
+        item.classList.toggle("aberto", !estavaAberto);
+    });
+});
+
+/* Fecha os menus quando clicar fora da navegação */
+document.addEventListener("click", (evento) => {
+    if (!evento.target.closest(".menu-principal")) {
+        document.querySelectorAll(".menu-principal .aberto").forEach((item) => {
+            item.classList.remove("aberto");
+        });
+    }
+});

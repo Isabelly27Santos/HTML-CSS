@@ -31,14 +31,121 @@
                 Agendar Consulta
             </button>
         </header>
-        <nav>
-            <a href="#">O QUATRO PATAS</a>
-            <a href="">HOSPITAIS</a>
-            <a href="">ESPECIALIDADES</a>
-            <a href="">EXAMES VETERINÁRIOS</a>
-            <a href="">SERVIÇOS</a>
-            <a href="">BLOG</a>
-            <a href="">CONTATO</a>
+        <nav class="menu-principal">
+            <ul class="menu">
+                <li class="item-menu">
+                    <a href="#sobre-nos">O QUATRO PATAS</a>
+                </li>
+
+                <li class="item-menu dropdown">
+                    <a href="#">HOSPITAIS</a>
+                    <ul class="submenu">
+                        <li><a href="#unidades">Tatuapé</a></li>
+                        <li><a href="#unidades">Moema</a></li>
+                        <li><a href="#unidades">Santo Amaro</a></li>
+                    </ul>
+                </li>
+
+                <li class="item-menu dropdown">
+                    <a href="#">ESPECIALIDADES</a>
+                    <ul class="submenu">
+                        <li><a href="#">Acupuntura Veterinária</a></li>
+                        <li><a href="#">Anestesia Veterinária</a></li>
+                        <li><a href="#">Cardiologia Veterinária</a></li>
+                        <li><a href="#">Cuidados Paliativos Veterinários</a></li>
+                        <li><a href="#">Dermatologia Veterinária</a></li>
+                        <li><a href="#">Endocrinologia Veterinária</a></li>
+                        <li><a href="#">Fisioterapia Veterinária</a></li>
+                        <li><a href="#">Gastroenterologia Veterinária</a></li>
+                        <li><a href="#">Hematologia Veterinária</a></li>
+                        <li><a href="#">Hemodiálise Veterinária</a></li>
+                        <li><a href="#">Homeopatia Veterinária</a></li>
+                        <li><a href="#">Infectologia Veterinária</a></li>
+                        <li><a href="#">Medicina Felina</a></li>
+                        <li><a href="#">Nefrologia e Urologia Veterinária</li></a>
+                        <li><a href="#">Neurologia Veterinária</a></li>
+                        <li><a href="#">Nutrição Veterinária</a></li>
+                        <li><a href="#">Odontologia Veterinária</a></li>
+                        <li><a href="#">Oftalmologia Veterinária</a></li>
+                        <li><a href="#">Oncologia Veterinária</a></li>
+                        <li><a href="#">Ortopedia Veterinária</a></li>
+                        <li><a href="#">Radioterapia Veterinária</a></li>
+                        <li><a href="#">Reprodução Veterinária</a></li>
+                    </ul>
+                </li>
+                    
+                <li class="item-menu dropdown">
+                        <a href="#">SERVIÇOS</a>
+                        <ul class="submenu">
+                            <li><a href="#">Atendimento Veterinário</a></li>
+                            <li><a href="#">Banho e Tosa</a></li>
+                            <li><a href="#">Castração</a></li>
+                            <li><a href="#">Células-Tronco</a></li>
+                            <li><a href="#">Cirurgia Veterinária</a></li>
+                            <li><a href="#">Internação</a></li>
+                            <li><a href="#">Plano Preventivo</a></li>
+                            <li><a href="#">Terapia Comportamental Cães e Gatos</a></li>
+                            <li><a href="#">UTI – Unidade de Terapia Intensiva</a></li>
+                            <li><a href="#">Vacina para Cães</a></li>
+                            <li><a href="#">Vacina para Gatos</a></li>
+                        </ul>
+                </li>
+
+                <li class="item-menu dropdown">
+                    <a href="#">EXAMES VETERINÁRIOS</a>
+
+                    <ul class="submenu submenu-exames">
+
+                        <!-- Coluna 1 -->
+                        <li class="linha">
+                            <a href="#">EXAMES LABORATORIAIS</a>
+
+                            <ul class="submenu-interno">
+                                <li><a href="#">Biologia Molecular</a></li>
+                                <li><a href="#">Bioquímica</a></li>
+                                <li><a href="#">Citologias</a></li>
+                                <li><a href="#">Dermatologia</a></li>
+                                <li><a href="#">Fezes</a></li>
+                                <li><a href="#">Hematologia</a></li>
+                                <li><a href="#">Hormônios</a></li>
+                                <li><a href="#">Líquidos Cavitários</a></li>
+                                <li><a href="#">Microbiologia</a></li>
+                                <li><a href="#">Patologia</a></li>
+                                <li><a href="#">Sorologias</a></li>
+                                <li><a href="#">Urina</a></li>
+                            </ul>
+                        </li>
+
+                        <!-- Coluna 2 -->
+                        <li class="linha">
+                            <a href="#">EXAMES DE IMAGEM</a>
+
+                            <ul class="submenu-interno">
+                                <li><a href="#">Ecocardiograma / com Doppler</a></li>
+                                <li><a href="#">Eletrocardiograma</a></li>
+                                <li><a href="#">Endoscopia, Broncoscopia e Rinoscopia</a></li>
+                                <li><a href="#">Holter</a></li>
+                                <li><a href="#">Pressão Arterial</a></li>
+                                <li><a href="#">Raio X Veterinário</a></li>
+                                <li><a href="#">Ressonância Magnética</a></li>
+                                <li><a href="#">Tomografia</a></li>
+                                <li><a href="#">Ultrassom</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#blogs">BLOG</a>
+                </li>
+
+                <li class="item-menu">
+                    <a href="#faleconosco">CONTATO</a>
+                </li>
+            </ul>
+
+                    
         </nav>
         <hero>
             <div class="card-principal revelar">
@@ -103,7 +210,7 @@
                 loop>
             </dotlottie-wc>
         </div>
-        <div class="sobre-nos revelar">
+        <div class="sobre-nos revelar"  id="sobre-nos">
             <h2>Conheça a Quatro Patas</h2>
 
             <h1>Cuidado, Amor e Bem-Estar para o Seu Pet</h1>
@@ -256,7 +363,7 @@
             </div>
         </section>
 
-        <div class="blogs">
+        <div class="blogs" id="blogs">
             <h1>Últimas Postagens</h1>
             <div class="container-blogs">
                 <div class="post">
@@ -285,7 +392,7 @@
 
             </div>
         </div>
-        <section class="unidades revelar">
+        <section class="unidades revelar" id="unidades">
             <h1>Nossas Unidades</h1>
             <div class="container-unidades">
                 <div class="unidade">
@@ -364,7 +471,7 @@
                 </div>
             </div>
 
-                <div class="container-faleconosco">
+                <div class="container-faleconosco" id="faleconosco">
                     <h1>Fale com a Quatro Patas!</h1>
                     <form class="formulario">
                         <div class="campo">

@@ -8,6 +8,7 @@
     box-sizing: border-box;
     background-color: white;
     font-family: var(--fonte1);
+    scroll-behavior: smooth;
 }
 
 :root {
@@ -92,32 +93,177 @@ img.logo {
     margin-left: auto;
 }
 
-
-nav {
-    height: 8vh;
-    background-color: var(--cor5);
+nav.menu-principal {
     grid-area: 2 / 1 / 3 / -1;
+    position: relative;
+    z-index: 100;
+}
+
+.menu {
     display: flex;
-    width: 100%;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
-    padding-left: 10vw;
-    padding-right: 10vw;
-    gap: 5px;
-    box-shadow: inset 0px 0px 5px rgba(72, 71, 71, 0.323);
+    gap: 30px;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0 10px;
+    background-color: var(--cor5);
 }
 
-nav > a {
-    text-decoration: none;
-    background-color: transparent;
+.item-menu {
+    position: relative;
+    list-style: none;
+}
+
+.item-menu > a {
+    display: block;
+    padding: 15px 0;
+    background-color: var(--cor5);
     color: white;
-    font-weight: 500;
-    font-size: .9em;
+    text-decoration: none;
+    font-weight: bold;
 }
 
-nav> a:hover {
-    color: rgb(242, 236, 236);
+.item-menu > a:hover,
+.item-menu > a:focus-visible {
+    color: var(--cor1);
 }
+
+
+/* ===== PRIMEIRO NÍVEL: SUBMENUS COMUNS ===== */
+
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 200;
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    width: max-content;
+    min-width: 200px;
+    max-height: 70vh;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 8px 0;
+    list-style: none;
+
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px #00000020;
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(8px);
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease,
+        visibility 0.25s ease;
+}
+
+/* Abre somente o submenu diretamente ligado ao item */
+.dropdown:hover > .submenu,
+.dropdown:focus-within > .submenu,
+.dropdown.aberto > .submenu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+
+/* ===== EXAMES: DUAS COLUNAS LADO A LADO ===== */
+
+.submenu-exames {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 25px;
+
+    width: max-content;
+    max-width: 90vw;
+    overflow: visible;
+
+    padding: 18px;
+}
+
+/* Cada categoria é uma coluna independente */
+.submenu-exames > .linha {
+    position: relative;
+    flex: 0 0 220px;
+    min-width: 0;
+    list-style: none;
+}
+
+/* Títulos das categorias */
+.submenu-exames > .linha > a {
+    display: block;
+    padding: 10px 0;
+
+    color: var(--cor8);
+    background-color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.submenu-exames > .linha > a:hover,
+.submenu-exames > .linha > a:focus-visible {
+    color: var(--cor3);
+}
+
+
+/* ===== SEGUNDO NÍVEL: LISTAS DE EXAMES ===== */
+
+.submenu-interno {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2px;
+
+    position: static;
+    width: 100%;
+    max-height: 60vh;
+    overflow-y: auto;
+
+    margin: 0;
+    padding: 5px 0 0;
+    list-style: none;
+    background-color: white;
+}
+
+/* Abre somente a lista da categoria selecionada */
+.submenu-exames > .linha:hover > .submenu-interno,
+.submenu-exames > .linha:focus-within > .submenu-interno,
+.submenu-exames > .linha.aberto > .submenu-interno {
+    display: flex;
+}
+
+/* Links dos exames e dos outros submenus */
+.submenu a {
+    display: block;
+    padding: 10px 16px;
+
+    background-color: white;
+    color: var(--cor8);
+    text-decoration: none;
+    white-space: normal;
+}
+
+.submenu a:hover,
+.submenu a:focus-visible {
+    background-color: var(--cor1);
+    color: var(--cor8);
+}
+
+.submenu-interno a {
+    padding: 7px 0;
+}
+
 
 hero {
     background-color: var(--cor2);
