@@ -180,3 +180,69 @@ document.addEventListener("click", (evento) => {
         });
     }
 });
+
+
+
+//faz loop infinito com as avaliações do maps
+
+const carrossel = document.querySelector(".lista-avaliacoes");
+
+const gruposOriginais = Array.from(
+    document.querySelectorAll(
+        ".lista-avaliacoes > .grupo-avaliacoes"
+    )
+);
+
+if (
+    carrossel &&
+    gruposOriginais.length > 1 &&
+    !carrossel.dataset.inicializado
+) {
+    carrossel.dataset.inicializado = "true";
+
+    // Cria cópias dos grupos para permitir o loop infinito
+    gruposOriginais.forEach((grupo) => {
+        const copia = grupo.cloneNode(true);
+        copia.setAttribute("aria-hidden", "true");
+        carrossel.appendChild(copia);
+    });
+
+    let indiceAtual = 0;
+    let animando = false;
+
+    function proximoPar() {
+        if (animando) return;
+
+        animando = true;
+        indiceAtual++;
+
+        // Mede a largura de um grupo
+        const larguraGrupo =
+            gruposOriginais[0].getBoundingClientRect().width;
+
+        carrossel.style.transition = "transform 0.8s ease-in-out";
+
+        carrossel.style.transform =
+            `translateX(-${indiceAtual * larguraGrupo}px)`;
+    }
+
+    carrossel.addEventListener("transitionend", (evento) => {
+        if (evento.propertyName !== "transform") return;
+
+        // Ao chegar à cópia do primeiro grupo, volta ao início
+        if (indiceAtual === gruposOriginais.length) {
+            carrossel.style.transition = "none";
+
+            indiceAtual = 0;
+            carrossel.style.transform = "translateX(0px)";
+
+            // Aplica o reposicionamento sem animação
+            carrossel.getBoundingClientRect();
+        }
+
+        animando = false;
+    });
+
+    // Avança a cada 10 segundos
+    setInterval(proximoPar, 10000);
+}
