@@ -1,7 +1,53 @@
 @charset "UTF-8";
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sriracha&display=swap');
+/* =========================================================================
+   SUMÁRIO
+   1.  Variáveis
+   2.  Reset e base
+   3.  Layout: Container 1
+   4.  Cabeçalho
+   5.  Botões compartilhados
+   6.  Menu principal e submenus
+   7.  Hero (carrossel + cards de agendamento)
+   8.  Avaliações do Google
+   9.  Especialidades
+   10. Métricas
+   11. Layout: Container 2
+   12. Sobre nós (foto + texto)
+   13. Por que nos escolher + barras de progresso
+   14. Testemunhos
+   15. Blog
+   16. Unidades
+   17. Perguntas frequentes (FAQ)
+   18. Fale conosco (formulário)
+   19. Rodapé
+   20. Direitos autorais
+   21. Animação de revelar ao rolar
+   ========================================================================= */
 
+
+/* =========================================================================
+   1. VARIÁVEIS
+   ========================================================================= */
+:root {
+    /* Cores */
+    --cor1: #cbeddf;     /* verde bem claro */
+    --cor2: #a2e0c7;     /* verde claro */
+    --cor3: #51be93;     /* verde destaque */
+    --cor4: #568667fc;   /* verde escuro (menu, rodapé) */
+    --cor5: #c9986ffd;   /* marrom claro (botões) */
+    --cor6: #ad825ffd;   /* marrom escuro (hover dos botões) */
+    --cor7: #484747;     /* cinza escuro (textos) */
+
+    /* Fontes (carregadas pelo <link> no HTML) */
+    --fonte1: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --fonte2: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+
+/* =========================================================================
+   2. RESET E BASE
+   ========================================================================= */
 * {
     margin: 0;
     padding: 0;
@@ -11,31 +57,27 @@
     scroll-behavior: smooth;
 }
 
-:root {
-    --cor1: #cbeddf;
-    --cor2: #a2e0c7;
-    --cor3: #51be93;
-    --cor5: #568667fc;
-    --cor6: #c9986ffd;
-    --cor7: #ad825ffd;
-    --cor8: #484747;
-    --fonte1: "Nunito", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --fonte2: "Montserrat", Arial, Helvetica, sans-serif;
-}
 
+/* =========================================================================
+   3. LAYOUT: CONTAINER 1 (cabeçalho, menu, hero e avaliações)
+   ========================================================================= */
 .container {
     display: grid;
-    grid-template: auto /70% 30%;
+    grid-template: auto / 70% 30%;
 }
 
+
+/* =========================================================================
+   4. CABEÇALHO
+   ========================================================================= */
 header {
-    height: 20vh;
-    background-color: white;
     grid-area: 1 / 1 / 2 / -1;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     width: 100%;
+    height: 20vh;
+    background-color: white;
 }
 
 img.logo {
@@ -45,36 +87,14 @@ img.logo {
 }
 
 .contato-header {
-    line-height: 2.5em;
-    font-weight: 500;
-    font-size: 1.2em;
-    justify-self: flex-start;
-    color: var(--cor8);
     margin-left: 5vh;
+    color: var(--cor7);
+    font-size: 1.2em;
+    font-weight: 500;
+    line-height: 2.5em;
 }
 
-.botao-agendar-consulta {
-    background-color: var(--cor6);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    height: 7vh;
-    border-radius: 20px;
-    font-size: medium;
-    font-weight: 600;
-    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.818);
-    transform: translateX(-5vh);
-    margin-left: 50px;
-}
-
-.botao-agendar-consulta:hover, .card-principal > button:hover, .especialidades > button:hover, .sobre-nos > button:hover, .post > button:hover {
-    background-color: var(--cor7);
-    cursor: pointer;
-    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.679);
-    color: white;
-    transition: color 0.3s ease;
-}
-
+/* Ícones das redes sociais */
 .social {
     margin: 10px;
     font-size: 2.5em;
@@ -83,7 +103,7 @@ img.logo {
 }
 
 .social:hover {
-    color: var(--cor5);
+    color: var(--cor4);
     cursor: pointer;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.277);
     transition: color 0.3s ease;
@@ -93,6 +113,56 @@ img.logo {
     margin-left: auto;
 }
 
+.botao-agendar-consulta {
+    height: 7vh;
+    margin-left: 50px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--cor5);
+    color: white;
+    font-size: medium;
+    font-weight: 600;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.818);
+    transform: translateX(-5vh);
+}
+
+
+/* =========================================================================
+   5. BOTÕES COMPARTILHADOS
+   ========================================================================= */
+
+/* Estilo base dos botões marrons (Especialidades, Sobre nós e Blog) */
+.especialidades > button,
+.sobre-nos > button,
+.post > button {
+    margin: 4vw auto 0;
+    padding: 15px 35px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--cor5);
+    color: white;
+    font-weight: 600;
+    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.818);
+}
+
+/* Hover comum a todos os botões principais do site */
+.botao-agendar-consulta:hover,
+.card-principal > button:hover,
+.especialidades > button:hover,
+.sobre-nos > button:hover,
+.post > button:hover {
+    background-color: var(--cor6);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.679);
+    transition: color 0.3s ease;
+}
+
+
+/* =========================================================================
+   6. MENU PRINCIPAL E SUBMENUS
+   ========================================================================= */
 nav.menu-principal {
     grid-area: 2 / 1 / 3 / -1;
     position: relative;
@@ -105,10 +175,10 @@ nav.menu-principal {
     align-items: center;
     gap: 30px;
     width: 100%;
-    list-style: none;
     margin: 0;
     padding: 0 10px;
-    background-color: var(--cor5);
+    list-style: none;
+    background-color: var(--cor4);
 }
 
 .item-menu {
@@ -119,10 +189,10 @@ nav.menu-principal {
 .item-menu > a {
     display: block;
     padding: 15px 0;
-    background-color: var(--cor5);
+    background-color: var(--cor4);
     color: white;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .item-menu > a:hover,
@@ -130,9 +200,7 @@ nav.menu-principal {
     color: var(--cor1);
 }
 
-
-/* ===== PRIMEIRO NÍVEL: SUBMENUS COMUNS ===== */
-
+/* ----- Primeiro nível: submenus comuns ----- */
 .submenu {
     position: absolute;
     top: 100%;
@@ -156,6 +224,7 @@ nav.menu-principal {
     border-radius: 8px;
     box-shadow: 0 8px 20px #00000020;
 
+    /* Escondido até o hover/foco */
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -167,7 +236,7 @@ nav.menu-principal {
         visibility 0.25s ease;
 }
 
-/* Abre somente o submenu diretamente ligado ao item */
+/* Abre só o submenu ligado diretamente ao item */
 .dropdown:hover > .submenu,
 .dropdown:focus-within > .submenu,
 .dropdown.aberto > .submenu {
@@ -177,8 +246,23 @@ nav.menu-principal {
     transform: translateY(0);
 }
 
+/* Links dos submenus */
+.submenu a {
+    display: block;
+    padding: 10px 16px;
+    background-color: white;
+    color: var(--cor7);
+    text-decoration: none;
+    white-space: normal;
+}
 
-/* ===== EXAMES: DUAS COLUNAS LADO A LADO ===== */
+.submenu a:hover,
+.submenu a:focus-visible {
+    background-color: var(--cor1);
+    color: var(--cor7);
+}
+
+/* ----- Exames: duas colunas lado a lado ----- */
 
 .submenu-exames {
     flex-direction: row;
@@ -192,7 +276,7 @@ nav.menu-principal {
     padding: 18px;
 }
 
-/* Cada categoria é uma coluna independente */
+/* Cada categoria é uma coluna */
 .submenu-exames > .linha {
     position: relative;
     flex: 0 0 220px;
@@ -204,9 +288,8 @@ nav.menu-principal {
 .submenu-exames > .linha > a {
     display: block;
     padding: 10px 0;
-
-    color: var(--cor8);
     background-color: white;
+    color: var(--cor7);
     font-weight: bold;
     text-decoration: none;
 }
@@ -216,9 +299,7 @@ nav.menu-principal {
     color: var(--cor3);
 }
 
-
-/* ===== SEGUNDO NÍVEL: LISTAS DE EXAMES ===== */
-
+/* ----- Segundo nível: lista de exames ----- */
 .submenu-interno {
     display: none;
     flex-direction: column;
@@ -236,28 +317,11 @@ nav.menu-principal {
     background-color: white;
 }
 
-/* Abre somente a lista da categoria selecionada */
+/* Abre só a lista da categoria selecionada */
 .submenu-exames > .linha:hover > .submenu-interno,
 .submenu-exames > .linha:focus-within > .submenu-interno,
 .submenu-exames > .linha.aberto > .submenu-interno {
     display: flex;
-}
-
-/* Links dos exames e dos outros submenus */
-.submenu a {
-    display: block;
-    padding: 10px 16px;
-
-    background-color: white;
-    color: var(--cor8);
-    text-decoration: none;
-    white-space: normal;
-}
-
-.submenu a:hover,
-.submenu a:focus-visible {
-    background-color: var(--cor1);
-    color: var(--cor8);
 }
 
 .submenu-interno a {
@@ -265,19 +329,21 @@ nav.menu-principal {
 }
 
 
-/* Área principal */
+/* =========================================================================
+   7. HERO (carrossel + cards de agendamento)
+   ========================================================================= */
 .hero {
-    background-color: var(--cor2);
     display: grid;
     grid-template-columns: minmax(0, 3fr) minmax(150px, 1fr);
     grid-template-rows: 1fr 1fr;
     gap: 40px;
     align-items: stretch;
     padding: 2.5vw;
+    background-color: var(--cor2);
     box-shadow: inset 0 0 5px rgba(89, 89, 89, 0.323);
 }
 
-/* Janela do carrossel */
+/* ----- Janela do carrossel ----- */
 .carousel-hero {
     grid-column: 1;
     grid-row: 1 / 3;
@@ -290,7 +356,7 @@ nav.menu-principal {
     box-shadow: 2px 2px 2px rgba(64, 64, 64, 0.221);
 }
 
-/* Faixa que desliza */
+/* Faixa que desliza (o JS altera o transform) */
 .slides-hero {
     display: flex;
     width: 100%;
@@ -298,7 +364,7 @@ nav.menu-principal {
     transition: transform 0.5s ease-in-out;
 }
 
-/* Cada banner */
+/* ----- Cada banner ----- */
 .card-principal {
     flex: 0 0 100%;
     width: 100%;
@@ -322,56 +388,24 @@ nav.menu-principal {
     box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.3);
 }
 
-.hero1 {
-    background-image: url("imagens/hero.png");
-}
-
-.hero2 {
-    background-image: url(imagens/hero2.png);
-}
-
-.card-principal.hero2 p {
-    color: rgb(96, 93, 93);
-}
-
-.card-principal.hero2 h1 {
-    color: rgb(64, 101, 64);
-}
-
-.card-principal.hero2 > button {
-    background-color: var(--cor5);
-    color: white;
-
-}
-
-.card-principal.hero2 > button:hover {
-    background-color: rgb(61, 81, 61);
-    transition: color 0.3s ease;
-}
-
-.hero3 {
-    background-image: url(imagens/hero3.jpg);
-}
-
-
-/* Conteúdo dos banners */
+/* Conteúdo dos banners (fica na coluna da direita) */
 .card-principal h1 {
     grid-area: 1 / 2 / 2 / 3;
-    font-size: clamp(1.2rem, 1.8vw, 1.9rem);
-    color: white;
     background: transparent;
+    color: white;
     font-family: var(--fonte2);
+    font-size: clamp(1.2rem, 1.8vw, 1.9rem);
 }
 
 .card-principal h1 span {
-    color: #009258;
     background: transparent;
+    color: #009258;
 }
 
 .card-principal p {
     grid-area: 2 / 2 / 3 / 3;
-    color: white;
     background: transparent;
+    color: white;
     font-size: 1rem;
     line-height: 1.5;
 }
@@ -380,6 +414,7 @@ nav.menu-principal {
     grid-area: 3 / 2 / 4 / 3;
     justify-self: start;
     align-self: flex-end;
+    margin: 10px 0 20px 0;
     padding: 10px 15px;
     border: none;
     border-radius: 15px;
@@ -387,15 +422,49 @@ nav.menu-principal {
     color: black;
     font-weight: 600;
     cursor: pointer;
-    margin: 10px 0px 20px 0px;
 }
 
-/* Setas */
+/* ----- Imagens e variações de cada banner ----- */
+.hero1 {
+    background-image: url("imagens/hero.png");
+}
+
+.hero2 {
+    background-image: url("imagens/hero2.png");
+}
+
+.card-principal.hero2 h1 {
+    color: rgb(64, 101, 64);
+}
+
+.card-principal.hero2 p {
+    color: rgb(96, 93, 93);
+}
+
+.card-principal.hero2 > button {
+    background-color: var(--cor4);
+    color: white;
+}
+
+.card-principal.hero2 > button:hover {
+    background-color: rgb(61, 81, 61);
+    transition: color 0.3s ease;
+}
+
+.hero3 {
+    background-image: url("imagens/hero3.jpg");
+}
+
+/* ----- Setas do carrossel ----- */
 .seta-hero {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 2;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     width: 40px;
     height: 40px;
@@ -403,18 +472,9 @@ nav.menu-principal {
     border-radius: 50%;
 
     background-color: transparent;
-    color: var(--cor8);
+    color: var(--cor7);
     font-size: 1.8rem;
     cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-button > i.fa-solid {
-    background-color: transparent;
-    color: rgba(255, 255, 255, 0.729);
 }
 
 .seta-hero.anterior {
@@ -425,16 +485,27 @@ button > i.fa-solid {
     right: 12px;
 }
 
+/* Esconde a seta quando o JS coloca o atributo hidden */
+.seta-hero[hidden] {
+    display: none;
+}
+
+/* Ícones (Font Awesome) dentro de botões */
+button > i.fa-solid {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.729);
+}
+
 button > i.fa-solid:hover {
     color: white;
 }
 
-/* Bolinhas */
+/* ----- Indicadores (bolinhas) ----- */
 .indicadores-hero {
     position: absolute;
-    z-index: 2;
     bottom: 15px;
     left: 50%;
+    z-index: 2;
     transform: translateX(-50%);
 
     display: flex;
@@ -454,27 +525,25 @@ button > i.fa-solid:hover {
 }
 
 .bolinha.ativa {
-    background-color: var(--cor7);
+    background-color: var(--cor6);
     transform: scale(1.2);
 }
 
-/* Cards de agendamento */
+/* ----- Cards de agendamento (coluna da direita) ----- */
 .card-agendar {
     grid-column: 2;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    margin: 0;
-
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 10px;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.221);
 }
 
+/* 1º div do .hero é o carrossel, então os cards são o 2º e o 3º */
 .card-agendar:nth-of-type(2) {
     grid-row: 1;
 }
@@ -483,53 +552,52 @@ button > i.fa-solid:hover {
     grid-row: 2;
 }
 
-.seta-hero[hidden] {
-    display: none;
-}
-
-
-.circle > .iagendar {
-    font-size: clamp(1rem, 2vw, 3rem);
-    background-color: var(--cor6);
-    border-radius: 50%;
-    color: white;
-}
-
 .card-agendar > .circle {
-    background-color: var(--cor6);
-    width: 3.5vw;
-    height: 3.5vw;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 3.5vw;
+    height: 3.5vw;
     margin-bottom: 10px;
+    border-radius: 50%;
+    background-color: var(--cor5);
+}
+
+.circle > .iagendar {
+    border-radius: 50%;
+    background-color: var(--cor5);
+    color: white;
+    font-size: clamp(1rem, 2vw, 3rem);
 }
 
 .card-agendar > p {
+    color: var(--cor7);
     font-weight: 600;
-    color: var(--cor8);
 }
 
 .card-agendar:hover {
     cursor: pointer;
-    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.463);
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.463);
 }
 
-.card-agendar:hover .circle,.card-agendar:hover .iagendar  {
-    background-color: var(--cor7);
+.card-agendar:hover .circle,
+.card-agendar:hover .iagendar {
+    background-color: var(--cor6);
     transition: color 0.3s ease;
 }
 
 
+/* =========================================================================
+   8. AVALIAÇÕES DO GOOGLE (carrossel vertical em pares)
+   ========================================================================= */
 .avaliacao-maps {
-    background-color: var(--cor1);
     grid-area: 3 / 2 / 4 / 3;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
-    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
+    background-color: var(--cor1);
+    box-shadow: inset 0 0 5px rgba(89, 89, 89, 0.323);
 }
 
 .avaliacao-maps > h2 {
@@ -539,52 +607,50 @@ button > i.fa-solid:hover {
 }
 
 .text-avaliacao {
-    background-color: var(--cor1);
     margin: 15px;
+    background-color: var(--cor1);
 }
 
-/* Janela que mostra somente um par */
+/* Janela que mostra um par por vez */
 .carrossel-avaliacoes {
     width: 100%;
     height: 320px;
     overflow: hidden;
 }
 
-/* Faixa horizontal com todos os grupos */
+/* Faixa com todos os grupos (o JS altera o transform) */
 .lista-avaliacoes {
     display: flex;
     height: 100%;
     transition: transform 0.8s ease-in-out;
 }
 
-/* Cada grupo ocupa toda a janela */
+/* Cada grupo ocupa a janela inteira */
 .grupo-avaliacoes {
     flex: 0 0 100%;
     min-height: 0;
-    box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     overflow: hidden;
     background-color: var(--cor1);
 }
 
-/* Cards empilhados */
+/* Cards de avaliação empilhados */
 .avaliacao {
     flex: 1 1 0;
     min-height: 0;
-    box-sizing: border-box;
     overflow: hidden;
 
-    padding: 10px;
-    line-height: 1.5rem;
-    font-size: 0.8rem;
-    border-radius: 5px;
-    box-shadow: 1px 2px 2px rgba(128, 128, 128, 0.316);
-    margin: 15px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    margin: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px rgba(128, 128, 128, 0.316);
+    font-size: 0.8rem;
+    line-height: 1.5rem;
 }
 
 .avaliacao-nomes {
@@ -592,100 +658,101 @@ button > i.fa-solid:hover {
     justify-content: space-between;
 }
 
+
+/* =========================================================================
+   9. ESPECIALIDADES
+   ========================================================================= */
 .especialidades {
-    width: auto;
-    background-color: white;
-    grid-area: 4 / 1 / 5 / -1;
-    margin: 10vh 0px;
+    grid-area: 4 / 1 / 5 / -1; /* sem efeito enquanto estiver fora do .container */
     display: flex;
     flex-direction: column;
-
+    width: auto;
+    margin: 10vh 0;
+    background-color: white;
 }
+
+.especialidades > h2 {
+    margin-bottom: 7vh;
+    text-align: center;
+    color: var(--cor4);
+    font-size: clamp(1.3rem, 2vw, 2rem);
+}
+
 .container-especialidades {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 25px;
-    margin: 0px 15vw;
-}
-
-.especialidades > h2 {
-    text-align: center;
-    font-size: clamp(1.3rem, 2vw, 2rem);
-    color: var(--cor5);
-    margin-bottom: 7vh;
+    margin: 0 15vw;
 }
 
 .card-especialidades {
     flex: 1 1 250px;
     max-width: 250px;
-    box-shadow: 0px 0px 10px rgba(128, 128, 128, 0.384);
     height: 250px;
-    text-align: center;
-    border-radius: 15px;
+
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column-reverse; /* ícone em cima, texto embaixo */
     align-items: center;
     justify-content: space-evenly;
-    color: var(--cor5);
+
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(128, 128, 128, 0.384);
+    color: var(--cor4);
     font-weight: 700;
-    
+    text-align: center;
 }
 
 .card-especialidades:hover {
-    transform: translateY(-7px);
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.718);
     cursor: pointer;
-}
-
-.especialidades > button, .sobre-nos > button, .post > button {
-    padding: 15px 35px;
-    margin: 4vw auto 0px  auto;
-    color: white;
-    background-color: var(--cor6);
-    border-radius: 25px;
-    border: none;
-    box-shadow: 1px 1px 2px rgba(128, 128, 128, 0.818);
-    font-weight: 600;
-
+    transform: translateY(-7px);
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.718);
 }
 
 
+/* =========================================================================
+   10. MÉTRICAS (contadores)
+   ========================================================================= */
 .metricas {
-    padding: 20vh 0px;
-     background:
-        linear-gradient(#51be92bc),
-        url(imagens/fundo-metricas.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    grid-area: 5 / 1 / 6 / -1;
+    grid-area: 5 / 1 / 6 / -1; /* sem efeito enquanto estiver fora do .container */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 30px;
-    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
+    padding: 20vh 0;
+
+    /* Camada verde translúcida por cima da imagem de fundo */
+    background:
+        linear-gradient(#51be92bc),
+        url(imagens/fundo-metricas.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 5px rgba(89, 89, 89, 0.323);
 }
 
 .card-metricas {
-    background-color: transparent;
-    border: solid 1px white;
-    border-radius: 10px;
     flex: 1 1 300px;
     max-width: 350px;
     aspect-ratio: 1 / 1;
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    gap: 20px;
+    padding: 20px;
+
+    border: solid 1px white;
+    border-radius: 10px;
+    background-color: transparent;
     color: white;
+    font-family: var(--fonte2);
     font-size: clamp(1rem, 2rem, 2rem);
     font-weight: 700;
-    gap: 20px;
-    font-family: var(--fonte2);
-    padding: 20px;
+    text-align: center;
 }
 
+/* Número do contador */
 .card-metricas > span {
     background-color: transparent;
     font-size: clamp(2rem, 4.5rem, 4.5rem);
@@ -693,84 +760,96 @@ button > i.fa-solid:hover {
 
 .imetricas {
     background-color: transparent;
-    font-size: clamp(1rem, 4rem, 4rem);
     color: white;
+    font-size: clamp(1rem, 4rem, 4rem);
 }
 
+
+/* =========================================================================
+   11. LAYOUT: CONTAINER 2 (grade de 10 colunas)
+   ========================================================================= */
 .container2 {
     display: grid;
     grid-template: auto / repeat(10, 1fr);
     height: 130vh;
 }
 
+
+/* =========================================================================
+   12. SOBRE NÓS
+   ========================================================================= */
+
+/* ----- Foto + animação Lottie (camadas sobrepostas) ----- */
 .foto-sobre {
     grid-area: 1 / 1 / 2 / 5;
-    margin: auto;
+    position: relative;
     width: 100%;
     height: 100%;
-    position: relative;
-    object-fit: contain;
+    margin: auto;
 }
 
-.foto-sobre > .degrade {
-    height: 40%;
-    width: 100%;
+/* Camada 1: animação ao fundo */
+dotlottie-wc {
     position: absolute;
+    inset: 0;
+    
+    display: block;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+}
+
+/* Camada 2: foto centralizada */
+.foto-sobre > img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+    transform: translate(-50%, -50%);
+    width: 650px;
+    background-color: transparent;
+}
+
+/* Camada 3: degradê branco na parte de baixo */
+.foto-sobre > .degrade {
+    position: absolute;
+    bottom: 0;
     z-index: 3;
+    width: 100%;
+    height: 40%;
     background: linear-gradient(
         to top,
         #ffffff 40%,
         rgba(255, 255, 255, 0.937) 60%,
         rgba(255, 255, 255, 0) 100%
     );
-    bottom: 0;
     pointer-events: none;
 }
 
-dotlottie-wc {
-    display: block;
-    width: 100%;
-    height: 100%;
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    z-index: 1;
-    inset: 0;
-}
-
-
-.foto-sobre > img {
-    position: absolute;
-    z-index: 2; 
-    background-color: transparent;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 650px;
-
-}
-
-.sobre-nos > h1 {
-    color: var(--cor6);
-    font-size: clamp(2rem, 3rem, 3rem);
-    margin: 15px 0px;
+/* ----- Texto ----- */
+.sobre-nos {
+    grid-area: 1 / 5 / -1 / -1;
+    padding: 5vw;
+    background-color: white;
 }
 
 .sobre-nos > h2 {
     color: var(--cor3);
 }
 
-.sobre-nos > p {
+.sobre-nos > h1 {
+    margin: 15px 0;
+    color: var(--cor5);
+    font-size: clamp(2rem, 3rem, 3rem);
+}
+
+.sobre-nos > p,
+.checks-sobre-nos > .checks {
     font-size: clamp(1rem, 1.3rem, 1.3rem);
 }
 
 .info-sobre {
-    color: var(--cor8);
-}
-
-.sobre-nos {
-    background-color: white;
-    grid-area: 1 / 5 / -1 / -1;
-    padding: 5vw;
+    color: var(--cor7);
 }
 
 .sobre-nos > .checks-sobre-nos {
@@ -785,34 +864,37 @@ dotlottie-wc {
     line-height: 1.5em;
 }
 
+
+/* =========================================================================
+   13. POR QUE NOS ESCOLHER + BARRAS DE PROGRESSO
+   ========================================================================= */
 .porque {
     grid-area: 2 / 1 / 3 / 5;
     height: 65vh;
 }
 
 .porque > h1 {
-    color: var(--cor7);
+    margin: 1vw 4vw;
+    color: var(--cor6);
+    font-family: var(--fonte2);
     font-size: clamp(2rem, 3.5rem, 3.5rem);
     font-weight: 800;
-    margin: 1vw 4vw;
-    font-family: var(--fonte2);
 }
 
 .porque > p {
-    color: var(--cor8);
+    margin: 1vw 4vw;
+    color: var(--cor7);
     font-size: clamp(1rem, 1.4rem, 1.4rem);
     font-weight: normal;
-    margin: 1vw 4vw;
 }
 
-
+/* ----- Barras ----- */
 .resultados {
-    grid-area: 2 /5 / 3 / -1;
+    grid-area: 2 / 5 / 3 / -1;
     display: flex;
     flex-direction: column;
-    padding: 1vw 5vw;
     gap: 30px;
-    
+    padding: 1vw 5vw;
 }
 
 .habilidade {
@@ -823,40 +905,54 @@ dotlottie-wc {
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
-    color: var(--cor8);
-    font-weight: 700;
+    color: var(--cor7);
     font-size: clamp(1rem, 1.6rem, 1.6rem);
+    font-weight: 700;
 }
 
+/* Fundo cinza da barra */
 .barra {
     width: 100%;
     height: 17px;
-    background-color: #e5e5e5;
-    border-radius: 10px;
     overflow: hidden;
+    border-radius: 10px;
+    background-color: #e5e5e5;
 }
 
+/* Preenchimento (o JS muda a largura usando data-porcentagem) */
 .progresso {
     width: 0;
     height: 100%;
-    background: linear-gradient(to right, #a2e0c7, #51be93);
     border-radius: 10px;
+    background: linear-gradient(to right, #a2e0c7, #51be93);
     transition: width 3s ease;
 }
 
+
+/* =========================================================================
+   14. TESTEMUNHOS (carrossel)
+   ========================================================================= */
 .testemunhos {
-    background-color: var(--cor5);
     grid-area: 3 / 1 / 4 / -1;
     padding-top: 3vw;
-    box-shadow: inset 0px 0px 10px rgba(7, 7, 7, 0.27);
+    background-color: var(--cor4);
+    box-shadow: inset 0 0 10px rgba(7, 7, 7, 0.27);
     text-align: center;
+}
+
+.testemunhos h1 {
+    background-color: transparent;
+    color: white;
+    font-family: var(--fonte2);
+    font-size: clamp(1.4rem, 2.3rem, 2.3rem);
+    -webkit-text-stroke: 1px rgba(110, 108, 108, 0.277);
 }
 
 .carrossel-testemunhos {
     position: relative;
     max-width: 90%;
     margin: 40px auto;
-    padding: 0 55px;
+    padding: 0 55px; /* espaço para as setas */
     background-color: transparent;
 }
 
@@ -864,10 +960,11 @@ dotlottie-wc {
     overflow: hidden;
 }
 
+/* Faixa que desliza (o JS altera o transform) */
 .trilho-testemunhos {
     display: flex;
+    background-color: var(--cor4);
     transition: transform 0.6s ease-in-out;
-    background-color: var(--cor5);
 }
 
 .slide-testemunho {
@@ -879,71 +976,61 @@ dotlottie-wc {
     justify-content: center;
     gap: 5vw;
 
-    background-color: var(--cor5);
-    text-align: left;
     padding-top: 15px;
+    background-color: var(--cor4);
+    text-align: left;
 }
 
 .slide-testemunho img {
     max-width: 500px;
-    object-fit: cover;
-    border-radius: 12px;
     height: 81%;
     max-height: 600px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.547);
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.547);
 }
 
 .testemunho-info {
     flex: 1;
     max-width: 500px;
-    background-color: var(--cor5);
     height: 70%;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.547);
-    border-radius: 15px 15px 0px 0px;
-}
-
-.testemunhos h1 {
-    color: white;
-    background-color: transparent;
-    font-family: var(--fonte2);
-    font-size: clamp(1.4rem, 2.3rem, 2.3rem);
-    -webkit-text-stroke: 1px rgba(110, 108, 108, 0.277);
+    border-radius: 15px 15px 0 0;
+    background-color: var(--cor4);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.547);
 }
 
 .testemunho-info h2 {
-    padding: 40px 0px 0px 30px;
-    color: var(--cor8);
-    border-radius: 15px 15px 0px 0px;
+    padding: 40px 0 0 30px;
+    border-radius: 15px 15px 0 0;
+    color: var(--cor4);
     font-size: clamp(1.2rem, 1.6rem, 1.6rem);
-    color: var(--cor5);
     -webkit-text-stroke: 1px rgba(110, 108, 108, 0.277);
 }
 
 .testemunho-info p {
-    line-height: 1.8;
-    padding: 10px 30px;
-    border-radius: 0px 0px 15px 15px;
-    font-size: clamp(.8rem, .9rem, .9rem);
     height: 98%;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.547);
+    padding: 10px 30px;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.547);
+    font-size: clamp(.8rem, .9rem, .9rem);
+    line-height: 1.8;
 }
 
-/* Setas */
+/* ----- Setas ----- */
 .seta {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
     z-index: 2;
+    transform: translateY(-50%);
 
     width: 45px;
     height: 45px;
     border: none;
     border-radius: 50%;
 
-    background-color: var(--cor8);
+    background-color: var(--cor7);
     color: white;
     font-size: 22px;
-
     cursor: pointer;
     transition: background-color 0.3s, scale 0.3s;
 }
@@ -962,116 +1049,114 @@ dotlottie-wc {
 }
 
 
+/* =========================================================================
+   15. BLOG
+   ========================================================================= */
 .blogs {
-    background-color: white;
     grid-area: 4 / 1 / 5 / -1;
+    background-color: white;
 }
 
-.blogs > h1, .unidades > h1 {
-    text-align: center;
-    color: var(--cor7);
-    font-size: clamp(2rem, 4.5rem, 4.5rem);
+/* Título grande (usado no Blog e nas Unidades) */
+.blogs > h1,
+.unidades > h1 {
     margin: 6vw;
-    font-weight: 500;
+    text-align: center;
+    color: var(--cor6);
     font-family: var(--fonte2);
-
+    font-size: clamp(2rem, 4.5rem, 4.5rem);
+    font-weight: 500;
 }
+
 .container-blogs {
     display: flex;
-    flex: 1 1 100px;
-    max-width: 90vw;
     gap: 5vw;
+    max-width: 90vw;
     margin: auto;
-    padding: 0px 0vw 3vw 0px;
+    padding: 0 0 3vw 0;
 }
 
 .post {
+    position: relative; /* referência para a .data-post */
+    flex: 1 1 100px;
     display: flex;
     flex-direction: column;
-    text-align: center;
     justify-content: flex-start;
-    flex: 1 1 100px;
-    text-align: left;
     gap: 20px;
-    color: var(--cor8);
-    position: relative;
-
-}
-
-.post > h2 {
-    text-align: center;
-    color: var(--cor5);
+    color: var(--cor7);
+    text-align: left;
 }
 
 .post > img {
     width: 100%;
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.555);
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.555);
+}
+
+.post > h2 {
+    text-align: center;
+    color: var(--cor4);
 }
 
 .post > button {
     margin-top: 10px;
-
 }
 
+/* Bolinha com a data, por cima da imagem */
 .data-post {
-    background-color: var(--cor3);
-    padding: 1vw 1.6vw;
     position: absolute;
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-    text-align: center;
-    font-weight: 600;
-    color: white;
-    z-index: 1;
     bottom: 93%;
-    
+    z-index: 1;
+    aspect-ratio: 1 / 1;
+    padding: 1vw 1.6vw;
+    border-radius: 50%;
+    background-color: var(--cor3);
+    color: white;
+    font-weight: 600;
+    text-align: center;
 }
 
 .data-post > .num {
     background-color: var(--cor3);
     font-size: clamp(1rem, 1.6rem, 1.6rem);
-
-
 }
 
+
+/* =========================================================================
+   16. UNIDADES
+   ========================================================================= */
 .unidades {
-    background-color: white;
     grid-area: 5 / 1 / 6 / -1;
     padding-bottom: 7vw;
-}
-
-.unidades > h1 {
-    text-align: center;
+    background-color: white;
 }
 
 .container-unidades {
     display: flex;
     justify-content: center;
     gap: 4vw;
+    color: var(--cor7);
     line-height: 2.3rem;
-    color: var(--cor8);
-}
-
-.unidade > img {
-    width: 100%;
-    width: clamp(200px, 400px, 500px);
-    border-radius: 5px;
-    box-shadow: 0px 0px 15px rgba(128, 128, 128, 0.555);
-    aspect-ratio: 4 / 3;
-}
-
-.unidade > img:hover {
-    box-shadow: 0px 0px 15px rgba(49, 49, 49, 0.773);
 }
 
 .unidade:hover {
     cursor: pointer;
 }
 
+.unidade > img {
+    width: clamp(200px, 400px, 500px);
+    aspect-ratio: 4 / 3;
+    border-radius: 5px;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.555);
+}
+
+.unidade > img:hover {
+    box-shadow: 0 0 15px rgba(49, 49, 49, 0.773);
+}
+
 .unidade > h2 {
+    margin: 1rem 0;
+    color: var(--cor4);
     font-size: clamp(1rem, 2rem, 2rem);
-    margin: 1rem 0px;
-    color: var(--cor5);
 }
 
 .unidade > p {
@@ -1079,9 +1164,15 @@ dotlottie-wc {
 }
 
 .unidade > p > .fa-solid {
-    color: var(--cor5);
+    color: var(--cor4);
 }
 
+
+/* =========================================================================
+   17. PERGUNTAS FREQUENTES (FAQ)
+   ========================================================================= */
+
+/* Grade que junta FAQ (esquerda) e formulário (direita) */
 .duvidas-faleconosco {
     grid-area: 6 / 1 / 7 / -1;
     display: grid;
@@ -1094,55 +1185,55 @@ dotlottie-wc {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0px 4vw 4vw 4vw;
     gap: 1vw;
+    padding: 0 4vw 4vw 4vw;
 }
 
 .duvidas > h1 {
-    font-size: clamp(1em, 3em, 3em);
-    color: var(--cor5);
-    text-align: center;
     margin: 1.5vw;
+    text-align: center;
+    color: var(--cor4);
+    font-size: clamp(1em, 3em, 3em);
 }
 
+/* ----- Pergunta ----- */
 .item-duvida > h2 {
     padding: 20px;
     border-radius: 10px;
     background-color: rgba(226, 225, 225, 0.23);
-    box-shadow: 0px 0px 3px rgba(128, 128, 128, 0.297);
-    color: var(--cor8);
+    box-shadow: 0 0 3px rgba(128, 128, 128, 0.297);
+    color: var(--cor7);
     font-family: var(--fonte2);
-    font-weight: 600;
     font-size: clamp(1rem, 1.3rem, 1.3rem);
-
-}
-
-.item-duvida > h2 {
+    font-weight: 600;
     cursor: pointer;
     transition: color 0.5s ease;
-}
-
-.item-duvida > h2:hover {
-    color: var(--cor3);
-}
-
-.item-duvida h2 i {
-    transition: transform 0.3s ease; /*efeito de virar fica suave*/
-}
-
-.item-duvida h2.ativo i {
-    transform: rotate(180deg);  /*vira a seta para cima*/
-}
-
-.item-duvida h2.ativo, .item-duvida h2.ativo i {
-    background-color: var(--cor3);
-    color: white;
 }
 
 .item-duvida > h2 > .fa-solid {
     background-color: transparent;
 }
 
+.item-duvida h2 i {
+    transition: transform 0.3s ease; /* deixa suave o giro da seta */
+}
+
+.item-duvida > h2:hover {
+    color: var(--cor3);
+}
+
+/* Pergunta aberta (classe colocada pelo JS) */
+.item-duvida h2.ativo,
+.item-duvida h2.ativo i {
+    background-color: var(--cor3);
+    color: white;
+}
+
+.item-duvida h2.ativo i {
+    transform: rotate(180deg); /* vira a seta para cima */
+}
+
+/* ----- Resposta (fechada) ----- */
 .item-duvida > .respostas {
     display: grid;
     grid-template-rows: 0fr;
@@ -1152,35 +1243,65 @@ dotlottie-wc {
         opacity 0.4s ease;
 }
 
-.item-duvida >.respostas > p {
+.item-duvida > .respostas > p {
     overflow: hidden;
     margin: 0 2vw;
-    line-height: 1.6rem;
     font-size: clamp(1rem, 1.1rem, 1.1rem);
+    line-height: 1.6rem;
 }
 
-
-/* Resposta aberta */
+/* ----- Resposta aberta (classe colocada pelo JS) ----- */
 .respostas.aberto {
     display: block;
-    opacity: 1;
     margin: 12px 0 20px;
+    opacity: 1;
 }
 
 .respostas.aberto p {
     margin: 2vw;
 }
 
-.formulario{
+
+/* =========================================================================
+   18. FALE CONOSCO (formulário)
+   ========================================================================= */
+.container-faleconosco {
+    grid-area: 1 / 6 / 2 / -1;
+    align-self: start;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto 5vw;
+    border-radius: 10px;
+
+    /* Camada verde translúcida por cima da foto */
+    background:
+        linear-gradient(#51be92d2),
+        url(https://img.magnific.com/fotos-premium/jovem-veterinaria-segurando-um-grande-gato-preto-e-sorrindo-na-clinica_386167-312.jpg?semt=ais_hybrid&w=740&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: white; 
+}
+
+.container-faleconosco > h1 {
+    padding: 2vw 0;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    font-family: var(--fonte2);
+    font-size: clamp(1rem, 2.5rem, 2.5rem);
+}
+
+.formulario {
     display: flex;
     flex-direction: column;
     gap: 20px;
     width: 100%;
     max-width: 600px;
-    margin: auto;
-    font-family: var(--fonte2);
+    margin: auto auto 15vw;
     background-color: transparent;
-    margin-bottom: 15vw;
+    font-family: var(--fonte2);
 }
 
 .campo {
@@ -1191,23 +1312,21 @@ dotlottie-wc {
 }
 
 .campo > label {
-    font-weight: 600;
-    color: black;
     background-color: transparent;
-
+    color: black;
+    font-weight: 600;
 }
 
 .campo input,
 .campo textarea {
     width: 100%;
-    box-sizing: border-box;
     padding: 14px 16px;
     border: 1px solid #ccc;
     border-radius: 10px;
+    outline: none;
     background-color: white;
     font: inherit;
     font-size: 1rem;
-    outline: none;
     transition:
         border-color 0.3s ease,
         box-shadow 0.3s ease;
@@ -1220,20 +1339,20 @@ dotlottie-wc {
 }
 
 .campo textarea {
-    resize: vertical;
     min-height: clamp(120px, 200px, 200px);
+    resize: vertical;
 }
 
 .formulario button {
+    margin-top: 20px;
     padding: 14px 24px;
     border: none;
     border-radius: 10px;
-    background-color: var(--cor5);
+    background-color: var(--cor4);
     color: white;
     font: inherit;
-    font-weight: 600;
     font-size: 1rem;
-    margin-top: 20px;
+    font-weight: 600;
     cursor: pointer;
     transition:
         background-color 0.3s ease,
@@ -1245,143 +1364,128 @@ dotlottie-wc {
     transform: translateY(-2px);
 }
 
-.container-faleconosco {
-    background:
-        linear-gradient(#51be92d2),
-        url(https://img.magnific.com/fotos-premium/jovem-veterinaria-segurando-um-grande-gato-preto-e-sorrindo-na-clinica_386167-312.jpg?semt=ais_hybrid&w=740&q=80);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 80%;
-    margin: 0 auto;
-    margin-bottom: 5vw;
-    height: auto;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    flex: none;
-    grid-area: 1 / 6 / 2 / -1;
-    background-color: white;
-    align-self: start;
-    
 
-}
-
-.container-faleconosco > h1 {
-    text-align: center;
-    background-color: transparent;
-    padding: 2vw 0px;
-    font-size: clamp(1rem, 2.5rem, 2.5rem);
-    color: white;
-    font-family: var(--fonte2);
-}
-
+/* =========================================================================
+   19. RODAPÉ
+   ========================================================================= */
 footer {
-    background-color: var(--cor5);
     grid-area: 7 / 1 / 8 / -1;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 7vw;
-    font-size: clamp(1rem, 1.1rem, 1.1rem);
     padding: 5vw 0;
+    background-color: var(--cor4);
+    font-size: clamp(1rem, 1.1rem, 1.1rem);
 }
 
-.container-foot, .container-foot-social {
+/* Colunas do rodapé */
+.container-foot,
+.container-foot-social {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--cor5);
+    background-color: var(--cor4);
 }
 
+/* ----- Coluna: logo + redes sociais ----- */
 .footer-img {
-    max-width: 150px;
-    aspect-ratio: 1/1;
     align-self: start;
+    max-width: 150px;
+    aspect-ratio: 1 / 1;
     background-color: transparent;
 }
 
-.container-foot > h1 {
-    color: white;
-    background-color: var(--cor5);
-}
-
-.container-foot > h2 {
-    color: white;
-    background-color: var(--cor5);
-}
-
-.container-foot > p, .container-foot > p .fa-solid, .container-foot a {
-    color: white;
-    background-color: var(--cor5);
-    text-decoration: none;
-}
-
-.container-foot-social > p, .container-foot-social .fa-brands{
-    background-color: transparent;
+.container-foot-social > p,
+.container-foot-social .fa-brands {
     text-align: center;
     color: white;
     font-size: clamp(1rem, 2rem, 2rem);
     font-weight: 700;
 }
 
-.container-foot-social .fa-brands {
-    background-color: var(--cor3);
-
-}
-
-.container-foot-social div {
-    gap: 20px;
-    display: flex;
-    justify-content: center;
+.container-foot-social > p {
     background-color: transparent;
 }
 
+.container-foot-social .fa-brands {
+    background-color: var(--cor3);
+}
+
+.container-foot-social div {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+/* Círculo em volta de cada ícone */
 .container-foot-social span {
     padding: 1rem;
     border-radius: 50%;
     background-color: var(--cor3);
 }
 
-
-
 .container-foot-social span:hover {
-    color: var(--cor5);
+    color: var(--cor4);
     cursor: pointer;
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.277);
+    box-shadow: 0 0 10px rgba(245, 240, 240, 0.626);
     transition: color 0.3s ease;
-    box-shadow: 0px 0px 10px rgba(245, 240, 240, 0.626);
 }
 
-.container-foot h2:hover, .container-foot a:hover {
+/* ----- Colunas de texto (endereços, horários, serviços) ----- */
+.container-foot > h1,
+.container-foot > h2 {
+    background-color: var(--cor4);
+    color: white;
+}
+
+.container-foot > p,
+.container-foot > p .fa-solid,
+.container-foot a {
+    background-color: var(--cor4);
+    color: white;
+    text-decoration: none;
+}
+
+.container-foot h2:hover,
+.container-foot a:hover {
     color: var(--cor1);
     cursor: pointer;
 }
 
+
+/* =========================================================================
+   20. DIREITOS AUTORAIS
+   ========================================================================= */
 .direitos {
-    text-align: center;
-    padding: 4vw;
-    background-color:var(--cor5);
     grid-area: 8 / 1 / 9 / -1;
+    padding: 4vw;
+    text-align: center;
+    background-color: var(--cor4);
 }
 
-.direitos > p{
+.direitos > p {
+    margin: 15px;
     background-color: transparent;
     color: white;
-    margin: 15px;
     font-weight: 600;
-
 }
 
-/* Estado inicial: elemento escondido */
+
+/* =========================================================================
+   21. ANIMAÇÃO DE REVELAR AO ROLAR (o JS adiciona a classe .ativo)
+   ========================================================================= */
+
+/* Estado inicial: escondido e um pouco abaixo */
 .revelar {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-/* Estado final: elemento visível */
+/* Estado final: visível na posição normal */
 .revelar.ativo {
     opacity: 1;
     transform: translateY(0);

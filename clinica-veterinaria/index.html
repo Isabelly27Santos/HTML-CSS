@@ -1,42 +1,70 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- ==================== METADADOS ==================== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=surgical" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_small" />
+    <title>Quatro Patas</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+
+    <!-- ==================== FONTES ==================== -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sriracha&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
-    <script src="script.js" defer></script>
-    <title>Quatro Patas</title>
-</head>
-<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sriracha&display=swap">
+
+    <!-- Ícones Material Symbols -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=check_small,surgical">
+
+    <!-- Ícones Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+          integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <!-- ==================== ESTILOS DO PROJETO ==================== -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- ==================== SCRIPTS ==================== -->
     <script type="module" src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- =====================================================================
+         CONTAINER 1: Cabeçalho, menu, hero e avaliações
+         ===================================================================== -->
     <div class="container">
+
+        <!-- ==================== CABEÇALHO ==================== -->
         <header>
             <img class="logo" src="imagens/logo-header.png" alt="logo clínica quatro patas">
+
+            <!-- Telefones de contato -->
             <p class="contato-header">
                 <i class="fa-solid fa-phone"></i> (11) 9165-4000<br>
-                <i class="fa-solid fa-phone"></i> (11) 6541-2500<br>
-                
+                <i class="fa-solid fa-phone"></i> (11) 6541-2500
             </p>
+
+            <!-- Redes sociais -->
             <i class="fa-brands fa-facebook social"></i>
             <i class="fa-brands fa-square-instagram social"></i>
             <i class="fa-brands fa-square-whatsapp social"></i>
-            <button class="botao-agendar-consulta">
-                Agendar Consulta
-            </button>
+
+            <button class="botao-agendar-consulta">Agendar Consulta</button>
         </header>
+
+        <!-- ==================== MENU PRINCIPAL ==================== -->
         <nav class="menu-principal">
             <ul class="menu">
+
+                <!-- Sobre nós -->
                 <li class="item-menu">
                     <a href="#sobre-nos">O QUATRO PATAS</a>
                 </li>
 
+                <!-- Hospitais (dropdown) -->
                 <li class="item-menu dropdown">
                     <a href="#">HOSPITAIS</a>
                     <ul class="submenu">
@@ -46,6 +74,7 @@
                     </ul>
                 </li>
 
+                <!-- Especialidades (dropdown) -->
                 <li class="item-menu dropdown">
                     <a href="#">ESPECIALIDADES</a>
                     <ul class="submenu">
@@ -62,7 +91,7 @@
                         <li><a href="#">Homeopatia Veterinária</a></li>
                         <li><a href="#">Infectologia Veterinária</a></li>
                         <li><a href="#">Medicina Felina</a></li>
-                        <li><a href="#">Nefrologia e Urologia Veterinária</li></a>
+                        <li><a href="#">Nefrologia e Urologia Veterinária</a></li>
                         <li><a href="#">Neurologia Veterinária</a></li>
                         <li><a href="#">Nutrição Veterinária</a></li>
                         <li><a href="#">Odontologia Veterinária</a></li>
@@ -73,33 +102,33 @@
                         <li><a href="#">Reprodução Veterinária</a></li>
                     </ul>
                 </li>
-                    
+
+                <!-- Serviços (dropdown) -->
                 <li class="item-menu dropdown">
-                        <a href="#">SERVIÇOS</a>
-                        <ul class="submenu">
-                            <li><a href="#">Atendimento Veterinário</a></li>
-                            <li><a href="#">Banho e Tosa</a></li>
-                            <li><a href="#">Castração</a></li>
-                            <li><a href="#">Células-Tronco</a></li>
-                            <li><a href="#">Cirurgia Veterinária</a></li>
-                            <li><a href="#">Internação</a></li>
-                            <li><a href="#">Plano Preventivo</a></li>
-                            <li><a href="#">Terapia Comportamental Cães e Gatos</a></li>
-                            <li><a href="#">UTI – Unidade de Terapia Intensiva</a></li>
-                            <li><a href="#">Vacina para Cães</a></li>
-                            <li><a href="#">Vacina para Gatos</a></li>
-                        </ul>
+                    <a href="#">SERVIÇOS</a>
+                    <ul class="submenu">
+                        <li><a href="#">Atendimento Veterinário</a></li>
+                        <li><a href="#">Banho e Tosa</a></li>
+                        <li><a href="#">Castração</a></li>
+                        <li><a href="#">Células-Tronco</a></li>
+                        <li><a href="#">Cirurgia Veterinária</a></li>
+                        <li><a href="#">Internação</a></li>
+                        <li><a href="#">Plano Preventivo</a></li>
+                        <li><a href="#">Terapia Comportamental Cães e Gatos</a></li>
+                        <li><a href="#">UTI – Unidade de Terapia Intensiva</a></li>
+                        <li><a href="#">Vacina para Cães</a></li>
+                        <li><a href="#">Vacina para Gatos</a></li>
+                    </ul>
                 </li>
 
+                <!-- Exames (dropdown com 2 colunas) -->
                 <li class="item-menu dropdown">
                     <a href="#">EXAMES VETERINÁRIOS</a>
-
                     <ul class="submenu submenu-exames">
 
-                        <!-- Coluna 1 -->
+                        <!-- Coluna 1: Exames Laboratoriais -->
                         <li class="linha">
                             <a href="#">EXAMES LABORATORIAIS</a>
-
                             <ul class="submenu-interno">
                                 <li><a href="#">Biologia Molecular</a></li>
                                 <li><a href="#">Bioquímica</a></li>
@@ -116,10 +145,9 @@
                             </ul>
                         </li>
 
-                        <!-- Coluna 2 -->
+                        <!-- Coluna 2: Exames de Imagem -->
                         <li class="linha">
                             <a href="#">EXAMES DE IMAGEM</a>
-
                             <ul class="submenu-interno">
                                 <li><a href="#">Ecocardiograma / com Doppler</a></li>
                                 <li><a href="#">Eletrocardiograma</a></li>
@@ -136,217 +164,169 @@
                     </ul>
                 </li>
 
+                <!-- Blog -->
                 <li class="item-menu">
                     <a href="#blogs">BLOG</a>
                 </li>
 
+                <!-- Contato -->
                 <li class="item-menu">
                     <a href="#faleconosco">CONTATO</a>
                 </li>
-            </ul>
 
-                    
+            </ul>
         </nav>
-        
+
+        <!-- ==================== HERO (banner principal) ==================== -->
         <section class="hero">
 
-        <!-- Carrossel principal -->
-        <div class="carousel-hero revelar">
+            <!-- Carrossel de banners -->
+            <div class="carousel-hero revelar">
 
-            <div class="slides-hero">
+                <div class="slides-hero">
 
-                <!-- Card 1 -->
-                <div class="card-principal slide-hero hero1">
-                    <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
+                    <!-- Banner 1 -->
+                    <div class="card-principal slide-hero hero1">
+                        <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
+                        <p>
+                            Na Quatro Patas, seu melhor amigo recebe todo o
+                            carinho e atenção que merece. Oferecemos cuidados
+                            veterinários em todas as fases da vida.
+                        </p>
+                        <button>Ver Planos</button>
+                    </div>
 
-                    <p>
-                        Na Quatro Patas, seu melhor amigo recebe todo o
-                        carinho e atenção que merece. Oferecemos cuidados
-                        veterinários em todas as fases da vida. 
-                    </p>
+                    <!-- Banner 2 -->
+                    <div class="card-principal slide-hero hero2">
+                        <h1>Hospital 24h: Cuidado Sempre por Perto</h1>
+                        <p>
+                            Imprevistos podem acontecer a qualquer momento. Por isso, nossa equipe está pronta
+                            para cuidar do seu pet com carinho, atenção e suporte veterinário 24 horas por dia,
+                            todos os dias.
+                        </p>
+                        <button>Nossas Unidades</button>
+                    </div>
 
-                    <button>Ver Planos</button>
+                    <!-- Banner 3 -->
+                    <div class="card-principal slide-hero hero3">
+                        <h1>Quatro Patas é Cuidado de Qualidade!</h1>
+                        <p>
+                            Há mais de 20 especialidades veterinárias, profissionais dedicados e serviços de
+                            qualidade reconhecidos por nossos clientes. Tudo para oferecer ao seu pet um cuidado
+                            com carinho, confiança e atenção em cada detalhe.
+                        </p>
+                        <button>Conhecer Especialidades</button>
+                    </div>
+
                 </div>
 
-                <!-- Card 2 -->
-                <div class="card-principal slide-hero hero2">
-                    <h1>Hospital 24h: Cuidado Sempre por Perto</h1>
+                <!-- Setas de navegação -->
+                <button class="seta-hero anterior" aria-label="Banner anterior" type="button">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
+                <button class="seta-hero proximo" aria-label="Próximo banner" type="button">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </button>
 
-                    <p>
-                        Imprevistos podem acontecer a qualquer momento. Por isso, nossa equipe está pronta para cuidar do seu pet com carinho, atenção e suporte veterinário 24 horas por dia, todos os dias.
-                    </p>
-
-                    <button>Nossas Unidades</button>
-                </div>
-
-                <!-- Card 3 -->
-                <div class="card-principal slide-hero hero3">
-                    <h1>Quatro Patas é Cuidado de Qualidade!</h1>
-
-                    <p>
-                        Há mais de 20 especialidades veterinárias, profissionais dedicados e serviços de qualidade reconhecidos por nossos clientes. Tudo para oferecer ao seu pet um cuidado com carinho, confiança e atenção em cada detalhe.
-                    </p>
-
-                    <button>Conhecer Especialidades</button>
+                <!-- Indicadores (bolinhas) -->
+                <div class="indicadores-hero">
+                    <button class="bolinha ativa" aria-label="Ir para o banner 1" aria-current="true" type="button"></button>
+                    <button class="bolinha" aria-label="Ir para o banner 2" type="button"></button>
+                    <button class="bolinha" aria-label="Ir para o banner 3" type="button"></button>
                 </div>
 
             </div>
 
-            <!-- Setas de navegação -->
-            <button class="seta-hero anterior"
-                    aria-label="Banner anterior"
-                    type="button">
-                <i class="fa-solid fa-circle-chevron-left"></i>
-            </button>
-
-            <button class="seta-hero proximo"
-                    aria-label="Próximo banner"
-                    type="button">
-                <i class="fa-solid fa-circle-chevron-right"></i>
-            </button>
-
-            <!-- Indicadores -->
-            <div class="indicadores-hero">
-                <button class="bolinha ativa"
-                        aria-label="Ir para o banner 1"
-                        aria-current="true"
-                        type="button"></button>
-
-                <button class="bolinha"
-                        aria-label="Ir para o banner 2"
-                        type="button"></button>
-
-                <button class="bolinha"
-                        aria-label="Ir para o banner 3"
-                        type="button"></button>
+            <!-- Cards fixos de agendamento -->
+            <div class="card-agendar revelar">
+                <div class="circle">
+                    <i class="fa-solid fa-user-doctor iagendar"></i>
+                </div>
+                <p>Agendar Consulta</p>
             </div>
 
-        </div>
-
-        <!-- Cards de agendamento permanecem fixos -->
-        <div class="card-agendar revelar">
-            <div class="circle">
-                <i class="fa-solid fa-user-doctor iagendar"></i>
+            <div class="card-agendar revelar">
+                <div class="circle">
+                    <i class="fa-solid fa-vial iagendar"></i>
+                </div>
+                <p>Agendar Exame</p>
             </div>
-            <p>Agendar Consulta</p>
-        </div>
 
-        <div class="card-agendar revelar">
-            <div class="circle">
-                <i class="fa-solid fa-vial iagendar"></i>
-            </div>
-            <p>Agendar Exame</p>
-        </div>
+        </section>
 
-    </section>
-
-
+        <!-- ==================== AVALIAÇÕES DO GOOGLE ==================== -->
         <div class="avaliacao-maps revelar">
-            <h2>Somos 4,8 &#x2B50 no Google!</h2>
+            <h2>Somos 4,8 &#x2B50; no Google!</h2>
             <p class="text-avaliacao">Veja o que nossos clientes dizem sobre a Quatro Patas.</p>
+
             <div class="carrossel-avaliacoes">
                 <div class="lista-avaliacoes">
 
-                    <!-- Primeiro par -->
+                    <!-- Par 1 -->
                     <div class="grupo-avaliacoes">
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Mariana S.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Mariana S.</strong> <span>★★★★★</span></p>
                             <p>“Atendimento maravilhoso! Minha cachorrinha foi recebida com muito carinho. Fiquei tranquila sabendo que ela estava em boas mãos.”</p>
                             <p>Tutora da Mel</p>
                         </div>
-
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Rafael M.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Rafael M.</strong> <span>★★★★★</span></p>
                             <p>“Equipe atenciosa, ambiente acolhedor e profissionais que realmente amam o que fazem. Recomendo de olhos fechados!”</p>
                             <p>Tutor do Thor</p>
                         </div>
                     </div>
 
-                    <!-- Segundo par -->
+                    <!-- Par 2 -->
                     <div class="grupo-avaliacoes">
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Camila R.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Camila R.</strong> <span>★★★★★</span></p>
                             <p>“Minha gatinha foi muito bem cuidada! A veterinária explicou cada detalhe do atendimento e me deixou supertranquila.”</p>
                             <p>Tutora da Luna</p>
                         </div>
-
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Fernanda A.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Fernanda A.</strong> <span>★★★★★</span></p>
                             <p>“Levei meu cachorro para uma consulta e adorei a experiência. O atendimento foi rápido, cuidadoso e muito atencioso.”</p>
                             <p>Tutora do Bob</p>
                         </div>
                     </div>
 
-                    <!-- Terceiro par -->
+                    <!-- Par 3 -->
                     <div class="grupo-avaliacoes">
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Lucas M.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Lucas M.</strong> <span>★★★★★</span></p>
                             <p>“Ambiente limpo e organizado, com uma equipe que trata os animais com muito amor. Meu gatinho foi muito bem recebido!”</p>
                             <p>Tutor do Simba</p>
                         </div>
-
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Juliana P.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Juliana P.</strong> <span>★★★★★</span></p>
                             <p>“Fiquei muito satisfeita com o atendimento. Recebi todas as orientações necessárias para cuidar melhor da minha cachorrinha.”</p>
                             <p>Tutora da Belinha</p>
                         </div>
                     </div>
 
-                    <!-- Quarto par -->
+                    <!-- Par 4 -->
                     <div class="grupo-avaliacoes">
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>André C.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>André C.</strong> <span>★★★★★</span></p>
                             <p>“Profissionais muito competentes e carinhosos. Meu cachorro costuma ficar nervoso no veterinário, mas se sentiu confortável aqui.”</p>
                             <p>Tutor do Max</p>
                         </div>
-
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Patrícia L.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Patrícia L.</strong> <span>★★★★★</span></p>
                             <p>“Gostei muito da atenção e do cuidado durante a consulta. É ótimo encontrar um lugar onde nosso pet é tratado como parte da família.”</p>
                             <p>Tutora da Amora</p>
                         </div>
                     </div>
 
-                    <!-- Quinto par -->
+                    <!-- Par 5 -->
                     <div class="grupo-avaliacoes">
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Bruno F.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Bruno F.</strong> <span>★★★★★</span></p>
                             <p>“Agendamento tranquilo, atendimento acolhedor e explicações claras. Com certeza voltarei com meu companheiro de quatro patas!”</p>
                             <p>Tutor do Fred</p>
                         </div>
-
                         <div class="avaliacao">
-                            <p class="avaliacao-nomes">
-                                <strong>Isabela T.</strong>
-                                <span>★★★★★</span>
-                            </p>
+                            <p class="avaliacao-nomes"><strong>Isabela T.</strong> <span>★★★★★</span></p>
                             <p>“Minha experiência foi excelente! Toda a equipe foi gentil e demonstrou muito carinho pela minha gatinha. Recomendo muito!”</p>
                             <p>Tutora da Nina</p>
                         </div>
@@ -354,178 +334,243 @@
 
                 </div>
             </div>
-            
+        </div>
+
+    </div>
+    <!-- Fim do CONTAINER 1 -->
+
+
+    <!-- =====================================================================
+         ESPECIALIDADES E MÉTRICAS
+         ===================================================================== -->
+
+    <!-- ==================== ESPECIALIDADES ==================== -->
+    <section class="especialidades revelar">
+        <h2>Especialidades Veterinárias</h2>
+
+        <div class="container-especialidades">
+            <div class="card-especialidades">Medicina Felina <img src="https://img.icons8.com/?size=100&id=fQaa3wJkgiUX&format=png&color=51be93" alt="Medicina Felina"></div>
+            <div class="card-especialidades">Cirurgia Veterinária <img src="https://img.icons8.com/?size=100&id=a95CDjMqtD2s&format=png&color=51be93" alt="Cirurgia Veterinária"></div>
+            <div class="card-especialidades">Odontologia Veterinária <img src="https://img.icons8.com/?size=100&id=4948&format=png&color=51be93" alt="Odontologia Veterinária"></div>
+            <div class="card-especialidades">Dermatologia Veterinária <img src="https://img.icons8.com/?size=100&id=5356&format=png&color=51be93" alt="Dermatologia Veterinária"></div>
+            <div class="card-especialidades">Oftalmologia Veterinária <img src="https://img.icons8.com/?size=100&id=988&format=png&color=51be93" alt="Oftalmologia Veterinária"></div>
+            <div class="card-especialidades">Ortopedia Veterinária <img src="https://img.icons8.com/?size=100&id=slJCduD09mJM&format=png&color=51be93" alt="Ortopedia Veterinária"></div>
+            <div class="card-especialidades">Acupuntura Veterinária <img src="https://img.icons8.com/?size=100&id=l9sGH2lnKv3h&format=png&color=51be93" alt="Acupuntura Veterinária"></div>
+            <div class="card-especialidades">Fisioterapia Veterinária <img src="https://img.icons8.com/?size=100&id=NrxCMi_QOw8D&format=png&color=51be93" alt="Fisioterapia Veterinária"></div>
+        </div>
+
+        <button>TODAS AS ESPECIALIDADES</button>
+    </section>
+
+    <!-- ==================== MÉTRICAS (contadores animados pelo JS) ==================== -->
+    <div class="metricas">
+        <div class="card-metricas">
+            <i class="fa-solid fa-briefcase-medical imetricas"></i>
+            <span class="contador" data-valor="8">0</span> Anos de Experiência
+        </div>
+        <div class="card-metricas">
+            <i class="fa-solid fa-dog imetricas"></i>
+            <span class="contador" data-valor="100000" data-sufixo="+">0</span> Pets Felizes
+        </div>
+        <div class="card-metricas">
+            <i class="fa-solid fa-stethoscope imetricas"></i>
+            <span class="contador" data-valor="80000" data-sufixo="+">0+</span> Clientes
+        </div>
+        <div class="card-metricas">
+            <i class="fa-solid fa-user-nurse imetricas"></i>
+            <span class="contador" data-valor="70">0</span> Profissionais Experts
         </div>
     </div>
-        <card class="especialidades revelar">
-            <h2>Especialidades Veterinárias</h2>
-            <div class="container-especialidades">
-                <div class="card-especialidades">Medicina Felina </i> <img src="https://img.icons8.com/?size=100&id=fQaa3wJkgiUX&format=png&color=51be93" alt="Medicina Felina"></div>
-                <div class="card-especialidades">Cirurgia Veterinária <img src="https://img.icons8.com/?size=100&id=a95CDjMqtD2s&format=png&color=51be93" alt="Cirurgia Veterinária"></div>
-                <div class="card-especialidades">Odontologia Veterinária <img src="https://img.icons8.com/?size=100&id=4948&format=png&color=51be93" alt="Odontologia Veterinária"></div>
-                <div class="card-especialidades">Dermatologia Veterinária <img src="https://img.icons8.com/?size=100&id=5356&format=png&color=51be93" alt="Dermatologia Veterinária"></div>
-                <div class="card-especialidades">Oftamologia Veterinária <img src="https://img.icons8.com/?size=100&id=988&format=png&color=51be93" alt="Oftamologia Veterinária"></div>
-                <div class="card-especialidades">Ortopedia Veterinária <img src="https://img.icons8.com/?size=100&id=slJCduD09mJM&format=png&color=51be93" alt="Ortopedia Veterinária"></div>
-                <div class="card-especialidades">Acupuntura Veterinária <img src="https://img.icons8.com/?size=100&id=l9sGH2lnKv3h&format=png&color=51be93" alt="Acupuntura Veterinária"></div>
-                <div class="card-especialidades">Fisioterapia Veterinária <img src="https://img.icons8.com/?size=100&id=NrxCMi_QOw8D&format=png&color=51be93" alt="Fisioterapia Veterinária"></div>
-            </div>
-            <button>TODAS AS ESPECIALIDADES</button>
-        </card>
-        <div class="metricas">
-                <div class="card-metricas"> <i class="fa-solid fa-briefcase-medical imetricas"></i><span class="contador" data-valor="8">0</span> Anos de Experiência</div>
-                <div class="card-metricas"> <i class="fa-solid fa-dog imetricas"></i>  <span  class="contador" data-valor="100000" data-sufixo = "+">0</span> Pets Felizes</div>
-                <div class="card-metricas"> <i class="fa-solid fa-stethoscope imetricas"></i>  <span   class="contador" data-valor="80000" data-sufixo = "+">0+</span> Clientes</div>
-                <div class="card-metricas"> <i class="fa-solid fa-user-nurse imetricas"></i> <span    class="contador" data-valor="70">0</span> Profissionais Experts</div>
-        </div>
-    </div>
+
+
+    <!-- =====================================================================
+         CONTAINER 2: Sobre, resultados, testemunhos, blog, unidades,
+         FAQ, contato e rodapé
+         ===================================================================== -->
     <div class="container2">
+
+        <!-- ==================== FOTO + ANIMAÇÃO (Sobre nós) ==================== -->
         <div class="foto-sobre revelar">
             <img src="imagens/vet-quem-somos.png" alt="veterinário com cachorro">
             <div class="degrade"></div>
-            <dotlottie-wc
-                src="imagens/animacao.lottie"
-                autoplay
-                loop>
-            </dotlottie-wc>
+            <dotlottie-wc src="imagens/animacao.lottie" autoplay loop></dotlottie-wc>
         </div>
-        <div class="sobre-nos revelar"  id="sobre-nos">
-            <h2>Conheça a Quatro Patas</h2>
 
+        <!-- ==================== SOBRE NÓS ==================== -->
+        <div class="sobre-nos revelar" id="sobre-nos">
+            <h2>Conheça a Quatro Patas</h2>
             <h1>Cuidado, Amor e Bem-Estar para o Seu Pet</h1>
 
             <p class="info-sobre">
-                <strong>Olá, nós somos a Quatro Patas! 🐾</strong> Somos apaixonados por animais e acreditamos que cada pet merece cuidado, carinho e atenção especial. Nossa missão é oferecer um atendimento acolhedor e de qualidade, cuidando da saúde e do bem-estar dos seus melhores amigos em cada etapa da vida.
-                Contamos com profissionais dedicados e uma estrutura preparada para proporcionar conforto, segurança e tranquilidade tanto para os pets quanto para seus tutores. Aqui, cada animal é tratado com todo o amor e respeito que merece, porque sabemos que eles são muito mais do que animais de estimação: são parte da família!
+                <strong>Olá, nós somos a Quatro Patas! 🐾</strong> Somos apaixonados por animais e acreditamos
+                que cada pet merece cuidado, carinho e atenção especial. Nossa missão é oferecer um atendimento
+                acolhedor e de qualidade, cuidando da saúde e do bem-estar dos seus melhores amigos em cada etapa da vida.
+                Contamos com profissionais dedicados e uma estrutura preparada para proporcionar conforto, segurança
+                e tranquilidade tanto para os pets quanto para seus tutores. Aqui, cada animal é tratado com todo o
+                amor e respeito que merece, porque sabemos que eles são muito mais do que animais de estimação:
+                são parte da família!
             </p>
-            <p class="checks-sobre-nos">
-                <p class="checks"> <span class="material-symbols-outlined">check_small</span> Atendimento Personalizado</p>
+
+            <!-- Lista de diferenciais -->
+            <div class="checks-sobre-nos">
+                <p class="checks"><span class="material-symbols-outlined">check_small</span> Atendimento Personalizado</p>
                 <p class="checks"><span class="material-symbols-outlined">check_small</span> Cuidado e Carinho em Cada Consulta</p>
                 <p class="checks"><span class="material-symbols-outlined">check_small</span> Emergências 24h</p>
-            </p>
+            </div>
 
             <button>SAIBA MAIS</button>
-
         </div>
+
+        <!-- ==================== POR QUE NOS ESCOLHER ==================== -->
         <div class="porque">
             <h1>Por que <br> Nos Escolher ?</h1>
             <p>Estamos sempre em busca do melhor para nossos clientes e seus pets, com atendimento humanizado e serviços de excelência.</p>
         </div>
+
+        <!-- ==================== BARRAS DE PROGRESSO (animadas pelo JS) ==================== -->
         <div class="resultados">
+
             <div class="habilidade">
-            <div class="habilidade-info">
-                Experiência dos Veterinários
-                <span>90%</span>
+                <div class="habilidade-info">
+                    Experiência dos Veterinários
+                    <span>90%</span>
+                </div>
+                <div class="barra">
+                    <div class="progresso" data-porcentagem="90"></div>
+                </div>
             </div>
 
-            <div class="barra">
-                <div class="progresso" data-porcentagem="90"></div>
-            </div>
-            </div>
             <div class="habilidade">
-            <div class="habilidade-info">
-                Qualidade do Serviço
-                <span>90%</span>
+                <div class="habilidade-info">
+                    Qualidade do Serviço
+                    <span>90%</span>
+                </div>
+                <div class="barra">
+                    <div class="progresso" data-porcentagem="90"></div>
+                </div>
             </div>
 
-            <div class="barra">
-                <div class="progresso" data-porcentagem="90"></div>
-            </div>
-            </div>
             <div class="habilidade">
-            <div class="habilidade-info">
-                Satisfação do Seu Pet!
-                <span>90%</span>
+                <div class="habilidade-info">
+                    Satisfação do Seu Pet!
+                    <span>90%</span>
+                </div>
+                <div class="barra">
+                    <div class="progresso" data-porcentagem="90"></div>
+                </div>
             </div>
 
-            <div class="barra">
-                <div class="progresso" data-porcentagem="90"></div>
-            </div>
-            </div>
         </div>
 
+        <!-- ==================== TESTEMUNHOS (carrossel) ==================== -->
         <section class="testemunhos revelar">
             <h1>Testemunhos de Nossos Pacientes</h1>
 
             <div class="carrossel-testemunhos">
 
-                <button class="seta seta-esquerda"
-                        aria-label="Testemunho anterior">
-                    &#10094;
-                </button>
+                <!-- Seta esquerda -->
+                <button class="seta seta-esquerda" aria-label="Testemunho anterior">&#10094;</button>
 
                 <div class="janela-testemunhos">
                     <div class="trilho-testemunhos">
 
+                        <!-- Félix -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/736x/0d/29/cd/0d29cdf859fff8427bed735881518da4.jpg"
-                                alt="Gato Félix">
-
-                            <div class="testemunho-info ">
+                            <img src="https://i.pinimg.com/736x/0d/29/cd/0d29cdf859fff8427bed735881518da4.jpg" alt="Gato Félix">
+                            <div class="testemunho-info">
                                 <h2>Félix</h2>
                                 <p>
-                                    Esse é o Félix, um gatinho muito corajoso! Ele foi adotado e tem uma família linda agora. Preocupados com o bem estar dele, os tutores o levaram no Quatro Patas Tatuapé para fazer uma consulta filhote, em que recebeu todas as orientações necessárias para cuidar do novo filhotinho. &#x1F49A Félix já foi castrado e agora está se recuperando com todo o amor em casa, seguindo todas as orientações da Dra. Ana Elisa, veterinária dele.
+                                    Esse é o Félix, um gatinho muito corajoso! Ele foi adotado e tem uma família linda agora.
+                                    Preocupados com o bem estar dele, os tutores o levaram no Quatro Patas Tatuapé para fazer
+                                    uma consulta filhote, em que recebeu todas as orientações necessárias para cuidar do novo
+                                    filhotinho. &#x1F49A; Félix já foi castrado e agora está se recuperando com todo o amor em
+                                    casa, seguindo todas as orientações da Dra. Ana Elisa, veterinária dele.
                                 </p>
                             </div>
                         </article>
 
+                        <!-- Austin -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/736x/52/cb/7f/52cb7f6cb87c373fcedbb4194eed0cf1.jpg"
-                                alt="Cachorrinho atendido pela clínica">
-
+                            <img src="https://i.pinimg.com/736x/52/cb/7f/52cb7f6cb87c373fcedbb4194eed0cf1.jpg" alt="Greyhound Austin">
                             <div class="testemunho-info">
                                 <h2>Austin</h2>
                                 <p>
-                                    O Austin é esse lindo Greyhound! &#x2B50
-                                    No réveillon ele veio até o Quatro Patas Tatuapé todo machucado, depois de achar que ia ser legal brincar com um porco espinho. Ficou internado durante dias na UTI, passou por várias cirurgias para retirada de espinhos (inclusive de dentro dos pulmões e de perto do coração) e teve que ficar com dreno torácico por mais de 3 meses. Durante esse tempo, ele recebeu cuidados de todos os Veterinários da nossa equipe, virou o xodó de todos e foi acompanhado de perto pela Dra. Kelly e pelo Dr. André. <br> 
-                                    <br>A boa notícia é que conseguimos tirar o último dreno torácico e demos alta para o Austin! Agora as próximas visitas serão para vacinação, check-up’s regulares e cuidar da saúde oral. Na última foto, ele já aparece sem os drenos e sem a roupa cirúrgica, depois de quase 5 meses.
-
+                                    O Austin é esse lindo Greyhound! &#x2B50;
+                                    No réveillon ele veio até o Quatro Patas Tatuapé todo machucado, depois de achar que ia
+                                    ser legal brincar com um porco espinho. Ficou internado durante dias na UTI, passou por
+                                    várias cirurgias para retirada de espinhos (inclusive de dentro dos pulmões e de perto do
+                                    coração) e teve que ficar com dreno torácico por mais de 3 meses. Durante esse tempo, ele
+                                    recebeu cuidados de todos os Veterinários da nossa equipe, virou o xodó de todos e foi
+                                    acompanhado de perto pela Dra. Kelly e pelo Dr. André. <br>
+                                    <br>A boa notícia é que conseguimos tirar o último dreno torácico e demos alta para o Austin!
+                                    Agora as próximas visitas serão para vacinação, check-up’s regulares e cuidar da saúde oral.
+                                    Na última foto, ele já aparece sem os drenos e sem a roupa cirúrgica, depois de quase 5 meses.
                                 </p>
                             </div>
                         </article>
 
+                        <!-- Luna -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/736x/94/ae/6c/94ae6c7f8c65f88311806a46bca61f0a.jpg">
-
+                            <img src="https://i.pinimg.com/736x/94/ae/6c/94ae6c7f8c65f88311806a46bca61f0a.jpg" alt="Cachorrinha Luna">
                             <div class="testemunho-info">
                                 <h2>Luna</h2>
                                 <p>
-                                    Oi eu sou a Luna, uma SRD de 1 ano e meio, e vim ao Quatro Patas Santo Amaro pois estava vomitando e com diarreia e aí a mamãe me trouxe rapidamente para consulta e exames. Fiz o Perfil Pet Care Laboratorial 1 que são vários exames, com um valor menor do que se fizer separado, e que trazem um diagnóstico mais preciso e fiz o exame de fezes também. O resultado dos exames apontou giárdia, agora já fiz o tratamento e estou linda e saudável explorando tudo por aí!
+                                    Oi eu sou a Luna, uma SRD de 1 ano e meio, e vim ao Quatro Patas Santo Amaro pois estava
+                                    vomitando e com diarreia e aí a mamãe me trouxe rapidamente para consulta e exames. Fiz o
+                                    Perfil Pet Care Laboratorial 1 que são vários exames, com um valor menor do que se fizer
+                                    separado, e que trazem um diagnóstico mais preciso e fiz o exame de fezes também. O resultado
+                                    dos exames apontou giárdia, agora já fiz o tratamento e estou linda e saudável explorando
+                                    tudo por aí!
                                 </p>
                             </div>
                         </article>
 
+                        <!-- Simba -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/1200x/73/74/a4/7374a4872a31c5b0e4fb65a2d0aceaca.jpg"
-                                alt="Gatinho atendido pela clínica">
-
+                            <img src="https://i.pinimg.com/1200x/73/74/a4/7374a4872a31c5b0e4fb65a2d0aceaca.jpg" alt="Gatinho Simba">
                             <div class="testemunho-info">
                                 <h2>Simba</h2>
                                 <p>
-                                    Oi, pessoal! Eu sou o Simba, um gatinho SRD de 1 ano, curioso e cheio de personalidade! &#x1F431 &#x2B50 Minha família me levou ao Quatro Patas para realizar minha castração e receber todas as orientações sobre os cuidados antes e depois do procedimento. A equipe foi muito atenciosa comigo e explicou para a minha humana como cuidar de mim durante a recuperação, incluindo o repouso e a administração dos medicamentos prescritos. Nos primeiros dias, recebi muitos carinhos e fiquei bem quietinho, mas logo estava de volta às minhas brincadeiras e sonecas favoritas. Agora estou recuperado e pronto para continuar explorando cada cantinho da casa!
+                                    Oi, pessoal! Eu sou o Simba, um gatinho SRD de 1 ano, curioso e cheio de personalidade!
+                                    &#x1F431; &#x2B50; Minha família me levou ao Quatro Patas para realizar minha castração e
+                                    receber todas as orientações sobre os cuidados antes e depois do procedimento. A equipe foi
+                                    muito atenciosa comigo e explicou para a minha humana como cuidar de mim durante a
+                                    recuperação, incluindo o repouso e a administração dos medicamentos prescritos. Nos primeiros
+                                    dias, recebi muitos carinhos e fiquei bem quietinho, mas logo estava de volta às minhas
+                                    brincadeiras e sonecas favoritas. Agora estou recuperado e pronto para continuar explorando
+                                    cada cantinho da casa!
                                 </p>
                             </div>
                         </article>
 
+                        <!-- Bob -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/1200x/5d/3a/41/5d3a41ee8342cfd1690a1e4033a69e92.jpg"
-                                alt="Gatinho atendido pela clínica">
-
+                            <img src="https://i.pinimg.com/1200x/5d/3a/41/5d3a41ee8342cfd1690a1e4033a69e92.jpg" alt="Shih-tzu Bob">
                             <div class="testemunho-info">
                                 <h2>Bob</h2>
                                 <p>
-                                    Eu sou o Bob, um Shih-tzu de 4 anos, e vim ao Quatro Patas porque estava me coçando bastante e minha pele estava ficando vermelhinha. Minha família ficou preocupada e resolveu marcar uma consulta para descobrir o que estava acontecendo. A veterinária examinou minha pele, conversou com meus tutores sobre minha rotina e indicou os cuidados necessários para o meu caso. Com o tratamento recomendado e muito carinho em casa, fui melhorando aos pouquinhos! Agora estou muito mais confortável, curtindo meus passeios e aproveitando cada momento ao lado da minha família.
+                                    Eu sou o Bob, um Shih-tzu de 4 anos, e vim ao Quatro Patas porque estava me coçando bastante
+                                    e minha pele estava ficando vermelhinha. Minha família ficou preocupada e resolveu marcar uma
+                                    consulta para descobrir o que estava acontecendo. A veterinária examinou minha pele, conversou
+                                    com meus tutores sobre minha rotina e indicou os cuidados necessários para o meu caso. Com o
+                                    tratamento recomendado e muito carinho em casa, fui melhorando aos pouquinhos! Agora estou
+                                    muito mais confortável, curtindo meus passeios e aproveitando cada momento ao lado da minha família.
                                 </p>
                             </div>
                         </article>
 
+                        <!-- Mel -->
                         <article class="slide-testemunho">
-                            <img src="https://i.pinimg.com/736x/c7/73/4a/c7734a0cb00957cb92ebc27e8c415985.jpg"
-                                alt="Golden Retriever pela clínica">
-
+                            <img src="https://i.pinimg.com/736x/c7/73/4a/c7734a0cb00957cb92ebc27e8c415985.jpg" alt="Golden Retriever Mel">
                             <div class="testemunho-info">
                                 <h2>Mel</h2>
                                 <p>
-                                    Oi, eu sou a Mel, uma Golden Retriever de 8 meses! &#x1F436 A mamãe me trouxe ao Quatro Patas porque estava na hora de atualizar minhas vacinas e garantir que eu continuasse crescendo forte e saudável. Durante a consulta, a veterinária também explicou todos os cuidados importantes dessa fase, desde a alimentação até a prevenção contra parasitas. Ganhei muito carinho durante o atendimento e saí de lá pronta para continuar minhas aventuras com segurança. Agora é só alegria, brincadeiras e muitos lambeijos!
+                                    Oi, eu sou a Mel, uma Golden Retriever de 8 meses! &#x1F436; A mamãe me trouxe ao Quatro
+                                    Patas porque estava na hora de atualizar minhas vacinas e garantir que eu continuasse
+                                    crescendo forte e saudável. Durante a consulta, a veterinária também explicou todos os
+                                    cuidados importantes dessa fase, desde a alimentação até a prevenção contra parasitas.
+                                    Ganhei muito carinho durante o atendimento e saí de lá pronta para continuar minhas
+                                    aventuras com segurança. Agora é só alegria, brincadeiras e muitos lambeijos!
                                 </p>
                             </div>
                         </article>
@@ -533,25 +578,28 @@
                     </div>
                 </div>
 
-                <button class="seta seta-direita"
-                        aria-label="Próximo testemunho">
-                    &#10095;
-                </button>
+                <!-- Seta direita -->
+                <button class="seta seta-direita" aria-label="Próximo testemunho">&#10095;</button>
 
             </div>
         </section>
 
+        <!-- ==================== BLOG ==================== -->
         <div class="blogs" id="blogs">
             <h1>Últimas Postagens</h1>
+
             <div class="container-blogs">
+
+                <!-- Post 1 -->
                 <div class="post">
-                    <img src="imagens/blog1.jpg" alt="cachorro dando a pata"> 
+                    <img src="imagens/blog1.jpg" alt="cachorro dando a pata">
                     <h2>Adestramento de Cães: Tudo o Que Você Precisa Saber para Educar Seu Melhor Amigo</h2>
                     <p>Educar um cão vai muito além de ensinar comandos como sentar, deitar e dar a pata. O adestramento é uma parte importante da convivência entre tutores e animais, pois ajuda a estabelecer limites, desenvolver a confiança e tornar o dia a dia mais tranquilo e seguro para todos. Com paciência, consistência e técnicas adequadas, é possível ensinar bons comportamentos e fortalecer o vínculo com seu melhor amigo.</p>
                     <button>LEIA MAIS</button>
                     <span class="data-post"><span class="num">18</span> <br> set</span>
                 </div>
-                
+
+                <!-- Post 2 -->
                 <div class="post">
                     <img src="https://adimax.com.br/wp-content/uploads/2024/09/Firefly-gato-e-cachorro-dividindo-o-mesmo-pote-de-comida-em-um-quintal-de-uma-casa-estilo-foto-rea.png" alt="gato e cachorro comendo">
                     <h2>Alimentação Natural para Pets: Benefícios, Cuidados e Como Oferecer uma Dieta Equilibrada</h2>
@@ -560,6 +608,7 @@
                     <span class="data-post"><span class="num">09</span> <br> out</span>
                 </div>
 
+                <!-- Post 3 -->
                 <div class="post">
                     <img src="imagens/blog3.jpg" alt="gato e cachorro no veterinário">
                     <h2>Saúde dos Pets: Como Cuidar do Seu Cão ou Gato e Garantir Mais Qualidade de Vida</h2>
@@ -570,172 +619,184 @@
 
             </div>
         </div>
+
+        <!-- ==================== UNIDADES ==================== -->
         <section class="unidades revelar" id="unidades">
             <h1>Nossas Unidades</h1>
+
             <div class="container-unidades">
+
+                <!-- Tatuapé -->
                 <div class="unidade">
                     <img src="imagens/unidade1.jpg" alt="Unidade Tatuapé">
-                     <h2>Tatuapé</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
+                    <h2>Tatuapé</h2>
+                    <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
                 </div>
+
+                <!-- Moema -->
                 <div class="unidade">
                     <img src="imagens/unidade2.jpg" alt="Unidade Moema">
                     <h2>Moema</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001 </p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
                 </div>
+
+                <!-- Santo Amaro -->
                 <div class="unidade">
                     <img src="imagens/unidade3.jpg" alt="Unidade Santo Amaro">
                     <h2>Santo Amaro</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
+                    <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
+                    <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
                 </div>
+
             </div>
         </section>
+
+        <!-- ==================== PERGUNTAS FREQUENTES + FALE CONOSCO ==================== -->
         <section class="duvidas-faleconosco">
+
+            <!-- ---------- FAQ (acordeão controlado pelo JS) ---------- -->
             <div class="duvidas">
                 <h1>Perguntas Frequentes</h1>
+
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> A Quatro Patas funciona 24 horas?</h2>
-                    <div  class="respostas">
+                    <div class="respostas">
                         <p>Sim! A Quatro Patas oferece atendimento veterinário 24 horas, todos os dias, para cuidar do seu melhor amigo sempre que ele precisar. Estamos preparados para receber seu pet em situações de emergência e oferecer o cuidado e a atenção que ele merece, inclusive durante a noite, aos finais de semana e feriados.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> A clínica aceita convênios veterinários?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>Sim! A Quatro Patas aceita alguns convênios veterinários para facilitar o acesso aos nossos serviços. Como a cobertura pode variar de acordo com o plano contratado e o procedimento necessário, recomendamos entrar em contato com nossa equipe para confirmar se o seu convênio é aceito e quais atendimentos estão disponíveis.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> Preciso agendar uma consulta para levar meu pet?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>Para consultas de rotina, recomendamos verificar a disponibilidade e realizar o agendamento antecipadamente. Em casos de emergência, você pode procurar a Quatro Patas a qualquer momento, pois nosso atendimento funciona 24 horas. Se possível, entre em contato com a equipe antes de vir para receber orientações.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> Quais animais são atendidos pela Quatro Patas?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>Nosso objetivo é proporcionar cuidado, conforto e bem-estar aos animais de estimação. Atendemos cães e gatos, oferecendo atenção individualizada para compreender as necessidades de cada paciente. Entre em contato para confirmar a disponibilidade de atendimento para outras espécies.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> O que devo fazer se meu pet apresentar uma emergência?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>Se o seu pet apresentar sinais como dificuldade para respirar, convulsões, sangramento intenso, desmaio ou suspeita de intoxicação, procure atendimento veterinário imediatamente. A Quatro Patas funciona 24 horas para receber seu companheiro quando ele mais precisa. Sempre que possível, ligue para a clínica durante o deslocamento para que a equipe possa orientar sua chegada.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> Quais serviços veterinários a Quatro Patas oferece?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>A Quatro Patas busca cuidar da saúde e da qualidade de vida do seu pet em diferentes etapas da vida. Nossa estrutura e nossos serviços podem incluir consultas veterinárias, avaliações preventivas e atendimento de urgência e emergência, conforme a disponibilidade da unidade. Entre em contato para conhecer os serviços oferecidos e verificar quais procedimentos estão disponíveis.</p>
                     </div>
                 </div>
 
                 <div class="item-duvida">
                     <h2><i class="fa-solid fa-chevron-down"></i> Como posso entrar em contato com a Quatro Patas?</h2>
-                    <div class = "respostas">
+                    <div class="respostas">
                         <p>Nossa equipe está pronta para ajudar você a encontrar as melhores orientações para o cuidado do seu pet. Entre em contato pelos nossos canais de atendimento para esclarecer dúvidas sobre consultas, convênios, serviços disponíveis e emergências. Afinal, sabemos que seu companheiro faz parte da família e merece atenção, carinho e cuidado em todos os momentos.</p>
                     </div>
                 </div>
             </div>
 
-                <div class="container-faleconosco" id="faleconosco">
-                    <h1>Fale com a Quatro Patas!</h1>
-                    <form class="formulario">
-                        <div class="campo">
-                            <label for="nome">Nome</label>
-                            <input
-                                type="text"
-                                id="nome"
-                                name="nome"
-                                placeholder="Digite seu nome aqui"
-                                required
-                                >
-                        </div>
+            <!-- ---------- Formulário de contato ---------- -->
+            <div class="container-faleconosco" id="faleconosco">
+                <h1>Fale com a Quatro Patas!</h1>
 
-                        <div class="campo">
-                            <label for="telefone">Telefone/WhatsApp</label>
-                            <input type="tel"
-                            id="telefone"
-                            name="telefone"
-                            placeholder="Seu número para contato"
-                            required
-                            >
-                        </div>
-                        
-                        <div class="campo">
-                            <label for="mensagem">Mensagem</label>
-                            <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            placeholder="No que podemos te ajudar? Em breve retornaremos sua mensagem."
-                            rows="5"
-                            required
-                            >
-                        </textarea>
+                <form class="formulario">
 
-                        <button type="submit">Enviar </button>
-                    </form>
-                </div>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome aqui" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefone">Telefone/WhatsApp</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="Seu número para contato" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                 
+                        <textarea id="mensagem" name="mensagem" rows="5" required
+                                  placeholder="No que podemos te ajudar? Em breve retornaremos sua mensagem."></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+
         </section>
+
+        <!-- ==================== RODAPÉ ==================== -->
         <footer>
 
-                <div  class="container-foot-social">
-                    <img src="imagens/logo-foot.png" class="footer-img" alt="logo Quatro Patas">
-                    <p>Siga-nos!</p>
-                    <div>
-                        <span><i class="fa-brands fa-instagram"></i></span>
-                        <span><i class="fa-brands fa-facebook"></i></span>
-                    </div>
+            <!-- Logo e redes sociais -->
+            <div class="container-foot-social">
+                <img src="imagens/logo-foot.png" class="footer-img" alt="logo Quatro Patas">
+                <p>Siga-nos!</p>
+                <div>
+                    <span><i class="fa-brands fa-instagram"></i></span>
+                    <span><i class="fa-brands fa-facebook"></i></span>
                 </div>
-
-            <div class="container-foot">
-              
-                     <h2>Tatuapé</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
-           
-              
-                    <h2>Moema</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001 </p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
-         
-                    <h2>Santo Amaro</h2>
-                     <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
-                     <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
-    
             </div>
+
+            <!-- Endereços das unidades -->
+            <div class="container-foot">
+                <h2>Tatuapé</h2>
+                <p><i class="fa-solid fa-location-dot"></i> R. Apucarana, 950 - Tatuapé, <br> São Paulo - SP, 03311-001</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 9165-4000</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 6541-2500</p>
+
+                <h2>Moema</h2>
+                <p><i class="fa-solid fa-location-dot"></i> Av. Macuco, 521 - Moema, <br> São Paulo - SP, 04523-001</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 5051-2244</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 2033-3906</p>
+
+                <h2>Santo Amaro</h2>
+                <p><i class="fa-solid fa-location-dot"></i> R. Verbo Divino, 1100 - Chácara Santo Antônio, <br> São Paulo - SP, 04719-002</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 2295-8877</p>
+                <p><i class="fa-solid fa-phone"></i> (11) 5181-4321</p>
+            </div>
+
+            <!-- Horários de atendimento -->
             <div class="container-foot">
                 <h1>Atendimento</h1>
+
                 <h2>Unidade Tatuapé:</h2>
                 <p>
                     Clínica Veterinária: 24h <br>
                     Petshop e Banho e tosa: 09h às 19h
                 </p>
+
                 <h2>Unidade Moema:</h2>
                 <p>
                     Clínica Veterinária: 09h às 19h <br>
-                    Petshop e Banho e tosa: 09h as 18h <br> com hora marcada
+                    Petshop e Banho e tosa: 09h às 18h <br> com hora marcada
                 </p>
+
                 <h2>Unidade Santo Amaro:</h2>
                 <p>
                     Clínica Veterinária: 24h <br>
-                    Petshop e Banho e tosa: 10h as 18h <br> com hora marcada
+                    Petshop e Banho e tosa: 10h às 18h <br> com hora marcada
                 </p>
             </div>
+
+            <!-- Links de serviços -->
             <div class="container-foot">
                 <h1>Serviços</h1>
                 <a href="">Vacina para Cães</a>
@@ -748,13 +809,18 @@
                 <a href="">Plano Preventivo</a>
                 <a href="">Todos os serviços</a>
             </div>
+
         </footer>
-        
+
+        <!-- ==================== DIREITOS AUTORAIS ==================== -->
         <div class="direitos">
             <hr>
             <p>© 2026 Quatro Patas • Todos os direitos reservados.</p>
             <p>Projeto desenvolvido por Isabelly Santos.</p>
         </div>
+
     </div>
+    <!-- Fim do CONTAINER 2 -->
+
 </body>
 </html>
