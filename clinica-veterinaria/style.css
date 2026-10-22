@@ -751,7 +751,7 @@ button > i.fa-solid:hover {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    padding: 20vh 0;
+    padding: 7vw 2vw;
 
     /* Camada verde translúcida por cima da imagem de fundo */
     background:
@@ -1318,6 +1318,7 @@ dotlottie-wc {
     width: 80%;
     margin: 0 auto 5vw;
     border-radius: 10px;
+    padding: 0 2vw;
 
     /* Camada verde translúcida por cima da foto */
     background:
