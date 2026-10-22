@@ -246,3 +246,65 @@ if (
     // Avança a cada 10 segundos
     setInterval(proximoPar, 10000);
 }
+
+
+//navegação dos banners no hero
+
+const carrosselHero = document.querySelector(".carousel-hero");
+const faixaHero = document.querySelector(".slides-hero");
+
+const slidesHero = document.querySelectorAll(".slide-hero");
+const setaAnterior = document.querySelector(".seta-hero.anterior");
+const setaProximo = document.querySelector(".seta-hero.proximo");
+const bolinhasHero = document.querySelectorAll(".bolinha");
+
+let indiceHero = 0;
+
+function atualizarHero() {
+    // Move a faixa até o banner selecionado
+    faixaHero.style.transform = `translateX(-${indiceHero * 100}%)`;
+
+    // Atualiza a bolinha ativa
+    bolinhasHero.forEach((bolinha, indice) => {
+        bolinha.classList.toggle("ativa", indice === indiceHero);
+
+        if (indice === indiceHero) {
+            bolinha.setAttribute("aria-current", "true");
+        } else {
+            bolinha.removeAttribute("aria-current");
+        }
+    });
+
+    // Esconde a seta anterior no primeiro banner
+    setaAnterior.hidden = indiceHero === 0;
+
+    // Esconde a próxima seta no último banner
+    setaProximo.hidden = indiceHero === slidesHero.length - 1;
+}
+
+// Voltar um banner
+setaAnterior.addEventListener("click", () => {
+    if (indiceHero > 0) {
+        indiceHero--;
+        atualizarHero();
+    }
+});
+
+// Avançar um banner
+setaProximo.addEventListener("click", () => {
+    if (indiceHero < slidesHero.length - 1) {
+        indiceHero++;
+        atualizarHero();
+    }
+});
+
+// Ir diretamente para o banner da bolinha clicada
+bolinhasHero.forEach((bolinha, indice) => {
+    bolinha.addEventListener("click", () => {
+        indiceHero = indice;
+        atualizarHero();
+    });
+});
+
+// Configura o estado inicial
+atualizarHero();

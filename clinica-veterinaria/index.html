@@ -147,24 +147,100 @@
 
                     
         </nav>
-        <hero>
-            <div class="card-principal revelar">
-                
-                <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
-                <p>
-                    Na Quatro Patas, seu melhor amigo recebe todo o carinho e atenção que merece. Oferecemos cuidados veterinários pensados para promover mais saúde, bem-estar e qualidade em  todas as fases da vida. &#x1F43E
-                </p>
-                <button>Ver Planos</button>
+        
+        <section class="hero">
+
+        <!-- Carrossel principal -->
+        <div class="carousel-hero revelar">
+
+            <div class="slides-hero">
+
+                <!-- Card 1 -->
+                <div class="card-principal slide-hero hero1">
+                    <h1>Cuidado Especializado para Seu Pet <span>24h</span></h1>
+
+                    <p>
+                        Na Quatro Patas, seu melhor amigo recebe todo o
+                        carinho e atenção que merece. Oferecemos cuidados
+                        veterinários em todas as fases da vida. 
+                    </p>
+
+                    <button>Ver Planos</button>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-principal slide-hero hero2">
+                    <h1>Hospital 24h: Cuidado Sempre por Perto</h1>
+
+                    <p>
+                        Imprevistos podem acontecer a qualquer momento. Por isso, nossa equipe está pronta para cuidar do seu pet com carinho, atenção e suporte veterinário 24 horas por dia, todos os dias.
+                    </p>
+
+                    <button>Nossas Unidades</button>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-principal slide-hero hero3">
+                    <h1>Quatro Patas é Cuidado de Qualidade!</h1>
+
+                    <p>
+                        Há mais de 20 especialidades veterinárias, profissionais dedicados e serviços de qualidade reconhecidos por nossos clientes. Tudo para oferecer ao seu pet um cuidado com carinho, confiança e atenção em cada detalhe.
+                    </p>
+
+                    <button>Conhecer Especialidades</button>
+                </div>
+
             </div>
-            <div class="card-agendar revelar">
-                <div class="circle"><i class="fa-solid fa-user-doctor iagendar"></i></div>
-                <p>Agendar Consulta</p>
-            </div >
-            <div  class="card-agendar revelar">
-                <div class="circle"><i class="fa-solid fa-vial iagendar"></i></div>
-                <p>Agendar Exame</p>
+
+            <!-- Setas de navegação -->
+            <button class="seta-hero anterior"
+                    aria-label="Banner anterior"
+                    type="button">
+                <i class="fa-solid fa-circle-chevron-left"></i>
+            </button>
+
+            <button class="seta-hero proximo"
+                    aria-label="Próximo banner"
+                    type="button">
+                <i class="fa-solid fa-circle-chevron-right"></i>
+            </button>
+
+            <!-- Indicadores -->
+            <div class="indicadores-hero">
+                <button class="bolinha ativa"
+                        aria-label="Ir para o banner 1"
+                        aria-current="true"
+                        type="button"></button>
+
+                <button class="bolinha"
+                        aria-label="Ir para o banner 2"
+                        type="button"></button>
+
+                <button class="bolinha"
+                        aria-label="Ir para o banner 3"
+                        type="button"></button>
             </div>
-        </hero>
+
+        </div>
+
+        <!-- Cards de agendamento permanecem fixos -->
+        <div class="card-agendar revelar">
+            <div class="circle">
+                <i class="fa-solid fa-user-doctor iagendar"></i>
+            </div>
+            <p>Agendar Consulta</p>
+        </div>
+
+        <div class="card-agendar revelar">
+            <div class="circle">
+                <i class="fa-solid fa-vial iagendar"></i>
+            </div>
+            <p>Agendar Exame</p>
+        </div>
+
+    </section>
+
+
         <div class="avaliacao-maps revelar">
             <h2>Somos 4,8 &#x2B50 no Google!</h2>
             <p class="text-avaliacao">Veja o que nossos clientes dizem sobre a Quatro Patas.</p>

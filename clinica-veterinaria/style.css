@@ -265,29 +265,228 @@ nav.menu-principal {
 }
 
 
-hero {
+/* Área principal */
+.hero {
     background-color: var(--cor2);
-    grid-area: 3 / 1 / 4 / 1;
     display: grid;
-    grid-template: auto / 75% 25%;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-around;
-    box-shadow: inset 0px 0px 5px rgba(89, 89, 89, 0.323);
+    grid-template-columns: minmax(0, 3fr) minmax(150px, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 40px;
+    align-items: stretch;
+    padding: 2.5vw;
+    box-shadow: inset 0 0 5px rgba(89, 89, 89, 0.323);
 }
 
+/* Janela do carrossel */
+.carousel-hero {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px rgba(64, 64, 64, 0.221);
+}
+
+/* Faixa que desliza */
+.slides-hero {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Cada banner */
+.card-principal {
+    flex: 0 0 100%;
+    width: 100%;
+    height: 100%;
+    min-width: 0;
+    min-height: 50vh;
+    padding: 30px;
+
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 40% 50%;
+    grid-template-rows: auto auto auto;
+    align-content: center;
+    align-items: center;
+    gap: 15px;
+
+    border-radius: 15px;
+    box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.3);
+}
+
+.hero1 {
+    background-image: url("imagens/hero.png");
+}
+
+.hero2 {
+    background-image: url(imagens/hero2.png);
+}
+
+.card-principal.hero2 p {
+    color: rgb(96, 93, 93);
+}
+
+.card-principal.hero2 h1 {
+    color: rgb(64, 101, 64);
+}
+
+.card-principal.hero2 > button {
+    background-color: var(--cor5);
+    color: white;
+
+}
+
+.card-principal.hero2 > button:hover {
+    background-color: rgb(61, 81, 61);
+    transition: color 0.3s ease;
+}
+
+.hero3 {
+    background-image: url(imagens/hero3.jpg);
+}
+
+
+/* Conteúdo dos banners */
+.card-principal h1 {
+    grid-area: 1 / 2 / 2 / 3;
+    font-size: clamp(1.2rem, 1.8vw, 1.9rem);
+    color: white;
+    background: transparent;
+    font-family: var(--fonte2);
+}
+
+.card-principal h1 span {
+    color: #009258;
+    background: transparent;
+}
+
+.card-principal p {
+    grid-area: 2 / 2 / 3 / 3;
+    color: white;
+    background: transparent;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card-principal > button {
+    grid-area: 3 / 2 / 4 / 3;
+    justify-self: start;
+    align-self: flex-end;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
+    font-weight: 600;
+    cursor: pointer;
+    margin: 10px 0px 20px 0px;
+}
+
+/* Setas */
+.seta-hero {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+
+    background-color: transparent;
+    color: var(--cor8);
+    font-size: 1.8rem;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button > i.fa-solid {
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.729);
+}
+
+.seta-hero.anterior {
+    left: 12px;
+}
+
+.seta-hero.proximo {
+    right: 12px;
+}
+
+button > i.fa-solid:hover {
+    color: white;
+}
+
+/* Bolinhas */
+.indicadores-hero {
+    position: absolute;
+    z-index: 2;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 10px;
+    background-color: transparent;
+}
+
+.bolinha {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.55);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.bolinha.ativa {
+    background-color: var(--cor7);
+    transform: scale(1.2);
+}
+
+/* Cards de agendamento */
 .card-agendar {
-    height: 70%;
-    width: 90%;
+    grid-column: 2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.221);
-    margin-left: -2rem;
-    
 }
+
+.card-agendar:nth-of-type(2) {
+    grid-row: 1;
+}
+
+.card-agendar:nth-of-type(3) {
+    grid-row: 2;
+}
+
+.seta-hero[hidden] {
+    display: none;
+}
+
 
 .circle > .iagendar {
     font-size: clamp(1rem, 2vw, 3rem);
@@ -320,63 +519,6 @@ hero {
 .card-agendar:hover .circle,.card-agendar:hover .iagendar  {
     background-color: var(--cor7);
     transition: color 0.3s ease;
-}
-
-
-.card-principal {
-    height: 85%;
-    width: 80%;
-    background-image: url(imagens/hero.png);
-    background-size: cover;
-    grid-area: 1 / 1 / 3 / 2;
-    margin: 6vw auto;
-    border-radius: 15px;
-    display: grid;
-    grid-template: auto / 40% 50%;
-    align-items: center;
-    align-content: space-evenly;
-    box-shadow: 2px 2px 3px rgba(128, 128, 128, 0.481);
-    
-}
-
-hero>img {
-    height: 100%;
-    background-color: none;
-    grid-area: 1 / 1 / 2 / 2;
-}
-
-.card-principal > h1 {
-    grid-area: 1 / 2 / 2 / -1;
-    font-size: clamp(1rem, 1.9vw, 2rem);
-    text-align: left;
-    background-color: transparent;
-    color: white;
-}
-
-.card-principal > h1 > span {
-    background-color: transparent;
-    color: #009258;
-}
-
-.card-principal > p {
-    grid-area: 2 / 2 / 3 / -1;
-    background-color: transparent;
-    color: white;
-    font-size: 100%;
-}
-
-.card-principal > button {
-    grid-area: 3 / 2 / 4 / -1;
-    background-color: white;
-    color: black;
-    border-radius: 15px;
-    padding: 10px 15px;
-    margin: auto;
-    align-self: start;
-    box-shadow: 0px 0px 5px rgba(128, 128, 128, 0.462);
-    border: none;
-    font-weight: 600;
-    
 }
 
 
