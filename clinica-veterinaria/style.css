@@ -393,7 +393,7 @@ nav.menu-principal {
     padding: clamp(16px, 0.8rem + 1vw, 30px);
 
     background-size: cover;
-    background-position: left top;
+    background-position: left bottom;
     background-repeat: no-repeat;
 
     display: grid;
@@ -418,7 +418,7 @@ nav.menu-principal {
 
 .card-principal h1 span {
     background: transparent;
-    color: #009258;
+    color: #66e0af;
 }
 
 .card-principal p {
@@ -427,6 +427,7 @@ nav.menu-principal {
     color: white;
     font-size: var(--fs-base);
     line-height: 1.5;
+    font-weight: 600;
 }
 
 .card-principal > button {
@@ -446,33 +447,34 @@ nav.menu-principal {
 
 /* ----- Imagens e variações de cada banner ----- */
 .hero1 {
-    background-image: url("imagens/hero.png");
+    background-image: url("imagens/hero1.png");
 }
 
 .hero2 {
     background-image: url("imagens/hero2.png");
 }
 
-.card-principal.hero2 h1 {
+.card-principal.hero3 h1 {
     color: rgb(64, 101, 64);
 }
 
-.card-principal.hero2 p {
-    color: rgb(96, 93, 93);
+.card-principal.hero3 p {
+    color: rgb(55, 55, 55);
 }
 
-.card-principal.hero2 > button {
+.card-principal.hero3 > button {
     background-color: var(--cor4);
     color: white;
 }
 
-.card-principal.hero2 > button:hover {
+.card-principal.hero3 > button:hover {
     background-color: rgb(61, 81, 61);
     transition: color 0.3s ease;
 }
 
 .hero3 {
-    background-image: url("imagens/hero3.jpg");
+    background-image: url("imagens/hero3.png");
+    background-position: left center;
 }
 
 /* ----- Setas do carrossel ----- */
