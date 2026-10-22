@@ -30,6 +30,24 @@
     <script src="script.js" defer></script>
 </head>
 
+
+<div id="dimensoes-janela"></div>
+
+    <!-- ==================== Contador de Resolução ==================== -->
+    <script>
+        const indicador = document.querySelector("#dimensoes-janela");
+
+        function atualizarDimensoes() {
+            indicador.textContent =
+                `${window.innerWidth} × ${window.innerHeight} px`;
+        }
+
+        window.addEventListener("resize", atualizarDimensoes);
+
+        atualizarDimensoes();
+    </script>
+
+
 <body>
 
     <!-- =====================================================================
@@ -501,10 +519,8 @@
                                     várias cirurgias para retirada de espinhos (inclusive de dentro dos pulmões e de perto do
                                     coração) e teve que ficar com dreno torácico por mais de 3 meses. Durante esse tempo, ele
                                     recebeu cuidados de todos os Veterinários da nossa equipe, virou o xodó de todos e foi
-                                    acompanhado de perto pela Dra. Kelly e pelo Dr. André. <br>
-                                    <br>A boa notícia é que conseguimos tirar o último dreno torácico e demos alta para o Austin!
+                                    acompanhado de perto pela Dra. Kelly e pelo Dr. André. A boa notícia é que conseguimos tirar o último dreno torácico e demos alta para o Austin!
                                     Agora as próximas visitas serão para vacinação, check-up’s regulares e cuidar da saúde oral.
-                                    Na última foto, ele já aparece sem os drenos e sem a roupa cirúrgica, depois de quase 5 meses.
                                 </p>
                             </div>
                         </article>
