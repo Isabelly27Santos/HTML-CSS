@@ -98,9 +98,9 @@ header {
 }
 
 img.logo {
-    height: 100%;
     padding: 10px;
     margin: 20px;
+    max-width: clamp(100px, 250px, 400px);
 }
 
 .contato-header {
@@ -451,24 +451,6 @@ nav.menu-principal {
 
 .hero2 {
     background-image: url("imagens/hero2.png");
-}
-
-.card-principal.hero3 h1 {
-    color: rgb(64, 101, 64);
-}
-
-.card-principal.hero3 p {
-    color: rgb(55, 55, 55);
-}
-
-.card-principal.hero3 > button {
-    background-color: var(--cor4);
-    color: white;
-}
-
-.card-principal.hero3 > button:hover {
-    background-color: rgb(61, 81, 61);
-    transition: color 0.3s ease;
 }
 
 .hero3 {
