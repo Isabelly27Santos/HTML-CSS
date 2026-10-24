@@ -446,15 +446,15 @@ nav.menu-principal {
 
 /* ----- Imagens e variações de cada banner ----- */
 .hero1 {
-    background-image: url("imagens/hero1.png");
+    background-image: url("../imagens/hero1.png");
 }
 
 .hero2 {
-    background-image: url("imagens/hero2.png");
+    background-image: url("../imagens/hero2.png");
 }
 
 .hero3 {
-    background-image: url("imagens/hero3.png");
+    background-image: url("../imagens/hero3.png");
 }
 
 /* ----- Setas do carrossel ----- */
@@ -736,7 +736,7 @@ button > i.fa-solid:hover {
     /* Camada verde translúcida por cima da imagem de fundo */
     background:
         linear-gradient(#51be92bc),
-        url(imagens/fundo-metricas.webp);
+        url(../imagens/fundo-metricas.webp);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: inset 0 0 5px rgba(89, 89, 89, 0.323);
