@@ -1,0 +1,719 @@
+@charset "UTF-8";
+
+/* =========================================================
+   1. VARIÁVEIS
+   ========================================================= */
+
+:root {
+    /* Cores */
+    --cor0: #e0eae6;
+    --cor1: #cbeddf;
+    --cor2: #a2e0c7;
+    --cor3: #51be93;
+    --cor4: #568667;
+    --cor5: #466752;
+    --cor6: #c9986f;
+    --cor7: #ad825f;
+    --cor8: #484747;
+
+    /* Fontes */
+    --fonte1: "Nunito", sans-serif;
+    --fonte2: "Montserrat", sans-serif;
+
+    /* Escala tipográfica fluida */
+    --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.9rem);
+    --fs-sm: clamp(0.85rem, 0.82rem + 0.15vw, 1rem);
+    --fs-base: clamp(0.95rem, 0.88rem + 0.25vw, 1.1rem);
+    --fs-md: clamp(1rem, 0.93rem + 0.31vw, 1.3rem);
+    --fs-lg: clamp(1.1rem, 1.01rem + 0.41vw, 1.5rem);
+    --fs-xl: clamp(1.4rem, 1.14rem + 0.72vw, 2rem);
+    --fs-2xl: clamp(1.8rem, 1.28rem + 1.44vw, 3rem);
+    --fs-3xl: clamp(2rem, 1.42rem + 2.56vw, 4.5rem);
+
+    /* Espaçamentos */
+    --espaco-1: 0.5rem;
+    --espaco-2: 1rem;
+    --espaco-3: 1.5rem;
+    --espaco-4: 2rem;
+
+    /* Acabamentos */
+    --raio-card: 14px;
+    --sombra-suave: 0 3px 12px rgba(70, 103, 82, 0.12);
+    --transicao: 0.25s ease;
+}
+
+
+/* =========================================================
+   2. RESET E CONFIGURAÇÕES GERAIS
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background-color: #ffffff;
+    color: var(--cor8);
+    font-family: var(--fonte1);
+    font-size: var(--fs-base);
+    line-height: 1.5;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 3px solid var(--cor6);
+    outline-offset: 4px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   3. INDICADOR DE RESOLUÇÃO
+   ========================================================= */
+
+#dimensoes-janela {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 9999;
+
+    padding: 6px 10px;
+    border-radius: 8px;
+
+    background-color: #222222;
+    color: #ffffff;
+
+    font: 12px monospace;
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   4. CABEÇALHO
+   ========================================================= */
+
+.cabecalho {
+    position: relative;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--espaco-2);
+
+    width: 100%;
+    padding: 0.6rem 1rem;
+
+    background-color: var(--cor0);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.identidade {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    min-width: 0;
+    background-color: transparent;
+}
+
+.logo-header {
+    width: clamp(40px, 12vw, 60px);
+    height: auto;
+}
+
+.nome-logo-header {
+    width: clamp(120px, 33vw, 180px);
+    height: auto;
+}
+
+.botao-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+
+    border: none;
+    border-radius: 10px;
+
+    background-color: transparent;
+    color: var(--cor5);
+
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    transition:
+        background-color var(--transicao),
+        color var(--transicao);
+}
+
+.botao-menu:hover {
+    background-color: var(--cor1);
+}
+
+
+/* =========================================================
+   5. HERO: ESTRUTURA MOBILE FIRST
+   ========================================================= */
+
+.hero {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+        "foto"
+        "texto"
+        "cards";
+
+    justify-items: center;
+    align-items: center;
+    gap: 0.75rem;
+
+    width: 100%;
+    max-width: 600px;
+
+    margin-inline: auto;
+    padding: 1rem 1.25rem 2.5rem;
+}
+
+
+/* =========================================================
+   6. IMAGEM + ANIMAÇÃO LOTTIE
+   ========================================================= */
+
+.foto-sobre {
+    position: relative;
+    isolation: isolate;
+
+    grid-area: foto;
+
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 1 / 1;
+
+    margin-inline: auto;
+}
+
+/* Animação de fundo */
+.foto-sobre dotlottie-wc {
+    position: absolute;
+    inset: 0;
+    
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: transparent;
+    pointer-events: none;
+}
+
+/* Fotografia principal */
+.foto-veterinaria {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+
+    transform: translate(-50%, -50%);
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+    background-color: transparent;
+}
+
+/* Degradê inferior */
+.foto-sobre .degrade {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+
+    height: 15%;
+
+    background: linear-gradient(
+        to top,
+        #ffffff 0%,
+        rgba(255, 255, 255, 0.8) 40%,
+        transparent 100%
+    );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   7. TEXTO PRINCIPAL
+   ========================================================= */
+
+.texto-hero {
+    grid-area: texto;
+
+    width: 100%;
+    min-width: 0;
+    max-width: 520px;
+
+    padding: 0 0.25rem;
+    background-color: transparent;
+}
+
+.subtitulo-hero {
+    display: block;
+
+    margin-bottom: 0.5rem;
+
+    color: var(--cor4);
+    font-size: var(--fs-sm);
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.texto-hero h1 {
+    margin: 0;
+
+    color: var(--cor5);
+    font-family: var(--fonte2);
+    font-size: var(--fs-xl);
+    font-weight: 800;
+    line-height: 1.25;
+    letter-spacing: -0.025em;
+
+    overflow-wrap: break-word;
+}
+
+.texto-hero p {
+    margin-top: 0.9rem;
+
+    color: var(--cor8);
+    font-size: var(--fs-base);
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   8. ÁREA DOS CARDS (mobile: dois quadrados lado a lado)
+   ========================================================= */
+
+.cards-agendamento {
+    grid-area: cards;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 0.75rem;
+
+    /* Largura própria: sem isso o "justify-items: center" do .hero
+       encolhe a área e os cards ficam minúsculos */
+    width: 100%;
+    max-width: 340px;
+
+    margin-top: 0.5rem;
+    background-color: transparent;
+}
+
+
+/* =========================================================
+   9. CARDS DE AGENDAMENTO (mobile: quadrado 1/1)
+   ========================================================= */
+
+.card-agendar {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+
+    /* Quadrado: a altura vem da largura (sem height/min-height,
+       que anulariam o aspect-ratio) */
+    width: 100%;
+    min-width: 0;
+    aspect-ratio: 1 / 1;
+
+    padding: 0.75rem 0.5rem;
+
+    border: 1px solid rgba(70, 103, 82, 0.08);
+    border-radius: var(--raio-card);
+
+    background-color: var(--cor1);
+    color: var(--cor5);
+
+    box-shadow: var(--sombra-suave);
+
+    text-align: center;
+    cursor: pointer;
+
+    transition:
+        transform var(--transicao),
+        background-color var(--transicao),
+        box-shadow var(--transicao),
+        color var(--transicao);
+}
+
+/* Círculo do ícone */
+.card-agendar .circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: clamp(44px, 12vw, 60px);
+    aspect-ratio: 1 / 1;
+
+    border-radius: 50%;
+    background-color: #ffffff;
+
+    transition: background-color var(--transicao);
+}
+
+/* Ícones */
+.card-agendar .iagendar {
+    background-color: transparent;
+    color: var(--cor5);
+
+    font-size: clamp(1.25rem, 3.5vw, 1.7rem);
+
+    transition: color var(--transicao);
+}
+
+/* Texto dos cards (a quebra de linha vem do <br> no HTML) */
+.texto-card {
+    display: block;
+    max-width: 100%;
+
+    background-color: transparent;
+    color: inherit;
+
+    font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem);
+    font-weight: 800;
+    line-height: 1.3;
+
+    white-space: nowrap;
+}
+
+/* Seta decorativa (só aparece no desktop) */
+.seta-card {
+    display: none;
+
+    background-color: transparent;
+    color: inherit;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   10. INTERAÇÃO DOS CARDS
+   ========================================================= */
+
+@media (hover: hover) and (pointer: fine) {
+    .card-agendar:hover {
+        transform: translateY(-3px);
+
+        background-color: var(--cor4);
+        color: #ffffff;
+
+        box-shadow: 0 8px 18px rgba(70, 103, 82, 0.2);
+    }
+
+    .card-agendar:hover .circle {
+        background-color: #ffffff;
+    }
+
+    .card-agendar:hover .iagendar {
+        color: var(--cor4);
+    }
+}
+
+.card-agendar:active {
+    transform: scale(0.98);
+}
+
+
+/* =========================================================
+   11. TABLETS E TELAS MÉDIAS (ainda vertical: cards quadrados)
+   ========================================================= */
+
+@media (min-width: 600px) {
+
+    .cabecalho {
+        padding: 0.75rem 1.75rem;
+    }
+
+    .hero {
+        gap: 1rem;
+        padding: 1.5rem 2rem 3rem;
+    }
+
+    .foto-sobre {
+        max-width: 440px;
+    }
+
+    .texto-hero {
+        padding-inline: 0.5rem;
+    }
+
+    .cards-agendamento {
+        gap: 1rem;
+        max-width: 400px;
+    }
+
+    .card-agendar {
+        gap: 0.75rem;
+        padding: 1rem 0.75rem;
+    }
+
+    .card-agendar .circle {
+        width: 60px;
+    }
+
+    .card-agendar .iagendar {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* =========================================================
+   12. DESKTOP (grid em colunas: cards retangulares)
+   Foto à esquerda; texto e cards à direita
+   ========================================================= */
+
+@media (min-width: 900px) {
+
+    .cabecalho {
+        padding: 0.75rem 3rem;
+    }
+
+    .hero {
+        grid-template-columns:
+            minmax(0, 1.1fr)
+            minmax(0, 1fr);
+
+        grid-template-areas:
+            "foto texto"
+            "foto cards";
+
+        align-items: stretch;
+        justify-items: stretch;
+
+        column-gap: clamp(2rem, 4vw, 4rem);
+        row-gap: 1.5rem;
+
+        width: 100%;
+        max-width: 1440px;
+
+        margin-inline: auto;
+        padding: 2.5rem 3rem 4rem;
+    }
+
+    /* Foto quadrada, centralizada na altura de texto + cards */
+    .foto-sobre {
+        grid-area: foto;
+
+        width: 100%;
+        max-width: 560px;
+        aspect-ratio: 1 / 1;
+
+        align-self: center;
+        justify-self: center;
+        margin: 0;
+    }
+
+    /* Texto: parte de cima da coluna direita */
+    .texto-hero {
+        grid-area: texto;
+
+        width: 100%;
+        max-width: 660px;
+        min-width: 0;
+
+        align-self: end;
+        padding: 0;
+    }
+
+    .texto-hero h1 {
+        font-size: clamp(1.8rem, 2.2vw, 2.7rem);
+        line-height: 1.2;
+    }
+
+    .texto-hero p {
+        max-width: 650px;
+        margin-top: 1rem;
+        line-height: 1.7;
+    }
+
+    .subtitulo-hero {
+        margin-bottom: 0.75rem;
+    }
+
+    /* Cards logo abaixo do texto */
+    .cards-agendamento {
+        grid-area: cards;
+
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: stretch;
+        gap: clamp(0.75rem, 1.5vw, 1.25rem);
+
+        width: 100%;
+        max-width: 660px;
+        min-width: 0;
+
+        align-self: start;
+        margin: 0;
+    }
+
+    /* Card retangular: ícone | texto | seta */
+    .card-agendar {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: clamp(0.6rem, 0.9vw, 1rem);
+
+        aspect-ratio: auto;   /* desliga o quadrado do mobile */
+        width: 100%;
+        min-height: clamp(88px, 7vw, 110px);
+
+        padding: clamp(0.85rem, 1.2vw, 1.25rem);
+        border-radius: 16px;
+
+        text-align: left;
+    }
+
+    /* Ícone (menor no início do desktop para caber o texto) */
+    .card-agendar .circle {
+        width: clamp(40px, 3.5vw, 56px);
+        min-width: clamp(40px, 3.5vw, 56px);
+    }
+
+    .card-agendar .iagendar {
+        font-size: clamp(1.15rem, 1.5vw, 1.6rem);
+    }
+
+    /* Texto */
+    .card-agendar .texto-card {
+        flex: 1;
+        min-width: 0;
+
+        font-size: clamp(0.85rem, 0.95vw, 1.1rem);
+        line-height: 1.3;
+        text-align: left;
+    }
+
+    /* Seta à direita */
+    .card-agendar .seta-card {
+        display: block;
+        flex-shrink: 0;
+        margin-left: auto;
+        font-size: 0.85rem;
+    }
+}
+
+
+/* =========================================================
+   13. TELAS GRANDES
+   ========================================================= */
+
+@media (min-width: 1400px) {
+
+    .cabecalho {
+        padding-inline: max(3rem, calc((100vw - 1320px) / 2));
+    }
+
+    .hero {
+        column-gap: clamp(3rem, 4vw, 4.5rem);
+        row-gap: 2rem;
+
+        padding-top: 3.5rem;
+        padding-bottom: 5rem;
+    }
+
+    .foto-sobre {
+        max-width: 600px;
+    }
+
+    .texto-hero h1 {
+        font-size: clamp(2.3rem, 2.4vw, 3.2rem);
+    }
+
+    .texto-hero p {
+        font-size: 1.1rem;
+    }
+
+    .cards-agendamento {
+        gap: 1.25rem;
+    }
+
+    .card-agendar {
+        min-height: clamp(110px, 7.5vw, 140px);
+        padding: 1.25rem 1.5rem;
+        gap: 1rem;
+    }
+
+    .card-agendar .circle {
+        width: 56px;
+        min-width: 56px;
+    }
+
+    .card-agendar .texto-card {
+        font-size: 1.1rem;
+    }
+}
+
+
+/* =========================================================
+   14. ACESSIBILIDADE
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

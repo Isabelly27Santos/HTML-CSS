@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Quatro Patas: hospital veterinário com atendimento humanizado, profissionais dedicados e muito carinho pelo seu pet."
+    >
+
+    <title>Quatro Patas | Hospital Veterinário</title>
+
+    <link
+        rel="shortcut icon"
+        href="imagens/favicon.ico"
+        type="image/x-icon"
+    >
+
+    <!-- Fontes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        referrerpolicy="no-referrer"
+    >
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Animação Lottie -->
+    <script
+        type="module"
+        src="https://cdn.jsdelivr.net/npm/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js"
+    ></script>
+
+    <!-- JavaScript do projeto -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Indicador de resolução para desenvolvimento -->
+    <div id="dimensoes-janela" aria-hidden="true"></div>
+
+    <!-- Cabeçalho -->
+    <header class="cabecalho">
+        <a
+            class="identidade"
+            href="#inicio"
+            aria-label="Quatro Patas - Página inicial"
+        >
+            <img
+                class="logo-header"
+                src="imagens/logo-header.png"
+                alt=""
+            >
+
+            <img
+                class="nome-logo-header"
+                src="imagens/nome-logo-header.png"
+                alt="Quatro Patas - Hospital Veterinário"
+            >
+        </a>
+
+        <button
+            class="botao-menu"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
+
+    <!-- Conteúdo principal -->
+    <main>
+        <section class="hero" id="inicio">
+
+            <!-- Imagem com animação -->
+            <div class="foto-sobre">
+
+                <dotlottie-wc
+                    src="imagens/animacao.lottie"
+                    autoplay
+                    loop
+                    aria-hidden="true"
+                ></dotlottie-wc>
+
+                <img
+                    class="foto-veterinaria"
+                    src="imagens/vet-quem-somos.png"
+                    alt="Veterinária cuidando de um cachorro"
+                    fetchpriority="high"
+                >
+
+                <div class="degrade" aria-hidden="true"></div>
+
+            </div>
+
+            <!-- Texto principal -->
+            <div class="texto-hero">
+
+                <span class="subtitulo-hero">
+                    Cuidado que vem do coração
+                </span>
+
+                <h1>
+                    Quatro Patas: cuidado e amor em cada passo do seu pet!
+                </h1>
+
+                <p>
+                    Um hospital veterinário completo, com profissionais
+                    dedicados, atendimento humanizado e muito amor,
+                    carinho e cuidado em cada etapa da vida do seu pet.
+                </p>
+
+            </div>
+
+            <!-- Atalhos de agendamento -->
+            <div class="cards-agendamento">
+
+                <button
+                    class="card-agendar"
+                    type="button"
+                >
+                    <span class="circle" aria-hidden="true">
+                        <i class="fa-solid fa-user-doctor iagendar"></i>
+                    </span>
+
+                    <span class="texto-card">
+                        Agendar <br> consulta
+                    </span>
+
+                    <span class="seta-card" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </button>
+
+                <button
+                    class="card-agendar"
+                    type="button"
+                >
+                    <span class="circle" aria-hidden="true">
+                        <i class="fa-solid fa-vial iagendar"></i>
+                    </span>
+
+                    <span class="texto-card">
+                        Agendar <br> exame
+                    </span>
+
+                    <span class="seta-card" aria-hidden="true">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </span>
+                </button>
+
+            </div>
+
+        </section>
+    </main>
+
+    <!-- Indicador de resolução -->
+    <script>
+        const indicador = document.querySelector("#dimensoes-janela");
+
+        function atualizarDimensoes() {
+            indicador.textContent =
+                `${window.innerWidth} × ${window.innerHeight} px`;
+        }
+
+        window.addEventListener("resize", atualizarDimensoes);
+        atualizarDimensoes();
+    </script>
+
+</body>
+</html>
