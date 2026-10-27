@@ -175,8 +175,9 @@
         </ul>
     </nav>
 
-    <!-- Conteúdo -->
     <main>
+
+        <!-- Hero -->
         <section class="hero" id="inicio">
 
             <div class="foto-sobre">
@@ -200,7 +201,7 @@
             <div class="texto-hero">
                 <span class="subtitulo-section">Cuidado que vem do coração</span>
 
-                <h1>Quatro Patas: cuidado e amor em cada passo do seu pet!</h1>
+                <h1 class="titulo1">Quatro Patas: cuidado e amor em cada passo do seu pet!</h1>
 
                 <p>
                     Um hospital veterinário completo, com profissionais dedicados,
@@ -209,7 +210,7 @@
                 </p>
             </div>
 
-            <!-- Desktop -->
+            <!-- Cards (desktop) -->
             <div class="cards-agendamento">
                 <button class="card-agendar" type="button">
                     <span class="circle" aria-hidden="true">
@@ -232,7 +233,7 @@
                 </button>
             </div>
 
-            <!-- Mobile e tablet -->
+            <!-- Botões (mobile e tablet) -->
             <div class="buttons-agendamento">
                 <button class="button-agendar" type="button">Agendar consulta</button>
                 <button class="button-agendar exame" type="button">Agendar exame</button>
@@ -245,21 +246,61 @@
 
         </section>
 
+        <!-- Serviços -->
         <section class="cards-servicos">
-            <span class="subtitulo-section">Como podemos ajudar?</span>
+            <h2 class="subtitulo-section">Como podemos ajudar?</h2>
 
-            <div class="lista-servicos">
-                <div><i class="fa-solid fa-stethoscope"></i> <p>Consultas</p></div>
-                <div><i class="fa-solid fa-microscope"></i> <p>Exames</p></div>
-                <div><i class="fa-solid fa-syringe"></i> <p>Vacinação</p></div>
-                <div><i class="fa-solid fa-heart-pulse"></i> <p>Cirurgias</p></div>
-                <div><i class="fa-solid fa-truck-medical"></i> <p>Emergência 24h</p></div>
-                <div><i class="fa-solid fa-shower"></i> Banho &amp; <p>Tosa</p></div>
+            <ul class="lista-servicos">
+                <li><i class="fa-solid fa-stethoscope" aria-hidden="true"></i><p>Consultas</p></li>
+                <li><i class="fa-solid fa-microscope" aria-hidden="true"></i><p>Exames</p></li>
+                <li><i class="fa-solid fa-syringe" aria-hidden="true"></i><p>Vacinação</p></li>
+                <li><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i><p>Cirurgias</p></li>
+                <li><i class="fa-solid fa-truck-medical" aria-hidden="true"></i><p>Emergência 24h</p></li>
+                <li><i class="fa-solid fa-shower" aria-hidden="true"></i><p>Banho &amp; Tosa</p></li>
+            </ul>
+        </section>
+
+        <!-- Sobre nós -->
+        <section class="sobre-nos" id="sobre-nos">
+
+            <div class="sobre-cabecalho">
+                <span class="subtitulo-section">Conheça a Quatro Patas</span>
+                <h2 class="titulo1">Cuidado, amor e bem-estar para o seu pet</h2>
             </div>
-         </section>
 
-         
-        </main>
+            <div class="shape-shadow">
+                <div class="animated-shape">
+                    <img
+                        src="imagens/sobre-nos.png"
+                        alt="Veterinária segurando cachorro"
+                        loading="lazy"
+                    >
+                </div>
+            </div>
+
+            <div class="sobre-conteudo">
+                <p class="destaque-sobre">Um espaço pensado para acolher pets e tutores.</p>
+
+                <p class="texto-sobre">
+                    Nossa missão é promover a saúde e a qualidade de vida dos animais.
+                    Unimos conhecimento veterinário, escuta atenta e carinho para oferecer
+                    o cuidado que cada pet precisa, em todas as fases da vida.
+                </p>
+
+                <ul class="lista-checks">
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Atendimento personalizado</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Cuidado e carinho em cada consulta</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Profissionais qualificados</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Estrutura moderna</li>
+                    <li><i class="fa-regular fa-circle-check" aria-hidden="true"></i> Atendimento de emergência 24 horas</li>
+                </ul>
+            </div>
+
+            <button class="button-agendar botao-saiba-mais" type="button">Saiba mais</button>
+
+        </section>
+
+    </main>
 
 </body>
 </html>
