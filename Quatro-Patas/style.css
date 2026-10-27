@@ -234,7 +234,7 @@ button {
     color: #fff;
     font-weight: 800;
     letter-spacing: 0.02em;
-    padding: 0.3rem;
+    padding: 0.3rem 1rem;
 
     transition: color var(--transicao);
 }
