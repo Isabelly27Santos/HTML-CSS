@@ -20,7 +20,7 @@
     --fonte1: "Nunito", sans-serif;
     --fonte2: "Montserrat", sans-serif;
 
-    /* Escala tipográfica fluida */
+    /* Tipografia fluida */
     --fs-xs: clamp(0.75rem, 0.72rem + 0.15vw, 0.9rem);
     --fs-sm: clamp(0.85rem, 0.82rem + 0.15vw, 1rem);
     --fs-base: clamp(0.95rem, 0.88rem + 0.25vw, 1.1rem);
@@ -28,26 +28,26 @@
     --fs-lg: clamp(1.1rem, 1.01rem + 0.41vw, 1.5rem);
     --fs-xl: clamp(1.4rem, 1.14rem + 0.72vw, 2rem);
     --fs-2xl: clamp(1.8rem, 1.28rem + 1.44vw, 3rem);
-    --fs-3xl: clamp(2rem, 1.42rem + 2.56vw, 4.5rem);
 
-    /* Espaçamentos */
-    --espaco-1: 0.5rem;
-    --espaco-2: 1rem;
-    --espaco-3: 1.5rem;
-    --espaco-4: 2rem;
+    /* Layout */
+    --margem: 1.25rem;
+    --largura-max: 1344px;
 
     /* Acabamentos */
     --raio-card: 14px;
     --sombra-suave: 0 3px 12px rgba(70, 103, 82, 0.12);
+    --sombra-hover: 0 8px 18px rgba(70, 103, 82, 0.2);
     --transicao: 0.25s ease;
 }
 
 
 /* =========================================================
-   2. RESET E CONFIGURAÇÕES GERAIS
+   2. RESET
    ========================================================= */
 
-* {
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -55,6 +55,7 @@
 
 html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -69,23 +70,6 @@ body {
     line-height: 1.5;
 }
 
-button,
-input,
-textarea,
-select {
-    font: inherit;
-}
-
-button {
-    color: inherit;
-}
-
-button:focus-visible,
-a:focus-visible {
-    outline: 3px solid var(--cor6);
-    outline-offset: 4px;
-}
-
 img {
     display: block;
     max-width: 100%;
@@ -96,9 +80,29 @@ a {
     text-decoration: none;
 }
 
+button,
+input,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+    outline: 3px solid var(--cor6);
+    outline-offset: 4px;
+}
+
 
 /* =========================================================
-   3. INDICADOR DE RESOLUÇÃO
+   3. INDICADOR DE RESOLUÇÃO (desenvolvimento)
    ========================================================= */
 
 #dimensoes-janela {
@@ -112,8 +116,8 @@ a {
 
     background-color: #222222;
     color: #ffffff;
-
     font: 12px monospace;
+
     pointer-events: none;
 }
 
@@ -129,10 +133,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--espaco-2);
+    gap: 1rem;
 
-    width: 100%;
-    padding: 0.6rem 1rem;
+    padding-block: 0.6rem;
+    padding-inline: max(var(--margem), calc((100% - var(--largura-max)) / 2));
 
     background-color: var(--cor0);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
@@ -142,9 +146,7 @@ a {
     display: flex;
     align-items: center;
     gap: 0.6rem;
-
     min-width: 0;
-    background-color: transparent;
 }
 
 .logo-header {
@@ -161,73 +163,57 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
+
     width: 44px;
     height: 44px;
-
-    border: none;
     border-radius: 10px;
 
-    background-color: transparent;
     color: var(--cor5);
-
     font-size: 1.6rem;
-    cursor: pointer;
 
-    transition:
-        background-color var(--transicao),
-        color var(--transicao);
-}
-
-.botao-menu:hover {
-    background-color: var(--cor1);
+    transition: background-color var(--transicao);
 }
 
 
 /* =========================================================
-   5. HERO: ESTRUTURA MOBILE FIRST
+   5. HERO (mobile first)
    ========================================================= */
 
 .hero {
     display: grid;
-
     grid-template-columns: minmax(0, 1fr);
     grid-template-areas:
         "foto"
         "texto"
-        "cards";
-
+        "cards"
+        "subtexto";
     justify-items: center;
     align-items: center;
     gap: 0.75rem;
 
     width: 100%;
     max-width: 600px;
-
     margin-inline: auto;
-    padding: 1rem 1.25rem 2.5rem;
+    padding: 1rem var(--margem) 2.5rem;
 }
 
 
 /* =========================================================
-   6. IMAGEM + ANIMAÇÃO LOTTIE
+   6. FOTO + ANIMAÇÃO
    ========================================================= */
 
 .foto-sobre {
+    grid-area: foto;
     position: relative;
     isolation: isolate;
-
-    grid-area: foto;
 
     width: 100%;
     max-width: 400px;
     aspect-ratio: 1 / 1;
-
     margin-inline: auto;
 }
 
-/* Animação de fundo */
 .foto-sobre dotlottie-wc {
     position: absolute;
     inset: 0;
@@ -237,32 +223,22 @@ a {
     width: 100%;
     height: 100%;
 
-    background-color: transparent;
     pointer-events: none;
 }
 
-/* Fotografia principal */
 .foto-veterinaria {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    inset: 0;
     z-index: 2;
-
-    transform: translate(-50%, -50%);
 
     width: 100%;
     height: 100%;
-
     object-fit: contain;
-    background-color: transparent;
 }
 
-/* Degradê inferior */
 .foto-sobre .degrade {
     position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    inset: auto 0 0 0;
     z-index: 3;
 
     height: 15%;
@@ -279,23 +255,19 @@ a {
 
 
 /* =========================================================
-   7. TEXTO PRINCIPAL
+   7. TEXTOS
    ========================================================= */
 
 .texto-hero {
     grid-area: texto;
-
     width: 100%;
     min-width: 0;
     max-width: 520px;
-
-    padding: 0 0.25rem;
-    background-color: transparent;
+    padding-inline: 0.25rem;
 }
 
 .subtitulo-hero {
     display: block;
-
     margin-bottom: 0.5rem;
 
     color: var(--cor4);
@@ -306,29 +278,44 @@ a {
 }
 
 .texto-hero h1 {
-    margin: 0;
-
     color: var(--cor5);
     font-family: var(--fonte2);
     font-size: var(--fs-xl);
     font-weight: 800;
     line-height: 1.25;
     letter-spacing: -0.025em;
-
     overflow-wrap: break-word;
 }
 
 .texto-hero p {
     margin-top: 0.9rem;
-
-    color: var(--cor8);
-    font-size: var(--fs-base);
     line-height: 1.7;
+}
+
+.sub-texto-hero {
+    grid-area: subtexto;
+
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 100%;
+    max-width: 520px;
+    margin-top: 1rem;
+    padding-inline: 0.25rem;
+
+    color: var(--cor5);
+    font-size: var(--fs-sm);
+    font-weight: 700;
+}
+
+.sub-texto-hero i {
+    color: var(--cor4);
 }
 
 
 /* =========================================================
-   8. ÁREA DOS CARDS (mobile: dois quadrados lado a lado)
+   8. CARDS DE AGENDAMENTO (mobile: quadrados)
    ========================================================= */
 
 .cards-agendamento {
@@ -339,35 +326,21 @@ a {
     align-items: start;
     gap: 0.75rem;
 
-    /* Largura própria: sem isso o "justify-items: center" do .hero
-       encolhe a área e os cards ficam minúsculos */
     width: 100%;
     max-width: 340px;
-
     margin-top: 0.5rem;
-    background-color: transparent;
 }
 
-
-/* =========================================================
-   9. CARDS DE AGENDAMENTO (mobile: quadrado 1/1)
-   ========================================================= */
-
 .card-agendar {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 0.6rem;
 
-    /* Quadrado: a altura vem da largura (sem height/min-height,
-       que anulariam o aspect-ratio) */
     width: 100%;
     min-width: 0;
     aspect-ratio: 1 / 1;
-
     padding: 0.75rem 0.5rem;
 
     border: 1px solid rgba(70, 103, 82, 0.08);
@@ -375,11 +348,9 @@ a {
 
     background-color: var(--cor1);
     color: var(--cor5);
-
     box-shadow: var(--sombra-suave);
 
     text-align: center;
-    cursor: pointer;
 
     transition:
         transform var(--transicao),
@@ -388,75 +359,52 @@ a {
         color var(--transicao);
 }
 
-/* Círculo do ícone */
 .card-agendar .circle {
     display: flex;
     align-items: center;
     justify-content: center;
-
     flex-shrink: 0;
 
     width: clamp(44px, 12vw, 60px);
     aspect-ratio: 1 / 1;
-
     border-radius: 50%;
-    background-color: #ffffff;
 
-    transition: background-color var(--transicao);
+    background-color: #ffffff;
 }
 
-/* Ícones */
 .card-agendar .iagendar {
-    background-color: transparent;
     color: var(--cor5);
-
     font-size: clamp(1.25rem, 3.5vw, 1.7rem);
-
     transition: color var(--transicao);
 }
 
-/* Texto dos cards (a quebra de linha vem do <br> no HTML) */
 .texto-card {
-    display: block;
     max-width: 100%;
-
-    background-color: transparent;
-    color: inherit;
-
     font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.1rem);
     font-weight: 800;
     line-height: 1.3;
-
-    white-space: nowrap;
 }
 
-/* Seta decorativa (só aparece no desktop) */
 .seta-card {
     display: none;
-
-    background-color: transparent;
-    color: inherit;
-
     font-size: 0.85rem;
 }
 
 
 /* =========================================================
-   10. INTERAÇÃO DOS CARDS
+   9. INTERAÇÕES
    ========================================================= */
 
 @media (hover: hover) and (pointer: fine) {
-    .card-agendar:hover {
-        transform: translateY(-3px);
-
-        background-color: var(--cor4);
-        color: #ffffff;
-
-        box-shadow: 0 8px 18px rgba(70, 103, 82, 0.2);
+    .botao-menu:hover {
+        background-color: var(--cor1);
     }
 
-    .card-agendar:hover .circle {
-        background-color: #ffffff;
+    .card-agendar:hover {
+        transform: translateY(-3px);
+        background-color: var(--cor4);
+        color: #ffffff;
+        box-shadow: var(--sombra-hover);
     }
 
     .card-agendar:hover .iagendar {
@@ -470,25 +418,29 @@ a {
 
 
 /* =========================================================
-   11. TABLETS E TELAS MÉDIAS (ainda vertical: cards quadrados)
+   10. TABLET (≥ 600px)
    ========================================================= */
 
 @media (min-width: 600px) {
+    :root {
+        --margem: 2rem;
+    }
 
     .cabecalho {
-        padding: 0.75rem 1.75rem;
+        padding-block: 0.75rem;
     }
 
     .hero {
         gap: 1rem;
-        padding: 1.5rem 2rem 3rem;
+        padding-block: 1.5rem 3rem;
     }
 
     .foto-sobre {
         max-width: 440px;
     }
 
-    .texto-hero {
+    .texto-hero,
+    .sub-texto-hero {
         padding-inline: 0.5rem;
     }
 
@@ -513,61 +465,45 @@ a {
 
 
 /* =========================================================
-   12. DESKTOP (grid em colunas: cards retangulares)
-   Foto à esquerda; texto e cards à direita
+   11. DESKTOP (≥ 900px)
    ========================================================= */
 
 @media (min-width: 900px) {
-
-    .cabecalho {
-        padding: 0.75rem 3rem;
+    :root {
+        --margem: 3rem;
     }
 
     .hero {
-        grid-template-columns:
-            minmax(0, 1.1fr)
-            minmax(0, 1fr);
-
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
         grid-template-areas:
             "foto texto"
-            "foto cards";
-
+            "foto cards"
+            "foto subtexto";
         align-items: stretch;
         justify-items: stretch;
-
         column-gap: clamp(2rem, 4vw, 4rem);
         row-gap: 1.5rem;
 
-        width: 100%;
         max-width: 1440px;
-
-        margin-inline: auto;
-        padding: 2.5rem 3rem 4rem;
+        padding-block: 2.5rem 4rem;
     }
 
-    /* Foto quadrada, centralizada na altura de texto + cards */
     .foto-sobre {
-        grid-area: foto;
-
         width: 100%;
         max-width: 560px;
-        aspect-ratio: 1 / 1;
-
         align-self: center;
         justify-self: center;
         margin: 0;
     }
 
-    /* Texto: parte de cima da coluna direita */
     .texto-hero {
-        grid-area: texto;
-
-        width: 100%;
         max-width: 660px;
-        min-width: 0;
-
         align-self: end;
         padding: 0;
+    }
+
+    .subtitulo-hero {
+        margin-bottom: 0.75rem;
     }
 
     .texto-hero h1 {
@@ -578,92 +514,67 @@ a {
     .texto-hero p {
         max-width: 650px;
         margin-top: 1rem;
-        line-height: 1.7;
     }
 
-    .subtitulo-hero {
-        margin-bottom: 0.75rem;
-    }
-
-    /* Cards logo abaixo do texto */
     .cards-agendamento {
-        grid-area: cards;
-
-        grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: stretch;
-        gap: clamp(0.75rem, 1.5vw, 1.25rem);
-
-        width: 100%;
-        max-width: 660px;
-        min-width: 0;
-
         align-self: start;
+        gap: clamp(0.75rem, 1.5vw, 1.25rem);
+        max-width: 660px;
         margin: 0;
     }
 
-    /* Card retangular: ícone | texto | seta */
+    .sub-texto-hero {
+        max-width: 660px;
+        align-self: start;
+        margin-top: 0;
+        padding: 0;
+    }
+
     .card-agendar {
         flex-direction: row;
-        align-items: center;
         justify-content: flex-start;
         gap: clamp(0.6rem, 0.9vw, 1rem);
 
-        aspect-ratio: auto;   /* desliga o quadrado do mobile */
-        width: 100%;
+        aspect-ratio: auto;
         min-height: clamp(88px, 7vw, 110px);
-
         padding: clamp(0.85rem, 1.2vw, 1.25rem);
         border-radius: 16px;
 
         text-align: left;
     }
 
-    /* Ícone (menor no início do desktop para caber o texto) */
     .card-agendar .circle {
         width: clamp(40px, 3.5vw, 56px);
-        min-width: clamp(40px, 3.5vw, 56px);
     }
 
     .card-agendar .iagendar {
         font-size: clamp(1.15rem, 1.5vw, 1.6rem);
     }
 
-    /* Texto */
     .card-agendar .texto-card {
         flex: 1;
         min-width: 0;
-
         font-size: clamp(0.85rem, 0.95vw, 1.1rem);
-        line-height: 1.3;
-        text-align: left;
     }
 
-    /* Seta à direita */
     .card-agendar .seta-card {
         display: block;
         flex-shrink: 0;
         margin-left: auto;
-        font-size: 0.85rem;
     }
 }
 
 
 /* =========================================================
-   13. TELAS GRANDES
+   12. TELAS GRANDES (≥ 1400px)
    ========================================================= */
 
 @media (min-width: 1400px) {
-
-    .cabecalho {
-        padding-inline: max(3rem, calc((100vw - 1320px) / 2));
-    }
-
     .hero {
         column-gap: clamp(3rem, 4vw, 4.5rem);
         row-gap: 2rem;
-
-        padding-top: 3.5rem;
-        padding-bottom: 5rem;
+        padding-block: 3.5rem 5rem;
     }
 
     .foto-sobre {
@@ -683,14 +594,13 @@ a {
     }
 
     .card-agendar {
+        gap: 1rem;
         min-height: clamp(110px, 7.5vw, 140px);
         padding: 1.25rem 1.5rem;
-        gap: 1rem;
     }
 
     .card-agendar .circle {
         width: 56px;
-        min-width: 56px;
     }
 
     .card-agendar .texto-card {
@@ -700,11 +610,10 @@ a {
 
 
 /* =========================================================
-   14. ACESSIBILIDADE
+   13. ACESSIBILIDADE
    ========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
